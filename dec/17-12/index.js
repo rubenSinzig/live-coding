@@ -61,4 +61,19 @@ drive >= 18
 console.log(1 == 1);
 let num1 = 1;
 let num2 = "1";
-console.log(num1 == num2);
+console.log(num1 === num2);
+//
+let userName = "Hadi";
+console.log(typeof userName);
+console.log(userName.length);
+console.log(add2.length);
+console.log(userName[2]);
+let string = "Hi my Name is Hadi";
+// "012345678"
+// "h****@gmail.com"
+let email = "hadi@gmail";
+console.log(email[5]);
+//"@had.com"
+email[4] == "@"
+  ? console.log("Enter a valid email add")
+  : console.log("this is a nice start for an email add");
