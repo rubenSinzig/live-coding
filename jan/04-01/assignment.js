@@ -50,7 +50,7 @@ console.log(`My name is ${firstName} ${lastName} and I am ${age}.`);
 
 // 11. Declare a variable and assign the value “the quick brown fox” (all in lower case). Capitalize the first letter of that string. Print the result to the console.
 let fox = "the quick brown fox";
-let firstFox = fox.substring(0, 1);
-let secFox = fox.substring(fox.length - 18)
+let firstFox = fox[0];
+let secFox = fox.substring(1)
 let uppFox = firstFox.toUpperCase();
 console.log(uppFox + secFox);
