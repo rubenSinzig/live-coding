@@ -116,3 +116,90 @@ console.log(text2);
 //
 let partOfStr = longStr.substring(4, 7);
 console.log(partOfStr);
+
+// 1. Declare a variable with the value of “I can walk in the park all day!“. Print the word “park” to the console.
+let strExOne = "I can walk in the park all day!";
+let shortStrOne = strExOne.substring(18, 22);
+console.log(shortStrOne);
+//  2. Declare a variable with the value of “Hello World”. Covert the value to upper case and print the converted value to the console.
+let strExTwo = "Hello World";
+console.log(strExTwo.toUpperCase());
+//  3. Declare another variable with the value of “Earthlings”. Convert the value to lower case and print the converted value to the console.
+let strExThree = "Earthlings";
+console.log(strExThree.toLowerCase());
+//  4. Declare a variable with the value “JavaScript”. Print the the characters “aSc” to the console using the substring() method.
+let Js = "JavaScript";
+console.log(Js.substring(3, 6));
+
+//  5. Check if the sentence “nice shoes” contains the letter l.
+let strExFive = "nice shoes";
+let lIsThere = strExFive.includes("l");
+console.log(lIsThere);
+//  6. Create a new string from a given string with the first character of the given string added at the front and back. eg. of output: JavaScript => JJavaScriptJ.
+let strExSix = "JavaScript";
+let strExSix_1 = "JJavaScriptJ";
+
+//let ModStr = "J" + strExSix + "J";
+console.log("J" + strExSix + "J");
+//let ModStr = strExSix[0] + strExSix + strExSix[0];
+let firstStrExSix = strExSix[0];
+console.log(firstStrExSix + strExSix + firstStrExSix);
+
+// .length - num
+let longText = "This is a long text";
+let subStr = longText.substring(longText.length - 4);
+console.log(subStr);
+
+// slice
+let sliceStr = longText.slice(5);
+console.log(sliceStr);
+
+// ` `
+let firstUserName = "Zain";
+let lastUserName = "something";
+let add = "xxx str, 1234 Berlin";
+// console.log(
+//   "Hi I am" +
+//     firstUserName +
+//     ",I live in " +
+//     add +
+//     ". My last name " +
+//     lastUserName +
+//     "."
+// );
+console.log(
+  `Hi I am ${firstUserName}, I live in ${add}. My last name is ${lastUserName}.`
+);
+
+var globalVar = "This is global";
+console.log(globalVar);
+globalVar = "This is global plus";
+
+function sub(x, y) {
+  let local = "This is local";
+  console.log(local);
+  console.log(globalVar);
+  globalVar = "This is global plus ++";
+  return x - y;
+}
+console.log(sub(10, 4));
+
+// ++ += -- -=
+let num1 = 1;
+//num1 = num1 + 1; == num1 += 1;
+num1 += 333;
+console.log(num1);
+let num2 = 2;
+//num2 = num2 - 1; == num2 -= 1;
+num2 -= 1;
+console.log(num2);
+// Increment
+let w = 10;
+w++;
+++w;
+console.log(w);
+// decrement
+let q = 10;
+q--;
+--q;
+console.log(q);
