@@ -15,7 +15,7 @@ console.log(typeof x);
 console.log(typeof old);
 console.log(typeof str);
 // length
-<<<<<<< HEAD
+
 /* let firstName = "Ruben";
 console.log(firstName.length);
 console.log(firstName[0]);
@@ -159,5 +159,30 @@ console.log(FinalFirstName);
 let shortForm =
   firstName[0].toUpperCase() + firstName.substring(1).toLowerCase();
 console.log(shortForm);
+
+// shortForm = H + adi
+// comment one line
+
+/* 
+
+THis is many lines
+comment
+
+*/
+
+/*
+
+// camelCase vs snake_case
+let longStr = "Hi this is me Hi, I am Hadi, I live in Berlin";
+
+// includes
+let text = longStr.includes("hi");
+let text2 = longStr.includes("@");
+console.log(text);
+console.log(text2);
+
+//
+let partOfStr = longStr.substring(4, 7);
+console.log(partOfStr);
 
 */
