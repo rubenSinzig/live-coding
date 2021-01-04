@@ -1,10 +1,10 @@
-// printing out
+// printing out using log method
 console.log("Hadi ");
 // var
 let x = 3;
 let str = "Berlin";
 let old = true;
-// ternary op
+// ternary condition ? ex if true : ex if false
 let kid = 18;
 kid > 16
   ? console.log("Yay I can Drive")
@@ -16,15 +16,17 @@ console.log(typeof x);
 console.log(typeof old);
 console.log(typeof str);
 // length
-// let firstName = "Hadi";
-// console.log(firstName.length);
-//console.log(firstName[0]);
+let firstNa = "Hadi";
+console.log(firstNa.length);
+console.log(firstNa[0]);
 let something = 1231;
 something = 4567;
 console.log(something);
 const fatherName = "Wii";
 console.log(fatherName);
-var global = "Hi I am global";
+// global var
+var global = "Hi I am global"; // hoisted
+// scope
 {
   let local = 22;
   global = "Hi";
@@ -33,15 +35,16 @@ var global = "Hi I am global";
 console.log(localGlob);
 print("Hadi");
 
-// function
+// function declaration
+// hoisted
 function print(xxx) {
   console.log(xxx);
 }
-
+// function call
 print("Hadi");
 print(22);
 console.log(lastName);
-var lastName = "Nsreeny";
+var lastName = "Nsreeny"; // hoisted
 console.log(lastName);
 function sum(x, y) {
   let z = 0;
@@ -64,18 +67,19 @@ const b = 3;
 console.log(a + b);
 // ----- option 4
 console.log(3 - 2 - 4 + 2 + 6);
+
 // substring
-let oString = "Hi My Name is Hadi, I'm 31 y.";
-print(oString.length);
-let str1 = oString.substring(5);
+let originalString = "Hi My Name is Hadi, I'm 31 y.";
+print(originalString.length);
+let str1 = originalString.substring(5);
 console.log(str1);
-let str2 = oString.substring(6, 10);
+let str2 = originalString.substring(6, 10);
 console.log(str2);
 // toUpperCase
-let str3 = oString.toUpperCase();
+let str3 = originalString.toUpperCase();
 console.log(str3);
 // toLowerCase
-let str4 = oString.toLowerCase();
+let str4 = originalString.toLowerCase();
 console.log(str4);
 let firstName = "hAdI";
 // Hadi
@@ -85,3 +89,7 @@ let restChr = firstName.substring(1).toLowerCase();
 console.log(restChr);
 let FinalFirstName = firstChr + restChr;
 console.log(FinalFirstName);
+
+let shortForm =
+  firstName[0].toUpperCase() + firstName.substring(1).toLowerCase();
+console.log(shortForm);
