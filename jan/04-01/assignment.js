@@ -39,7 +39,7 @@ console.log(person);
  console.log(uppValue.includes("Java"));
 
 // 9. Create a new string from a given string by changing the position of first and last characters. The string length must be greater than or equal to 1. eg. of output JavaScript => tavaScripJ
-let chaPerson = person.substring(2, 9);
+let chaPerson = person.substring(2, 10);
 console.log(person[10] + chaPerson + person[0]);
 
 // 10. Create 3 different variables about yourself using strings as values e.g. let firstName = “Maria”. Print the sentence to the console using string interpolation e.g. “My name is Maria. I live in Berlin and I am a teacher”.
