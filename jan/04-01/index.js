@@ -186,3 +186,30 @@ let partOfStr = longStr.substring(4, 7);
 console.log(partOfStr);
 
 */
+
+// subString
+let longText = "This is a long text";
+let subStr = longText.substring(longText.length - 4);
+console.log(subStr);
+
+// slice
+
+let sliceStr = longText.slice(5);
+console.log(sliceStr);
+
+// ` `
+let firstUserName = "Zain";
+let lastUserName = "Lastname";
+let add = "Straße, 12345 Leverkusen";
+// console.log("Hi I am "+firstUserName + " I live in "+add + ". My last name "+lastUserName +".");
+
+console.log(`Hi I am ${firstUserName}, I live in ${add}. My last name is ${lastUserName}.`);
+
+var globalVar = "This is global";
+console.log(globalVar);
+globalVar = "This is global plus";
+
+function sub(x, y){
+  return x - y;
+}
+console.log(sub(10, 4));
