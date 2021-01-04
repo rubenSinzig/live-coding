@@ -108,7 +108,7 @@ comment
 let longStr = "Hi this is me Hi, I am Hadi, I live in Berlin";
 
 // includes
-let text = longStr.includes("hi");
+let text = longStr.includes("hi"); // need to check
 let text2 = longStr.includes("@");
 console.log(text);
 console.log(text2);
@@ -203,3 +203,37 @@ let q = 10;
 q--;
 --q;
 console.log(q);
+// 7. Create a new string from a given string, taking the last 3 characters of the string and add them to both the front and back of the new string. The string length must be 3 or more.
+// eg. of output: javascript => iptJavaScriptipt
+let lastThree = Js.substring(Js.length - 3);
+let newJsStr = lastThree + Js + lastThree;
+console.log(newJsStr);
+// 8. Create a variable and assign a string value to it. Then, convert the value to upper case and print the converted value to the console and check whether it includes “Java”.
+let newStr = "I will go to Java";
+let upperNewStr = newStr.toUpperCase();
+console.log(upperNewStr);
+console.log(upperNewStr.includes("Java"));
+// something for fun :)
+upperNewStr.includes("Java") ? console.log("Nice") : console.log("Oh noo");
+
+console.log(11 == 12 ? "cool" : "Not cool");
+// 9. Create a new string from a given string by changing the position of first and last characters. The string length must be greater than or equal to 1. eg. of output JavaScript => tavaScripJ
+let modJsStr = Js.substring(1) + Js[0];
+console.log(modJsStr);
+let firstJsChr = Js[0];
+// JavaScript
+let lastJsChr = Js[Js.length - 1];
+let midJsStr = Js.substring(1, Js.length - 1);
+let newLongJsStr = lastJsChr + midJsStr + firstJsChr;
+console.log(newLongJsStr);
+// 10. Create 3 different variables about yourself using strings as values e.g. let firstName = “Maria”. Print the sentence to the console using string interpolation e.g. “My name is Maria. I live in Berlin and I am a teacher”.
+let myName = "Nancy";
+let myAdd = "Berlin";
+let myJob = "Teacher";
+let aboutMeStr = `My name is ${myName}. I live in ${myAdd}, and I am a ${myJob}.`;
+console.log(aboutMeStr);
+
+//11. Declare a variable and assign the value “the quick brown fox” (all in lower case). Capitalize the first letter of that string. Print the result to the console.
+let foxStr = "the quick brown fox";
+let foxUpper = foxStr[0].toUpperCase() + foxStr.substring(1);
+console.log(foxUpper);
