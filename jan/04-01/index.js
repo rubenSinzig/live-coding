@@ -108,7 +108,7 @@ comment
 let longStr = "Hi this is me Hi, I am Hadi, I live in Berlin";
 
 // includes
-let text = longStr.includes("hi"); // need to check
+let text = longStr.includes("Is");
 let text2 = longStr.includes("@");
 console.log(text);
 console.log(text2);
