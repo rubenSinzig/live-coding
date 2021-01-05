@@ -163,7 +163,7 @@ let add = "xxx str, 1234 Berlin";
 //     firstUserName +
 //     ",I live in " +
 //     add +
-//     ". My last name " +
+//     ". My last" + " " + "name " +
 //     lastUserName +
 //     "."
 // );
