@@ -103,7 +103,7 @@ comment
 let longStr = "Hi this is me Hi, I am Hadi, I live in Berlin";
 
 // includes
-let text = longStr.includes("hi"); // need to check
+let text = longStr.includes("Is");
 let text2 = longStr.includes("@");
 console.log(text);
 console.log(text2);
@@ -170,7 +170,7 @@ let add = "xxx str, 1234 Berlin";
 //     firstUserName +
 //     ",I live in " +
 //     add +
-//     ". My last name " +
+//     ". My last" + " " + "name " +
 //     lastUserName +
 //     "."
 // );
