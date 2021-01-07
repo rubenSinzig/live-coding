@@ -11,8 +11,9 @@ console.log(int3);
 // Use a ternary and if the number is even print 30 is even, else print that it is odd.
 // 33, 40, 2, 1, 22
 
-let num = 33;
-num ? console.log("The Number is even.") : console.log("The Number is odd.");
+let number = 33; // 40, 2, 1, 22
+let checkNumber = number % 2;
+checkNumber == 0 ? console.log(`${number} is even`) : console.log(`${number} is odd`);
 
 // Create a variable with the value of “123”. Convert it to a number.
 
