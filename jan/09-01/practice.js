@@ -13,14 +13,27 @@ let participants = [
             "Melanie", 
             ]
 
-// writing for how to pass through
+// 
 for (let index = 0; index < participants.length; index++) {
     console.log(participants[index]);
 }
 
 console.log("-------------------");
 
-// writing for output all elements from an array
+// 
 for (let participant of participants) {
     console.log(participant);
+}
+
+// break and continue
+
+for (let i = 0; i <= 15; i++) {
+    if (i === 5) {
+        continue // skip
+    }
+    
+    if ( i === 11 ) {
+        break // end
+    }
+    console.log(i);
 }
