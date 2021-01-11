@@ -192,9 +192,10 @@ for (let i = 1; i <= 10; i++) {
   // something else
 }
 
-// 1 1 1 2 2 2 3 3 3 4 4 4
 text = "";
 for (let i = 0; i <= 10; i += 2) {
   text += i + " ";
 }
 console.log(text);
+
+// 1 1 1 2 2 2 3 3 3 4 4 4
