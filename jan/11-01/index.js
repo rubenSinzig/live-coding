@@ -117,3 +117,65 @@ if ((a == b && c != a) || c == a) {
 } else {
   console.log("I don't know what you need from me 🤓 ");
 }
+//The odd/even reporter.
+// Write a program that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. “2 is even”).
+
+// Write programs that produce the following outputs:
+// 100 200 300 400 500 600 700 800 900 1000
+
+// 0 2 4 6 8 10
+// console.log("0 2 4 6 8 10");
+let text = "";
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 == 0) {
+    // text = text + i + " ";
+    text += i + " ";
+  }
+}
+console.log(text);
+console.log("--------");
+// 3 6 9 12 15
+text = "";
+for (let i = 1; i <= 15; i++) {
+  if (i % 3 == 0) {
+    text += i + " ";
+  }
+}
+console.log(text);
+console.log("--------");
+// 9 8 7 6 5 4 3 2 1 0
+text = "";
+for (let i = 9; i >= 0; i--) {
+  text += i + " ";
+}
+console.log(text);
+console.log("--------");
+// 1 1 1 2 2 2 3 3 3 4 4 4
+text = "";
+for (let i = 1; i <= 4; i++) {
+  for (let j = 0; j < 3; j++) {
+    text += i + " ";
+  }
+}
+console.log(text);
+console.log("--------");
+
+// 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+text = "";
+for (let i = 1; i <= 3; i++) {
+  // i =2
+  for (let j = 0; j <= 4; j++) {
+    // j = 0
+    text += j + " ";
+  }
+}
+console.log(text);
+
+for (let i = 1; i <= 10; i++) {
+  // 1 * 1 = 1
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
+  console.log("--- new table");
+  // something else
+}
