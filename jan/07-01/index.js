@@ -16,6 +16,7 @@ console.log("+str", strIntoNum1);
 let strIntoNum2 = str * 1; // we don't use
 console.log(" * 1= ", strIntoNum2);
 let strIntFloat = parseFloat(str);
+// 1005.44
 console.log("parseFloat", strIntFloat);
 console.log(((x + y) / (z + 2.44)) * 29 + x);
 //
@@ -23,7 +24,8 @@ console.log(((x + y) / (z + 2.44)) * 29 + x);
 let d, f, r;
 d = "H";
 f = 33;
-console.log(d + f);
+console.log(d + f); // H33
+
 // Number + Boolean
 r = true; // true = 1,  false =  0
 console.log(f + r); // 33 + 1 = 34
@@ -35,16 +37,17 @@ console.log(str1 + str2);
 let a = 3;
 console.log(a++);
 console.log(a);
+
 // --
 let q = 3;
 console.log(q--);
 console.log(q);
 //console.log(a);
 // typeof
-console.log(typeof str1);
+console.log(typeof str1); // sti
 console.log(typeof x);
 console.log(typeof console.log);
-console.log(typeof Math.ceil);
+console.log(typeof Math);
 // 3.444444444444
 // (0.1*0.2)
 let floatNum1 = 0.1;
@@ -52,7 +55,7 @@ let floatNum2 = 0.2;
 let result = floatNum1 * floatNum2;
 console.log(result);
 // toFixed()
-let num = 4;
+let num = 3;
 console.log(result.toFixed(num));
 
 // 1
@@ -114,7 +117,7 @@ console.log(1 == 1 && 1 == 10);
 // false || true => true
 // false || false => false
 // true || true => true
-console.log(1 == 20 || (1 == 1 && 1 != 292)); // false || true && true
+console.log(1 == 20 || (1 == 1 && 1 != 292)); // false || true && true -> true
 
 let bool1, bool2, boo3;
 bool1 = true;
