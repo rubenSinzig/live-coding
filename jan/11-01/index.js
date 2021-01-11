@@ -199,13 +199,24 @@ for (let i = 0; i <= 10; ) {
 }
 console.log(text);
 
-// 1 1 1 2 2 2 3 3 3 4 4 4
+// 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
 let countNum = 0;
-for (let i = 0; i <= 4; ) {
-  console.log(i);
+text = "";
+for (let i = 1; i <= 4; ) {
+  text += i + " ";
   if (countNum !== 0 && countNum % 3 === 0) {
     i++;
     countNum = 0;
   }
   countNum++;
 }
+console.log(text);
+
+let st = "Hi this is me 12343 334";
+let stToArr = st.split(" ");
+console.log(stToArr);
+let backToSt = stToArr.join(" ");
+console.log(backToSt);
+
+console.log("1".repeat(3));
+console.log("2".repeat(3));
