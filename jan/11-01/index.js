@@ -63,6 +63,57 @@ for (let i = 0; i <= 10; i++) {
 
 for (let i = 1; i <= 10; i++) {
   // 1 * 1 = 1
-  //console.log(`${i} * 1 = ${i * 1}`);
-  console.log(i, " * 1 = ", i * 1);
+  console.log(`${i} * 1 = ${i * 1}`);
+  //   console.log(i, " * 1 = ", i * 1);
+}
+const longArr = ["Hi I am, Coo to see you in.", "Hi I am"];
+console.log(longArr.length);
+const mixedArr = ["hi", 1222, true];
+console.log(typeof mixedArr);
+const chrArr = ["a", "b", "c"];
+// index
+for (let i = 0; i < chrArr.length; i++) {
+  //             a.toUpperCase() => A
+  console.log(chrArr[i].toUpperCase());
+}
+const names = ["hadi", "nancy"];
+// names[0][0]
+let str = "";
+for (let i = 0; i < names.length; i++) {
+  //             a.toUpperCase() => A
+  str = "";
+  str = names[i][0].toUpperCase() + names[i].substring(1);
+  console.log(str);
+}
+console.log(names[0]);
+
+//console.log(1 == 11 ? "cool" : "nooooo");
+let isSmart = false;
+if (isSmart) {
+  console.log("coool");
+} else {
+  console.log("nooooo");
+}
+let count = 0;
+if (22 * 3 == 299 + 3) {
+  count++;
+
+  console.log("You are nice");
+} else {
+  count--;
+  // \' \"  ignore
+  // \n new line
+  console.log("No that's \n this is new line");
+}
+
+// functions, if else, objects ,scopes all with {}
+// arrays, strings []
+// if conditions, method, conditions function call ()
+let a = true;
+let b = false;
+let c = 11 == 23;
+if ((a == b && c != a) || c == a) {
+  console.log("Wow");
+} else {
+  console.log("I don't know what you need from me 🤓 ");
 }
