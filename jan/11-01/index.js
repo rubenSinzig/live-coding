@@ -193,9 +193,19 @@ for (let i = 1; i <= 10; i++) {
 }
 
 text = "";
-for (let i = 0; i <= 10; i += 2) {
+for (let i = 0; i <= 10; ) {
   text += i + " ";
+  i += 2;
 }
 console.log(text);
 
 // 1 1 1 2 2 2 3 3 3 4 4 4
+let countNum = 0;
+for (let i = 0; i <= 4; i++) {
+  console.log(i);
+  if (countNum != 0 && countNum % 3 == 0) {
+    i = 0;
+    countNum = 0;
+  }
+  countNum++;
+}
