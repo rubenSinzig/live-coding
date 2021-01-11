@@ -201,10 +201,10 @@ console.log(text);
 
 // 1 1 1 2 2 2 3 3 3 4 4 4
 let countNum = 0;
-for (let i = 0; i <= 4; i++) {
+for (let i = 0; i <= 4; ) {
   console.log(i);
-  if (countNum != 0 && countNum % 3 == 0) {
-    i = 0;
+  if (countNum !== 0 && countNum % 3 === 0) {
+    i++;
     countNum = 0;
   }
   countNum++;
