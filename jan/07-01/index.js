@@ -135,3 +135,10 @@ console.log(numInStr === numb ? "cool" : "not cool"); //
 console.log(3.14 ? "yeah it's true" : "Nooooo");
 // Create a program that prints a random integer from 1 - 6.
 console.log(Math.floor(Math.random() * 6) + 1);
+
+//
+// 0 1 bit
+// 0000 4 bit
+// 0001
+// 32 bit
+//0000 0000 0000 0000 0000 0000 0000
