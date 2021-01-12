@@ -34,13 +34,29 @@ dogYears(4); // Change the dog's age inside the () to see in human years
 console.log("--------Exercise-------");
 
 //  A Lifetime Supply...
-// You just won a lifetime supply of your favorite snack! The snack company needs to calculate what that actually means and how much they need to give you over your "lifetime". Create a function to help you calculate that amount for yourself to make sure you get the right amount. The function should accept two arguments: person age and the amount he will eats per day. The function should calculate the amount that will be consumed for the rest of your life given a constant maximum age of 100.
+/* 
+  You just won a lifetime supply of your favorite snack! 
+   The snack company needs to calculate what that actually means and 
+   how much they need to give you over your "lifetime". Create a function 
+   to help you calculate that amount for yourself to make sure you get the right amount. 
+   The function should accept two arguments: person age and the amount he will eats per day. 
+   The function should calculate the amount that will be consumed for the rest of your life 
+   given a constant maximum age of 100.
+*/
 
 // Examples:
 
 // calcLifetimeSupply(25, 2) ➞ "The snack company should provide you with 54,788 units, until you are a ripe old age of 100. Happy snacking!"
 
 // calcLifetimeSupply(40, 3) ➞ "The snack company should provide you with 65,745 units, until you are a ripe old age of 100. Happy snacking!"
+const calcLifetimeSupply = (age, amount) => {
+  const maxAge = 100;
+  let amountInYear = amount * 365.25;
+  let units = (maxAge - age) * amountInYear;
+  // i can't find a solution to add a "," between the thousands and hundreds 
+  console.log(`The snack company should provide you with ${Math.round(units)} units, until you are a ripe old age of ${maxAge}. Happy snacking!`);
+};
+calcLifetimeSupply(25, 2); // Change the age and amount of units per day to see how much the company need to give you
 
 console.log("--------Exercise-------");
 //  Number to Month Name
@@ -54,6 +70,23 @@ console.log("--------Exercise-------");
 // monthName(3) ➞ "March"
 // monthName(12) ➞ "December"
 // monthName(6) ➞ "June"
+const monthName = (numb) => {
+  let months = [ "January",
+                 "February", 
+                 "March", 
+                 "April", 
+                 "May", 
+                 "June", 
+                 "July", 
+                 "August", 
+                 "September", 
+                 "October", 
+                 "November", 
+                 "December",
+                ];
+  console.log(months[--numb]);
+}
+monthName(3) // Change the number from 1-12 inside the () to see the month  
 
 console.log("--------Exercise-------");
 // Try to do it by yourself and don't look in yesterday solution. I trust you :)
