@@ -200,7 +200,41 @@ for (let i = 0; i <= 10; ) {
 console.log(text);
 
 // 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
-let countNum = 0;
+
+let st = "Hi this is me 12343 334";
+let stToArr = st.split(" ");
+console.log(stToArr);
+let backToSt = stToArr.join(" ");
+console.log(backToSt);
+
+console.log("1".repeat(3));
+console.log("2".repeat(3));
+
+// Count Occurrences.
+// Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
+
+// Example:
+
+// countOccurrences("this is a string", "i") ➞ 3
+const countOccurrences = (str, chr) => {
+  let strIntoArr = str.split("");
+  console.log(strIntoArr);
+  let count = 0;
+  for (let i = 0; i < strIntoArr.length; i++) {
+    // i == i
+    if (strIntoArr[i] == chr) {
+      count++; // 2
+    }
+  }
+  return count;
+};
+
+console.log(countOccurrences("this is a string", "i"));
+
+console.log("-----");
+
+//1 1 1 2 2 2 3 3 3 4 4 4
+let countNum = 1;
 text = "";
 for (let i = 1; i <= 4; ) {
   text += i + " ";
@@ -211,12 +245,3 @@ for (let i = 1; i <= 4; ) {
   countNum++;
 }
 console.log(text);
-
-let st = "Hi this is me 12343 334";
-let stToArr = st.split(" ");
-console.log(stToArr);
-let backToSt = stToArr.join(" ");
-console.log(backToSt);
-
-console.log("1".repeat(3));
-console.log("2".repeat(3));
