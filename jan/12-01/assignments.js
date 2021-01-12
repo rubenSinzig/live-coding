@@ -7,6 +7,16 @@ console.log("--------Exercise-------");
 // isLEQZero(0) ➞ true
 // isLEQZero(-4) ➞ true
 // isLEQZero(10) ➞ false
+const isLEQZero = (numb) => {
+  if (numb <= 0) {
+    console.log(true);
+  }
+  else {
+    console.log(false);
+  }
+};
+isLEQZero(0); // change the number inside the () to see if it's true or false
+
 console.log("--------Exercise-------");
 
 //  Dog Years. Create a function which calculates how old a dog is in dog years. The function should accept one argument that is the dog's age in human years.
@@ -15,6 +25,11 @@ console.log("--------Exercise-------");
 // Example:
 
 // dogAge(4) ➞ "Your doggy is 28 years old in dog years!"
+const dogYears = (numb) => {
+  let dog = numb * 7;
+  console.log(`Your doggy is ${dog} years old in dog years!`);
+}
+dogYears(4); // Change the dog's age inside the () to see in human years
 
 console.log("--------Exercise-------");
 
