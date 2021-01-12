@@ -100,10 +100,18 @@ The function should count the number of occurrences of that letter in the string
 
 // countOccurrences("this is a string", "i") ➞ 3
 const countOccurrences = (str, letter) => {
-  // ????????????????????????????????????????????????
+  let counter = 0;
+  let strToArray = str.split("");
+  // console.log(strToArray);
+  for (i = 0; i < strToArray.length; i++) {
+   if (strToArray[i] == letter) {
+     counter++;
+   }
+  }
+  console.log(counter);
 }; 
 countOccurrences("this is a string", "i");
-
+countOccurrences("Hi I am Ruben", "u");
 
 console.log("--------Exercise-------");
 /*  draw this shapes in your console
@@ -164,6 +172,27 @@ Bonus: create another function by doing some changes to the previous function in
   12
   1
 */
+const numbersCount = () => {
+  for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+      line += j +" ";
+    }
+    console.log(line);
+  }
+};
+numbersCount();
+
+const numbersCount2 = () => {
+  for (let i = 5; i >= 1; i--) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+      line += j +" ";
+    }
+    console.log(line);
+  }
+};
+numbersCount2();
 
 console.log("--------Exercise-------");
 /* create a function should that checks if a store contains a specific product in it's inventory.
@@ -176,6 +205,23 @@ let storeArr= ["milk", "eggs", "cheese", "butter"];
 inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
+const inventoryCheck = (product) => {
+  let storeArr= [
+                "milk", 
+                "eggs", 
+                "cheese", 
+                "butter",
+                ];
+  // console.log(storeArr);
+  let checkProduct = storeArr.includes(product, 0);
+  if (checkProduct) {
+    console.log(true);
+  }
+  else {
+    console.log(false);
+  }
+}
+inventoryCheck("cheese");
 
 console.log("--------Exercise-------");
 // Extra work :)
