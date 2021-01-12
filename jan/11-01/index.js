@@ -232,12 +232,13 @@ const countOccurrences = (str, chr) => {
 console.log(countOccurrences("this is a string", "i"));
 
 console.log("-----");
-// 1 1 1 1 2 2 2 3 3 3 4 4 4 need to check not working well
-countNum = 0;
+
+//1 1 1 2 2 2 3 3 3 4 4 4
+let countNum = 1;
 text = "";
 for (let i = 1; i <= 4; ) {
   text += i + " ";
-  if (countNum !== 0 && countNum % 3 == 0) {
+  if (countNum !== 0 && countNum % 3 === 0) {
     i++;
     countNum = 0;
   }
