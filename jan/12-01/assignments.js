@@ -226,7 +226,8 @@ inventoryCheck("cheese");
 console.log("--------Exercise-------");
 // Extra work :)
 // create a repo for this app. we are coming later to it :)
-// Create a program that generate a random password with the length of 30 character, every time you call the function should give you a different password
+// Create a program that generate a random password with the length of 30 character, 
+// every time you call the function should give you a different password
 
 // Examples you will have other passwords for sure
 
