@@ -85,17 +85,25 @@ const monthName = (numb) => {
                  "December",
                 ];
   console.log(months[--numb]);
-}
-monthName(3) // Change the number from 1-12 inside the () to see the month  
+};
+monthName(3); // Change the number from 1-12 inside the () to see the month  
 
 console.log("--------Exercise-------");
 // Try to do it by yourself and don't look in yesterday solution. I trust you :)
 // Count Occurrences.
-// Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
+/*
+Create a function that accepts two arguments: a string and a letter. 
+The function should count the number of occurrences of that letter in the string.
+*/
 
 // Example:
 
 // countOccurrences("this is a string", "i") ➞ 3
+const countOccurrences = (str, letter) => {
+  // ????????????????????????????????????????????????
+}; 
+countOccurrences("this is a string", "i");
+
 
 console.log("--------Exercise-------");
 /*  draw this shapes in your console
@@ -120,9 +128,12 @@ Third shape
 
 Bounce: Forth shape
 Be creative and show us your Artistic side
-
-
 */
+console.log(`First shape\nT\nTT\nTTT\nTTTT\n`);
+console.log(`Second shape\n****\n***\n**\n*\n`);
+console.log(`Third shape\n1\n12\n123\n1234\n12345\n`);
+// a movie character made of wood
+console.log(`Forth shape\n\n         *******\n       ***********\n      **   ***   **\n      **   * *   **\n      *************\n            *************\n      *************\n      ****     ****\n       ***********\n        *********\n`)
 
 console.log("--------Exercise-------");
 /*  Finish the following function so it outputs looks like this:
