@@ -163,3 +163,152 @@ const countOccurrences = (str, letter) => {
 console.log(countOccurrences("this is a string", "i")); // 3
 console.log(countOccurrences("xoxoxoxoxoxox", "x")); //7
 console.log(countOccurrences("x", "Y")); // 0
+
+// Create a program that generate a random password with the length of 30 character, every time you call the function should give you a different password
+// Examples:
+// passwordGen()  ➞ Y3mI9x7bvPY86T?oM§hIbgh!MLwA77N
+// passwordGen()  ➞ Oy$tkBGoo5fg§mO4AdV&Kh8XXZR4d7K
+// passwordGen()  ➞ v0ZwDrn@hfI€kOKWH§k6kqub6zfpuyP
+
+const passwordGen = () => {
+  let characters = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    7,
+    8,
+    9,
+    "!",
+    "§",
+    "$",
+    "%",
+    "&",
+    "?",
+    "@",
+    "€",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  let result = "";
+  let randomNum;
+
+  for (let i = 0; i <= 30; i++) {
+    randomNum = Math.floor(Math.random() * characters.length);
+    // result = result + characters[randomNum];
+    result += characters[randomNum];
+  }
+  return result;
+};
+
+// console.log(passwordGen());
+// other way
+let numbers = [0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9];
+let alpha = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+let charactersSp = ["!", "§", "$", "%", "&", "?", "@", "€"];
+const passGen = () => {
+  let result = "";
+  const randomNum = (arr) => {
+    let num = Math.floor(Math.random() * arr.length);
+    return num;
+  };
+  for (let i = 0; i < 17; i++) {
+    if (i % 2 == 0) {
+      // randomNum = Math.floor(Math.random() * numbers.length);
+      result += numbers[randomNum(numbers)];
+    }
+    if (i % 3 == 0) {
+      // randomNum = Math.floor(Math.random() * alpha.length);
+      result += alpha[randomNum(alpha)];
+    } else {
+      // randomNum = Math.floor(Math.random() * alpha.length);
+      result += alpha[randomNum(alpha)].toUpperCase();
+    }
+    if (i % 5 == 0) {
+      // randomNum = Math.floor(Math.random() * charactersSp.length);
+      result += charactersSp[randomNum()];
+    }
+  }
+
+  return result;
+};
+
+console.log(passGen());
