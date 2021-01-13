@@ -67,17 +67,17 @@ console.log(isEqualNumXandO("zpzpzpp")); // true (returns true if no x and o)
 console.log(isEqualNumXandO("zzoo")); // false
 
 // practicing on Loops
-const draw = (char) => {
-    let result = "";
-    // console.log(char);
-    for (let i = 0; i < 20; i++) {
-        console.log(char + "*");
-        for (let j = 0; j < i; j++) {
+// const draw = (char) => {
+//     let result = "";
+//     // console.log(char);
+//     for (let i = 0; i < 20; i++) {
+//         console.log(char + "*");
+//         for (let j = 0; j < i; j++) {
             
-        }
-        // console.log();
-    }
-};
-console.log(draw("*"));
+//         }
+//         // console.log();
+//     }
+// };
+// console.log(draw("*"));
 
 
