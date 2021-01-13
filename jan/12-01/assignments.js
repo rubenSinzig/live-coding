@@ -336,7 +336,7 @@ const isEqualNumXandO = (str) => {
       counterO++;
     }
   }
-
+  // need some more work :)
   if (counterX === counterO) {
     return true;
   } else {
@@ -347,3 +347,17 @@ const isEqualNumXandO = (str) => {
 console.log(isEqualNumXandO("zpzpzpp"));
 console.log(isEqualNumXandO("zzOo"));
 console.log(isEqualNumXandO("xxOo"));
+
+// Calculate the three bills including tips:
+//€22.35 + 10% tip
+//€26.67 + 15% tip
+//€35.92 + 20% tip
+// Calculate the three bills including tips: €22.35 + 10% tip €26.67 + 15% tip €35.92 + 20% tip
+const bill = (billOne, billTwo, billThree) => {
+  const tenP = 1.1;
+  const fifteenP = 1.15;
+  const twentyFiveP = 1.2;
+  return ` bill one ${billOne * tenP} € bill two ${billTwo * fifteenP} € `;
+};
+
+console.log(bill(22.35, 26.65, 35, 92));
