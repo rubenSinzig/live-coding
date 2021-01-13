@@ -286,28 +286,22 @@ let alpha = [
 let charactersSp = ["!", "§", "$", "%", "&", "?", "@", "€"];
 const passGen = () => {
   let result = "";
-  const randomNum = (arr) => {
-    let num = Math.floor(Math.random() * arr.length);
-    return num;
+  const randomNumGetter = (arr) => {
+    return Math.floor(Math.random() * arr.length);
   };
-  for (let i = 0; i < 17; i++) {
+  for (let i = 0; i <= 17; i++) {
     if (i % 2 == 0) {
-      // randomNum = Math.floor(Math.random() * numbers.length);
-      result += numbers[randomNum(numbers)];
+      result += numbers[randomNumGetter(numbers)];
     }
     if (i % 3 == 0) {
-      // randomNum = Math.floor(Math.random() * alpha.length);
-      result += alpha[randomNum(alpha)];
+      result += alpha[randomNumGetter(alpha)].toUpperCase();
     } else {
-      // randomNum = Math.floor(Math.random() * alpha.length);
-      result += alpha[randomNum(alpha)].toUpperCase();
+      result += alpha[randomNumGetter(alpha)];
     }
     if (i % 5 == 0) {
-      // randomNum = Math.floor(Math.random() * charactersSp.length);
-      result += charactersSp[randomNum()];
+      result += charactersSp[randomNumGetter(charactersSp)];
     }
   }
-
   return result;
 };
 
