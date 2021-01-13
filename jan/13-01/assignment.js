@@ -65,3 +65,19 @@ console.log(isEqualNumXandO("xooxx")); // false
 console.log(isEqualNumXandO("ooxXm")); // true (case insensitive)
 console.log(isEqualNumXandO("zpzpzpp")); // true (returns true if no x and o)
 console.log(isEqualNumXandO("zzoo")); // false
+
+// practicing on Loops
+const draw = (char) => {
+    let result = "";
+    // console.log(char);
+    for (let i = 0; i < 20; i++) {
+        console.log(char + "*");
+        for (let j = 0; j < i; j++) {
+            
+        }
+        // console.log();
+    }
+};
+console.log(draw("*"));
+
+
