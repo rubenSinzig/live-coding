@@ -94,3 +94,72 @@ const calcLifetimeSupply = (age, amountPerDay) => {
   return `The snack company should provide you with ${result} units, until you are a ripe old age of 100. Happy snacking!`;
 };
 console.log(calcLifetimeSupply(40, 3));
+/*
+Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
+  12345
+  1234
+  123
+  12
+  1
+*/
+
+const numbersCount = () => {
+  let text;
+  //           4>=0
+  for (let i = 5; i >= 0; i--) {
+    // something
+    // i = 3
+    text = "";
+    // text = ""
+    //                5<=4
+    for (let j = 1; j <= i; j++) {
+      // j= 5
+      // something
+      text += j;
+      // "123"+ 4
+    }
+    // something
+    console.log(text);
+    // "1234"
+  }
+};
+
+numbersCount();
+
+//  Dog Years. Create a function which calculates how old a dog is in dog years. The function should accept one argument that is the dog's age in human years.
+//PS:  calculate the dog's age in dog years based on the calculation of 1 human year = 7 dog years.
+
+// Example:
+
+// dogAge(4) ➞ "Your doggy is 28 years old in dog years!"
+const dogAge = (dogAgeInHuman) => {
+  let result = dogAgeInHuman * 7;
+  return `Your doggy is ${result} years old in dog years!`;
+};
+
+console.log(dogAge(4));
+
+// Count Occurrences.
+// Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
+
+// Example:
+
+// countOccurrences("this is a string", "i") ➞ 3
+
+const countOccurrences = (str, letter) => {
+  //let result = str.split("");
+  //console.log(result);
+  // let counter = 0;
+  // for (let i = 0; i < result.length; i++) {
+  //   if (result[i] == letter) {
+  //     counter++;
+  //   }
+  // }
+  let result = str.split(letter).length - 1;
+
+  return result;
+};
+
+console.log(countOccurrences("this is a string", "i")); // 3
+console.log(countOccurrences("xoxoxoxoxoxox", "x")); //7
+console.log(countOccurrences("x", "Y")); // 0
