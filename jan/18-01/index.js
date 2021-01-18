@@ -142,3 +142,41 @@ let age = 31;
 
 console.log(lifeStatus(firstName, age));
 console.log(lifeStatus("Zain", 12));
+
+let color = "red";
+switch (color) {
+  case "pink":
+    isLoged = false;
+
+    // more code
+    console.log("cool this is pink");
+    break;
+  case "red":
+    console.log("cool this is red");
+    break;
+  case "white":
+    console.log("cool this is white");
+    break;
+  default:
+    console.log("sorry you need to enter a color");
+}
+// more
+let userKidsNumber = 5;
+switch (userKidsNumber) {
+  case 1:
+    console.log("You are new parent with 1 child");
+    break;
+  case 2:
+    console.log("You have 2 kids nice ");
+    break;
+  case 3:
+    console.log("You have 3 kids nice ");
+    break;
+  case 4:
+  case 5:
+  case 6:
+    console.log("You have many kids nice ");
+    break;
+  default:
+    console.log("Cool you are happy parent :) ");
+}
