@@ -128,3 +128,7 @@ console.log(names[number1]);
 const NumArr = [22, 33, 55, 6754, 2, 22, 4, 55, 677, 432, 2];
 console.log(NumArr[NumArr.length - 1]);
 // for loop
+let bOne = 33;
+let billOneTip = 1.1;
+result = `bOne ${Math.floor(bOne * billOneTip)} `;
+console.log(result);
