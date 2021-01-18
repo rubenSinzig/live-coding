@@ -223,7 +223,23 @@ console.log(arrayToStr(["Berlin", "Paris", "Prague", "Rome"]));
 // [Maria, Mike, Paul, Doven] ➞ expected output: “Hello Maria! Hello Mike! Hello Paul! Hello Doven!”
 // Bonus [Susan, Rezvane, Mark] ➞ expected bonus output: “Susan is at index 0 of my friends and family array, Rezvane is at index 1 of my friends and family array, Mark is at index 2 of my friends and family array”.
 
+const hallo = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(`Hallo ${arr[i]} ,I am the index of ${i} `);
+  }
+};
+hallo(["Susan", "Rezvane", "Mark"]);
 // Odds and Evens.
 // Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 // [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+const oddOrEven = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2) {
+      console.log(arr[i] - 1);
+    } else {
+      console.log(arr[i] + 1);
+    }
+  }
+};
+oddOrEven([3, 5, 2, 4]);
