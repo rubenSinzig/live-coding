@@ -1,5 +1,5 @@
 const names = ["Zain", "Nancy", "Olga"];
-const smileys = ["😎", "🤓", "🥳"];
+
 // .length
 // to get the number of elements in an array
 console.log(names.length);
@@ -80,12 +80,52 @@ fakeCopy.pop();
 console.log(add);
 // .slice()
 // to make a shallow copy
-let shallowCopy = add.slice(1, 3);
+// [ 'Berlin', 'Paris', 'Pra', 'Malaga', 'Hi' ]
+let shallowCopy = add.slice(1, 5); // 4
 console.log(add.slice(1, 3));
 console.log(shallowCopy);
 shallowCopy.push("London");
 console.log(shallowCopy);
 console.log(add);
 
-let x = 10;
-let z = x;
+const smileys = ["😎", "🤓", "🥳"];
+let otherArr = smileys.slice(0, 2); // 2
+console.log(otherArr);
+// using a negative number in slice
+let otherArr2 = smileys.slice(-2);
+console.log(otherArr2);
+// Create a program with two variables: “item” and “times”.
+// Create a program that repeats the “item” as many times as specified by “times”.
+// The first variable (“item”) is the item that needs repeating while the second argument (“times”) is the number of times the item is to be repeated.
+// Print the result in an array. Examples:
+// (“example”, 3) ➞ [“example”, “example”, “example”]
+
+const rep = (item, times) => {
+  let result = [];
+  for (let i = 0; i < times; i++) {
+    result.push(item);
+  }
+  return result;
+};
+console.log(rep("Hadi", 3));
+
+// The Greater Numbers.
+//  Create a function which accepts two arguments:
+// the first argument being an array of numbers,
+//and the second argument being a number.
+// The function should return the elements of the array which are greater than the second argument.
+// i.e.
+// findGreatest([3, 4, 5], 4) ➞ 5
+// findGreatest([10, 20, 30], 12) ➞ 20, 30
+// findGreatest([0, 10, 3], 4) ➞ 10
+const findGreatest = (arr, num) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > num) {
+      result.push(arr[i]);
+    }
+  }
+  return result.join(", ");
+};
+
+console.log(findGreatest([3, 4, 12, 44], 3));
