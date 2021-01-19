@@ -110,18 +110,15 @@ console.log("---------------");
 // Examples:
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 // [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
-/*
-I can not find the right solution. I think the problem is in line 122,124 or 127.
-*/
 let arrNumOne = [3, 5, 2, 4];
 let arrNumTwo = [6, 9, 10, 20];
 const evenOdd = (arr) => {
   // console.log(arr);
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2) {
-      arr[i] + 1;
+    if (arr[i] % 2 == 0) {
+      arr[i] -= 1;
     } else {
-      arr[i] - 1;
+      arr[i] += 1;
     }
   }
   return arr;
