@@ -118,3 +118,31 @@ console.log(findVowels("this is a string"));
 // console.log(`this is a string -> ${findVowels(strTwo)}`);
 // console.log(`a, a, a, c -> ${findVowels(strThree)}`);
 console.log("---------------------");
+// No Duplicates!
+// A set is a collection of unique items.
+// A set can be formed from an array by removing all duplicate items.
+// Create a program which transforms an array into a set of unique values.
+// See the examples below.
+// Example:
+// [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
+// [1, 6, 6, 9, 9] ➞ [1, 6, 9]
+// [2, 2, 2, 2, 2, 2] ➞ [2]
+// [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
+// done with help
+const collection = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    if (!newArr.includes(arr[i])) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+};
+console.log(collection([1, 4, 4, 7, 7, 7]));
+console.log(collection([1, 6, 6, 9, 9]));
+console.log(collection([2, 2, 2, 2, 2, 2]));
+console.log(collection([5, 10, 15, 20, 25]));
+console.log("---------------------");
+//
+console.log("---------------------");
