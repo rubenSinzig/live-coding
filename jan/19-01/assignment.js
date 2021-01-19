@@ -10,6 +10,7 @@
 // .concat() merge two or more arrays
 // .slice(indexOf, end indexOf) shallow copy
 // ________________________________________________
+console.log("---------------------");
 // Repeat it.
 // Create a program with two variables:
 // “item” and “times”.
@@ -40,18 +41,17 @@ console.log("---------------------");
 // findGreatest([10, 20, 30], 12) ➞ 20, 30
 // findGreatest([0, 10, 3], 4) ➞ 10
 const findGreatest = (arr, num) => {
-  // let greaterThanNum;
+  let greaterThanNum = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > num) {
-      console.log(arr[i]);
+      greaterThanNum.push(arr[i]);
     }
   }
-  // not enough time to find out how to print it in one line.
-  // like this: findGreatest([10, 20, 30], 12) ➞ 20, 30
+  return greaterThanNum.join(", ");
 };
-findGreatest([3, 4, 5], 4);
-findGreatest([10, 20, 30], 12);
-findGreatest([0, 10, 3], 4);
+console.log(findGreatest([3, 4, 5], 4));
+console.log(findGreatest([10, 20, 30], 12));
+console.log(findGreatest([0, 10, 3], 4));
 console.log("---------------------");
 // AEIOU:
 // Vowels.
