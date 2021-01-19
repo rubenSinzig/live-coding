@@ -63,12 +63,29 @@ console.log(newArr);
 // create a string from an array
 let newStr = newArr.join(" ");
 console.log(newStr);
+
+// .concat()
+// merge two (or more) arrays
+let arr1 = [1, 233, 55];
+let arr2 = [33, 3, 55];
+let arr3 = arr1.concat(arr2, [22, 4, 555, 44]);
+console.log(arr3);
+
+const add = ["Berlin", "Paris", "Pra", "Malaga", "Hi"];
+let fakeCopy = add;
+console.log(fakeCopy);
+fakeCopy.push("Dubai");
+console.log(add);
+fakeCopy.pop();
+console.log(add);
 // .slice()
 // to make a shallow copy
+let shallowCopy = add.slice(1, 3);
+console.log(add.slice(1, 3));
+console.log(shallowCopy);
+shallowCopy.push("London");
+console.log(shallowCopy);
+console.log(add);
 
-let arr = [];
-
-for (let i = 0; i < 5; i++) {
-  arr.push(i);
-}
-console.log(arr);
+let x = 10;
+let z = x;
