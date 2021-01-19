@@ -94,10 +94,20 @@ console.log("---------------");
 // Loop through the array and add the city names to a string.
 // Examples:
 // [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome.”
+/*
+output is "Berlin, Paris, Prague, Rome, ." but output should be "Berlin, Paris, Prague, Rome."
+I have to look again on this assignment!!!!!!
+*/
 let city = ["Berlin", "Paris", "Prague", "Rome"];
-const arrToStr = () => {
-  // not finish now
+const arrToStr = (arr) => {
+  let arr2Str = "";
+  let comma = ", ";
+  for (let i = 0; i < arr.length; i++) {
+    arr2Str += arr[i] + comma;
+  }
+  return arr2Str + ".";
 };
+console.log(arrToStr(city));
 console.log("---------------");
 // Hello
 // Create an array filled with your friends’ or family’s names.
