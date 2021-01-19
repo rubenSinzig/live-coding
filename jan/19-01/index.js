@@ -90,6 +90,7 @@ console.log(add);
 
 const smileys = ["😎", "🤓", "🥳"];
 let otherArr = smileys.slice(0, 2); // 2
+console.log(smileys);
 console.log(otherArr);
 // using a negative number in slice
 let otherArr2 = smileys.slice(-2);
@@ -129,3 +130,17 @@ const findGreatest = (arr, num) => {
 };
 
 console.log(findGreatest([3, 4, 12, 44], 3));
+
+let originalArray = [
+  "JavaScript",
+  "will",
+  "turn",
+  "your",
+  "dreams",
+  "into",
+  "Reality",
+];
+let shallowCopyOg = originalArray.slice(-1); //
+
+console.log(shallowCopyOg);
+console.log(originalArray);
