@@ -100,9 +100,23 @@ const arrToStr = () => {
 };
 console.log("---------------");
 // Hello
-//  Create an array filled with your friends’ or family’s names. Loop over the array and greet each friend. Bonus: Print the indexes of each item in the array. Examples:
+// Create an array filled with your friends’ or family’s names.
+// Loop over the array and greet each friend.
+// Bonus:
+// Print the indexes of each item in the array.
+// Examples:
 // [Maria, Mike, Paul, Doven] ➞ expected output: “Hello Maria! Hello Mike! Hello Paul! Hello Doven!”
-// Bonus [Susan, Rezvane, Mark] ➞ expected bonus output: “Susan is at index 0 of my friends and family array, Rezvane is at index 1 of my friends and family array, Mark is at index 2 of my friends and family array”.
+// Bonus:
+// [Susan, Rezvane, Mark] ➞ expected bonus output: “Susan is at index 0 of my friends and family array, Rezvane is at index 1 of my friends and family array, Mark is at index 2 of my friends and family array”.
+let arrNames = ["Maria", "Mike", "Paul", "Doven", "Susan", "Rezvane", "Mark"];
+const friendsAndFamily = (arr) => {
+  result = "";
+  for (let i = 0; i < arr.length; i++) {
+    result += `Hello ${arr[i]}! ${arr[i]} is at index ${i} of my friends and family array,\n`;
+  }
+  return result;
+};
+console.log(friendsAndFamily(arrNames));
 console.log("---------------");
 // Odds and Evens.
 // Create a program that changes a given array by adding 1 to each odd integer
