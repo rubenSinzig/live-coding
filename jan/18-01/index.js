@@ -233,12 +233,16 @@ hallo(["Susan", "Rezvane", "Mark"]);
 // Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 // [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+
+// DRY
 const oddOrEven = (arr) => {
+  let currentValue;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2) {
-      console.log(arr[i] - 1);
+    currentValue = arr[i];
+    if (currentValue % 2) {
+      console.log(currentValue - 1);
     } else {
-      console.log(arr[i] + 1);
+      console.log(currentValue + 1);
     }
   }
 };
