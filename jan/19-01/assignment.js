@@ -24,12 +24,11 @@ let times = 3;
 const repeat = (str, num) => {
   let arr = [];
   for (let i = 0; i < num; i++) {
-    arr = str.repeat(num);
+    arr.push(item);
   }
-  // TIME IS OVER NOT FINISH
-  console.log(arr);
+  return arr;
 };
-repeat(item, times);
+console.log(repeat(item, times));
 console.log("---------------------");
 // The Greater Numbers.
 // Create a function which accepts two arguments:
