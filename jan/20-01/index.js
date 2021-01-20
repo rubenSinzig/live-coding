@@ -101,6 +101,24 @@ const findVowels2 = (str) => {
   }
   return counter;
 };
+
+const findVowels3 = (str) => {
+  let counter = 0;
+  let strToArr = str.toLowerCase().split("");
+  for (let i = 0; i < strToArr.length; i++) {
+    switch (strToArr[i]) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+        counter++;
+        break;
+    }
+  }
+  return `You had ${counter} Vowels`;
+};
+console.log(findVowels3("Hi this is cool"));
 // No Duplicates!
 // A set is a collection of unique items. A set can be formed from an array by removing all duplicate items. Create a program which transforms an array into a set of unique values. See the examples below. Example:
 // [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
