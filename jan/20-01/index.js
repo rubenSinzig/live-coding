@@ -108,18 +108,28 @@ const findVowels2 = (str) => {
 // [2, 2, 2, 2, 2, 2] ➞ [2]
 // [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
 
-const cleanUp = (arr) => {
-  let result = []; // 5 , 10
+function cleanUp(arr) {
+  let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (!result.includes(arr[i])) {
-      // 10
       result.push(arr[i]);
     }
   }
   return result;
-};
-console.log(cleanUp([5, 10, 5, 10, 25]));
-// [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
+}
+
+console.log(cleanUp([5, 5, 15, 20, 25, 5, 5, 15]));
+
+function cleanUp2(arr) {
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      // still fixing the problem, will update soon
+    }
+  }
+  return arr;
+}
+
+console.log(cleanUp2([5, 5, 15, 20, 25, 5, 5, 15]));
 
 // SumOfNumbers.
 
@@ -185,7 +195,7 @@ console.log(isStrStartOfWord("bu", "ttobun"));
 
 const isEqualSlices = (totalSlices, numOfRecipients, slicePerPerson) => {
   let neededSlices = numOfRecipients * slicePerPerson;
-  return `your had ${totalSlices >= neededSlices} so `;
+  return `your had ${totalSlices >= neededSlices} so good luck with that `;
 };
 
 console.log(isEqualSlices(24, 12, 2));
