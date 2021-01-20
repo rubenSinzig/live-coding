@@ -183,5 +183,5 @@ const dictionary2 = (str, arr) => {
   return result;
 };
 
-console.log(dictionary2("bo", ["cool", "Bool", "nool", "doOOol"]));
-console.log(dictionary2("bo", ["bool", "nool", "doOOol"]));
+console.log(dictionary2("bo", ["cool", "Bool", "nool", "doOOol"])); // [ 'bool' ]
+console.log(dictionary2("bo", ["ooBol", "nool", "doOOol"])); // empty array
