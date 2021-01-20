@@ -83,6 +83,24 @@ const findVowels = (str) => {
 };
 console.log(findVowels("Hi this is nice party, will be"));
 
+const findVowels2 = (str) => {
+  let currentValue;
+  let counter = 0;
+  let toLowStr = str.toLowerCase();
+  for (let i = 0; i < toLowStr.length; i++) {
+    currentValue = toLowStr[i];
+    if (
+      currentValue == "i" ||
+      currentValue == "a" ||
+      currentValue == "e" ||
+      currentValue == "o" ||
+      currentValue == "u"
+    ) {
+      counter++;
+    }
+  }
+  return counter;
+};
 // No Duplicates!
 // A set is a collection of unique items. A set can be formed from an array by removing all duplicate items. Create a program which transforms an array into a set of unique values. See the examples below. Example:
 // [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
@@ -98,18 +116,88 @@ const cleanUp = (arr) => {
       result.push(arr[i]);
     }
   }
-
   return result;
 };
 console.log(cleanUp([5, 10, 5, 10, 25]));
+// [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
+
+// SumOfNumbers.
+
+// Create a program that adds up the numbers in an array (of at least 3 numbers). Bonus: Print to screen both the sum and the product of these numbers.
 
 const sumOfNumbers = (arr) => {
-  let result = 0;
+  let sum = 0;
+  let product = 1;
   for (let i = 0; i < arr.length; i++) {
-    result += arr[i];
-    console.log(result);
+    sum += arr[i];
+    product *= arr[i];
   }
-
-  return result;
+  return `The sum of that arr is ${sum}, the product also is ${product}`;
 };
-console.log(sumOfNumbers([1, 3, 5]));
+
+console.log(sumOfNumbers([3, 4, 4, 6]));
+// Add Up.
+
+// Create a function that takes an integer as an argument. Add up all the integers from 1 to the integer you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+// Examples:
+
+// sumIntFrom1ToN(4) ➞ 10 sumIntFrom1ToN(13) ➞ 91 sumIntFrom1ToN(600) ➞ 180300
+
+const sumIntFrom1ToN = (num) => {
+  let sum = 0;
+  for (let i = 0; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+};
+
+console.log(sumIntFrom1ToN(7));
+// String Check.
+
+// Create a function that takes a string and a word, and then returns true or false depending on whether the word starts with the initial string.
+
+// Examples:
+
+// isStrStartOfWord("bu", "button") ➞ true isStrStartOfWord("tri", "triplet") ➞ true isStrStartOfWord("beau", "pastry") ➞ false
+
+const isStrStartOfWord = (str, word) => {
+  let lowStr = str.toLowerCase();
+  let lowWord = word.toLowerCase();
+  return lowWord.substring(0, lowStr.length) == lowStr;
+};
+console.log(isStrStartOfWord("bu", "button"));
+console.log(isStrStartOfWord("bu", "ttobun"));
+// Pie.
+
+// Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+
+// Total number of slices.
+// Number of recipients.
+// How many slices each person gets. Examples:
+// isEqualSlices(11, 5, 3) ➞ false // 5 people x 3 slices each = 15 slices > 11 slices
+
+// isEqualSlices(8, 3, 2) ➞ true
+
+// isEqualSlices(8, 3, 3) ➞ false
+
+// isEqualSlices(24, 12, 2) ➞ true
+
+const isEqualSlices = (totalSlices, numOfRecipients, slicePerPerson) => {
+  let neededSlices = numOfRecipients * slicePerPerson;
+  return `your had ${totalSlices >= neededSlices} so `;
+};
+
+console.log(isEqualSlices(24, 12, 2));
+console.log(isEqualSlices(8, 3, 3));
+// isPalindrome.
+
+// Write a program to check whether a word is a palindrome or not. Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat
+
+const isPalindrome = (str) => {
+  let wordToArr = str.toLowerCase().split("");
+  //console.log(wordToArr);
+  return str === wordToArr.reverse().join("");
+};
+
+console.log(isPalindrome("tarrattarrat"));
