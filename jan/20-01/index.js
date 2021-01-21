@@ -139,14 +139,12 @@ function cleanUp(arr) {
 console.log(cleanUp([5, 5, 15, 20, 25, 5, 5, 15]));
 
 function cleanUp2(arr) {
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) {
-      // still fixing the problem, will update soon
-    }
-  }
-  return arr;
+  //  for (i = 0; i < arr.length; i++) {
+  //     // if (arr[i] === arr[i + 1]) {
+  //     //   // still fixing the problem, will update soon
+  //     // }
+  //
 }
-
 console.log(cleanUp2([5, 5, 15, 20, 25, 5, 5, 15]));
 
 // SumOfNumbers.
@@ -224,7 +222,6 @@ console.log(isEqualSlices(8, 3, 3));
 
 const isPalindrome = (str) => {
   let wordToArr = str.toLowerCase().split("");
-  //console.log(wordToArr);
   return str === wordToArr.reverse().join("");
 };
 
