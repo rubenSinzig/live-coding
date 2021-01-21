@@ -293,11 +293,13 @@ const passGen = () => {
     if (i % 2 == 0) {
       result += numbers[randomNumGetter(numbers)];
     }
+    // some other if
     if (i % 3 == 0) {
       result += alpha[randomNumGetter(alpha)].toUpperCase();
     } else {
       result += alpha[randomNumGetter(alpha)];
     }
+    // some other if
     if (i % 5 == 0) {
       result += charactersSp[randomNumGetter(charactersSp)];
     }
