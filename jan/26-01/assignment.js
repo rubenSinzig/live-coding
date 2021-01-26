@@ -170,7 +170,7 @@ const howManyStr = (str, letter) => {
   let result = 0;
   let strToArr = str.split("");
   // console.log(strToArr);
-  const counter = strToArr.map((item, index) => {
+  const counter = strToArr.find((item) => {
     if (item == letter) {
       result++;
     }
