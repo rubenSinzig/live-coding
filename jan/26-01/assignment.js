@@ -28,10 +28,16 @@ const twofer = (userName = "you") => {
 console.log(twofer("Fran"));
 console.log(twofer());
 console.log("-------- assignment Two --------");
-// Write a function  that it still calculates the power of a number even if the exp argument is not passed to it. The default exp should be set to 2.
+// Write a function that it still calculates the power of a number
+// even if the exp argument is not passed to it. The default exp should be set to 2.
 // e.g
 // console.log(exponent(3, 3)) ---> 27
 // console.log(exponent(3)) ---> 9
+const exponent = (numOne, numTwo = 2) => {
+  return Math.pow(numOne, numTwo);
+};
+console.log(exponent(3, 3));
+console.log(exponent(3));
 console.log("-------- assignment Three --------");
 // Write a function that it returns the total amount of arguments passed to it.
 // e.g
