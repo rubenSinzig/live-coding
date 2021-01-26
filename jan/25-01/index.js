@@ -35,7 +35,6 @@ const findGreatest = (arr, num) => {
   }
   return result.join(", ");
 };
-console.log(findGreatest([0, 10, 3], 4));
 console.log(findGreatest([10, 20, 30], 12));
 // The longest word Create a function to find the longest word in a given string.
 
@@ -65,7 +64,6 @@ const reverse = (num) => {
 };
 
 console.log(reverse(34532));
-console.log(reverse(11111));
 
 // Alphabetical Order Create a function to sort a string into alphabetical order. NB: assume numbers, symbols and punctuation are not included in the string.
 
@@ -117,7 +115,6 @@ const hackerSpeak = (str) => {
     }
     hackerSpeak.push(letters[i]);
   }
-
   return hackerSpeak.join("");
 };
 
@@ -128,17 +125,17 @@ const hackerSpeak = (str) => {
 // Examples:
 
 // toCamelCase("hello_world") ➞ "helloWorld"
-// toCamelCase("javascript_is_fun") ➞ "javaScriptIsFun"
+// toCamelCase("javascript_is_fun") ➞ "javascriptIsFun"
 
 const toCamelCase = (str) => {
   let strToArr = str.toLowerCase().split("_");
   for (let i = 1; i < strToArr.length; i++) {
-    strToArr[i] = strToArr[i][0].toUpperCase() + strToArr[i].slice(1);
+    strToArr[i] = strToArr[i][0].toUpperCase() + strToArr[i].slice(1); //  W + orld = World
   }
   return strToArr.join("");
 };
-// console.log(toCamelCase("hello_world_see"));
-// console.log(toCamelCase("Java_Script"));
+console.log(toCamelCase("hello_world"));
+console.log(toCamelCase("javascript_is_fun"));
 // Is it Symmetrical? Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. NB: A number is symmetrical when it is the same as its reverse.
 
 // Examples:
@@ -152,8 +149,14 @@ const toCamelCase = (str) => {
 const isSymmetrical = (num) => {
   return num.toString() === num.toString().split("").reverse().join("");
 };
-// console.log(isSymmetrical(1112111));
-// Pig Latin Translation Create a function that takes a string of words and moves the first letter of each word to the end of it, then adds 'ay' to the end of the word. This is a basic form of "Pig Latin". Move the first letter of each word to the end of the word. Add "ay" to the end of the word. Words starting with a vowel (A, E, I, O, U) append "way" to the end instead. Extra Practice
+console.log(isSymmetrical(1112111));
+console.log(isSymmetrical(1123451));
+
+let lettersArr = ["H", "a", "d", "i"];
+console.log(lettersArr.join(""));
+
+// Pig Latin Translation Create a function that takes a string of words and moves the first letter of each word to the end of it, then adds 'ay' to the end of the word. This is a basic form of "Pig Latin".
+// Move the first letter of each word to the end of the word. Add "ay" to the end of the word. Words starting with a vowel (A, E, I, O, U) append "way" to the end instead. Extra Practice
 
 // Preserve proper capitalization as in the examples below. Examples:
 
@@ -162,13 +165,15 @@ const isSymmetrical = (num) => {
 // // pigLatin("He told us a very exciting tale.") ➞ "Ehay oldtay usway away eryvay excitingway aletay."
 
 const pigLatin = (str) => {
-  const lowerCase = str.toLowerCase();
+  const lowerCase = str.toLowerCase().split(".").join("");
   const splitStr = lowerCase.split(" ");
+
   const vowels = ["a", "e", "i", "o", "u"];
   const pigTranslation = [];
   for (let i = 0; i < splitStr.length; i++) {
-    let firstChar = splitStr[i][0];
-    let remainder = splitStr[i].slice(1, splitStr[i].length);
+    // this
+    let firstChar = splitStr[i][0]; // t
+    let remainder = splitStr[i].slice(1, splitStr[i].length); // his
     if (vowels.includes(firstChar)) {
       // checking if i is truthy or falsy.
       //If falsy, then it's the first word because it's 0.
@@ -186,7 +191,8 @@ const pigLatin = (str) => {
     }
   }
 
-  return pigTranslation.join(" ");
+  return `${pigTranslation.join(" ")}.`;
 };
 
-// console.log(pigLatin("this pig latin"));
+console.log(pigLatin("this pig latin."));
+console.log(pigLatin("He told us a very exciting tale."));
