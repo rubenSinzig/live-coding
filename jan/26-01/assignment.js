@@ -44,6 +44,12 @@ console.log("-------- assignment Three --------");
 // console.log(howManyArgs()) ---> 0
 // console.log(howManyArgs(1, false, "hello")) ---> 3
 // console.log(howManyArgs("better")) ---> 1
+const howManyArgs = (...args) => {
+  return args.length;
+};
+console.log(howManyArgs());
+console.log(howManyArgs(1, false, "hello"));
+console.log(howManyArgs("better"));
 console.log("-------- assignment Four --------");
 // Write a function which accepts any amount of numbers and return the sum of their addition
 // e.g
