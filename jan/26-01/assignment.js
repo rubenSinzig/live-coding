@@ -145,9 +145,24 @@ console.log(hackerSpeak("programming is fun"));
 console.log(hackerSpeak("become a coder"));
 console.log("-------- Odds and Evens --------");
 // Odds and Evens.
-// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
+// Create a program that changes a given array by adding 1 to each odd integer
+// and subtracting 1 from each even integer.
+// Examples:
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 // [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+const oddsOrEvens = (arr) => {
+  let result = [];
+  const oddEven = arr.map((item, index) => {
+    if (item % 2 == 0) {
+      result.push(item - 1);
+    } else {
+      result.push(item + 1);
+    }
+  });
+  return result;
+};
+console.log(oddsOrEvens([3, 5, 2, 4]));
+console.log(oddsOrEvens([6, 9, 10, 20]));
 console.log("-------- how many chr in a str --------");
 // how many chr in a str(not case sens)
 // howManyStr(“I like pizza”,“p”) -> 1
