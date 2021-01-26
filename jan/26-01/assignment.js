@@ -166,4 +166,16 @@ console.log(oddsOrEvens([6, 9, 10, 20]));
 console.log("-------- how many chr in a str --------");
 // how many chr in a str(not case sens)
 // howManyStr(“I like pizza”,“p”) -> 1
+const howManyStr = (str, letter) => {
+  let result = 0;
+  let strToArr = str.split("");
+  // console.log(strToArr);
+  const counter = strToArr.map((item, index) => {
+    if (item == letter) {
+      result++;
+    }
+  });
+  return result;
+};
+console.log(howManyStr("I like pizza", "p"));
 console.log("-------- assignment End --------");
