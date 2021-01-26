@@ -73,4 +73,15 @@ console.log("-------- assignment Five --------");
 // console.log(average(1, 2)) ---> 1.5
 // console.log(average(1, 3, 6, 10)) ---> 5
 // console.log(average(12, 14, 16)) ---> 14
+const average = (...num) => {
+  let result = 0;
+  for (let i = 0; i < num.length; i++) {
+    result += num[i];
+  }
+  return result / num.length;
+};
+console.log(average(0));
+console.log(average(1, 2));
+console.log(average(1, 3, 6, 10));
+console.log(average(12, 14, 16));
 console.log("-------- assignment End --------");
