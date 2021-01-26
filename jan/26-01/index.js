@@ -85,12 +85,12 @@ console.log(howManyArgs(1, false, "hello"));
 // console.log(sum(1, 15)) ---> 16
 // console.log(sum(25, 25, 20)) ---> 70
 const sum2 = (...args) => {
-  let result = 0;
-
+  let acc = 0;
   for (let i = 0; i < args.length; i++) {
-    result += args[i];
+    let cur = args[i];
+    acc += cur;
   }
-  return result;
+  return acc;
 };
 console.log(sum2(25, 25, 20));
 // Bonus: Write a function which accepts any amount of numbers and returns the average.
@@ -108,12 +108,71 @@ const average = (...args) => {
   return result / args.length;
 };
 console.log(average(25, 25, 20));
+
+const books = ["One Day", "One more thing", "Done by me"];
+
 // .map
 // Converting an array to a different array: `Array.prototype.map(<function>)`
+const printLabel = (item, index) => `${index}. title ${item}`;
+const printBook = books.map(printLabel);
+// const printBook = books.map((item, index) => `${index}. title ${item}`);
+
+console.log(printBook);
+console.log(books);
+const numbs = ["1", "2", "3"];
+const nums = numbs.map((item) => parseInt(item));
+console.log(nums);
+
+const printMany = [1, 2, 3, 4, 5].map((item, index) => console.log(item));
+// const printMany = [1, 2, 3, 4, 5].map((el, i) => console.log(item));
+
+// .reduce
+// Getting a in single output value
+const reducer = (acc, cur) => acc + cur; // 9
+const resultArr = [2, 3, 1, 3].reduce(reducer, 1);
+console.log(resultArr);
 
 // .filter
 // - Getting an array with items that aline with your condition: `Array.prototype.filter(<function>)`
-
+const names = ["Zain", "Nancy", "Olga"];
+const filArr = names.filter((name) => name.length > 4);
+console.log(filArr);
 // .find
 // - Getting a the first item that aline with your condition : `Array.prototype.filter(<function>)`
+
+const coolNumbers = [1, 2, 7, 43, 5, 6];
+const biggerThanFive = coolNumbers.find((num) => num >= 5);
+console.log(biggerThanFive);
+
 //  Maybe more 😏
+
+// sum numbers
+// Write a function which accepts any amount of numbers and return the sum of their addition
+// e.g
+// console.log(sum(1)) ---> 1
+// console.log(sum(1, 15)) ---> 16
+// console.log(sum(25, 25, 20)) ---> 70
+const sumNumbers = (...args) => {
+  return args.reduce((acc, cur) => {
+    return acc + cur;
+  });
+};
+console.log(sumNumbers(25, 25, 20));
+// toCamelCase
+const toCamelCase = (str) => {
+  // cool_fun -> coolFun
+  let strToArr = str.toLowerCase().split("_");
+  let result = strToArr.map((item, i) =>
+    1 > i ? item : item[0].toUpperCase() + item.slice(1)
+  );
+  return result.join("");
+};
+console.log(toCamelCase("cool_fun_things"));
+// hackerSpeak
+// Odds and Evens.
+// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
+// [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
+// [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+
+// how many chr in a str(not case sens)
+// howManyStr("I like pizza","i") -> 3
