@@ -111,7 +111,7 @@ const bankChecker = (str) => {
   return result;
 };
 console.log(bankChecker("Hi my bank account is "));
-console.log(bankChecker("Hi my DE22000022220000220022 account is "));
+console.log(bankChecker("Hi my DE2200002222A000220022 account is "));
 console.log("____________________");
 // This is crazy
 // Create a function that looks inside a givin string if it has the word (JavaScript) if so print "I know it's crazy 😉".
@@ -275,16 +275,18 @@ console.log("____________________");
 // validate("@hadi-nsreeny.com") -> Sorry, invalid email address
 
 function validate(email) {
-  let atPos;
-  let dotPos;
-  for (let i = 0; i < email.length; i++) {
-    if (email[i] === "@") {
-      atPos = i;
-    }
-    if (email[i] === ".") {
-      dotPos = i;
-    }
-  }
+  //   let atPos;
+  //   let dotPos;
+  //   for (let i = 0; i < email.length; i++) {
+  //     if (email[i] === "@") {
+  //       atPos = i;
+  //     }
+  //     if (email[i] === ".") {
+  //       dotPos = i;
+  //     }
+  //   }
+  let atPos = email.indexOf("@");
+  let dotPos = email.lastIndexOf(".");
   if (atPos > 0 && dotPos > atPos) {
     return `${email} is valid.`;
   } else {
