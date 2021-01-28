@@ -219,5 +219,8 @@ const howManyStr = (str, chr) => {
     .filter((letter) => letter == chr).length;
 };
 
+// [i, " ", l,i,k,e ....]
+//
+
 console.log(howManyStr("I like pizza", "i"));
 console.log(howManyStr("I like pizza", "p"));
