@@ -51,7 +51,7 @@ Number Pitfalls:
 - Dealing with NaN: `isNaN(<expression>)`, `typeof NaN`
 
 
-[06/01/2021](jan/06-01/index.js)
+[07/01/2021](jan/07-01/index.js)
 	- Review: 
 
 Expressions:
@@ -72,7 +72,7 @@ Boolean:
 - Syntax debugging VII
 - Short circuit assignment: Assigning variable fallback with `||`
 
-[07/01/2021](jan/07-01/index.js)	- Review from previous week
+[11/01/2021](jan/11-01/index.js)	- Review from previous week
 
 Boolean:
 - Boolean inversion with `!`
@@ -86,11 +86,11 @@ Decisions:
 - Syntax debugging VIII: Unclosed curly braces
 - The default case: `else { ... }`”
 
-[11/01/2020](jan/11-01/index.js)	Multiple choice:
+[12/01/2020](jan/12-01/index.js)	Multiple choice:
 
 - Testing multiple conditions: `else if (<boolean>){ ... }`
 - Executing code based on a value: `switch(<expression>){ ... }`
 - When to use: `switch` vs. `else if`
 - Construction work at DCI shorter day at class
 
-[12/01/2021](jan/12-01/index.js)- 
+[13/01/2021](jan/13-01/index.js)- 
