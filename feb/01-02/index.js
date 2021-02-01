@@ -168,16 +168,3 @@ console.log(arr[0][0] + arr[0][3]);
 
 // ASCII = American Standard Code for Information Interchange
 console.log(chr.charCodeAt(0));
-/*
-
-
-0    °
-1    ^
-2    !
-3  
-
-
-
-
-65535 س
-*/
