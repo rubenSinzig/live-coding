@@ -111,7 +111,7 @@ const bankChecker = (str) => {
   return result;
 };
 console.log(bankChecker("Hi my bank account is "));
-console.log(bankChecker("Hi my DE22000022220000220022 account is "));
+console.log(bankChecker("Hi my DE2200002222A000220022 account is "));
 console.log("____________________");
 // This is crazy
 // Create a function that looks inside a givin string if it has the word (JavaScript) if so print "I know it's crazy 😉".
@@ -172,26 +172,27 @@ const monthCheck = (str) => {
   ];
   let seasons = ["Winter", "Spring", "Summer", "Autumn"];
   const currentSe = (monthName) => {
-    switch (months.indexOf(monthName)) {
-      case 0:
-      case 1:
-      case 2:
-        return seasons[0];
-      case 3:
-      case 4:
-      case 5:
-        return seasons[1];
-      case 6:
-      case 7:
-      case 8:
-        return seasons[2];
-      case 9:
-      case 10:
-      case 11:
-        return seasons[3];
-      default:
-        return `something went wrong`;
-    }
+    // switch (months.indexOf(monthName)) {
+    //   case 0:
+    //   case 1:
+    //   case 2:
+    //     return seasons[0];
+    //   case 3:
+    //   case 4:
+    //   case 5:
+    //     return seasons[1];
+    //   case 6:
+    //   case 7:
+    //   case 8:
+    //     return seasons[2];
+    //   case 9:
+    //   case 10:
+    //   case 11:
+    //     return seasons[3];
+    //   default:
+    //     return `something went wrong`;
+    // }
+    return "something";
   };
   let month = str
     .toLowerCase()
@@ -200,9 +201,9 @@ const monthCheck = (str) => {
     .join("");
   return month == ""
     ? `We couldn’t find any month in your text, sorry try again`
-    : `You have entered ${month}, which is in ${currentSe(month)}`;
+    : `You have entered ${month}, which is in `;
 };
-console.log(monthCheck("I love June"));
+console.log(monthCheck("I love April"));
 console.log(monthCheck("We need Kartoffel"));
 
 console.log("____________________");
@@ -275,16 +276,18 @@ console.log("____________________");
 // validate("@hadi-nsreeny.com") -> Sorry, invalid email address
 
 function validate(email) {
-  let atPos;
-  let dotPos;
-  for (let i = 0; i < email.length; i++) {
-    if (email[i] === "@") {
-      atPos = i;
-    }
-    if (email[i] === ".") {
-      dotPos = i;
-    }
-  }
+  //   let atPos;
+  //   let dotPos;
+  //   for (let i = 0; i < email.length; i++) {
+  //     if (email[i] === "@") {
+  //       atPos = i;
+  //     }
+  //     if (email[i] === ".") {
+  //       dotPos = i;
+  //     }
+  //   }
+  let atPos = email.indexOf("@");
+  let dotPos = email.lastIndexOf(".");
   if (atPos > 0 && dotPos > atPos) {
     return `${email} is valid.`;
   } else {
