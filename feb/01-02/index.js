@@ -107,6 +107,22 @@ If the person has already retired then the message 'You're already retired!' sho
 Example: A lady is 40 years old, she retires at 65, she earns $2000 per month and she saves the 5% of it. How much money will she have saved until she retires?
 Output: $30000 */
 
+((currentAge, retirementAge, monthlyWage, percentage) => {
+  if (currentAge >= retirementAge) {
+    console.log("You are too old");
+  } else {
+    let yearsToSave = retirementAge - currentAge;
+    console.log("Years to go ", yearsToSave);
+    let monthsToSave = yearsToSave * 12;
+    console.log("Months to go ", monthsToSave);
+    let amountSavedByMonth = (monthlyWage * percentage) / 100;
+    let totalSave = amountSavedByMonth * monthsToSave;
+    console.log(
+      `you will go very old in ${yearsToSave}, and you will have ${totalSave} in in your bank`
+    );
+  }
+})(40, 65, 2000, 5);
+
 // loops
 
 // if .. else
