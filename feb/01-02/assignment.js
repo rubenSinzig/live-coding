@@ -35,7 +35,7 @@ let saveEachMonthInPercent = 5;
     let saveUntilRetirement =
       monthToRetirement * salaryPerMonth * saveInPercent;
     console.log(
-      `If you save ${saveEachMonthInPercent}% of your ${salaryPerMonth}€ each month you will have ${saveUntilRetirement}€ until your retirement`
+      `If you save ${saveEachMonthInPercent}% of your ${salaryPerMonth}€ each month you will have ${saveUntilRetirement}€ until your retirement age of ${ageOfRetirement} years.`
     );
   }
 })(currentAge, ageOfRetirement, salaryPerMonth, saveEachMonthInPercent);
