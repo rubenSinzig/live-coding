@@ -172,7 +172,7 @@ const monthCheck = (str) => {
   ];
   let seasons = ["Winter", "Spring", "Summer", "Autumn"];
   const currentSe = (monthName) => {
-    return seasons[Math.floor(months.indexOf(monthName)) / 3];
+    return seasons[Math.floor(months.indexOf(monthName) / 3)];
   };
   let month = str
     .toLowerCase()
