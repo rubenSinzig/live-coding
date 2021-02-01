@@ -165,6 +165,8 @@ console.log(arr[0][0] + arr[0][3]);
 //  will return integer between 0 and 65535 that replaces the UTF-16 code
 
 // common character codes UTF-32 UTF-16  UTF-8  ASCII   A 00001111
+
+// ASCII = American Standard Code for Information Interchange
 console.log(chr.charCodeAt(0));
 /*
 
