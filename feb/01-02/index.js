@@ -71,6 +71,7 @@ console.log(add());
 const sum = ((x, y) => {
   return x + y;
 })(3, 4);
+
 console.log(sum);
 
 // Write a function add that uses a closure that performs addition on arguments in two separate function calls.
@@ -123,24 +124,58 @@ Output: $30000 */
   }
 })(40, 65, 2000, 5);
 
-// loops
-
 // if .. else
+// let fat = true;
+// let isNormal = false
+// if (fat) {
+//     if (isNormal){
+//         // this is cool
+//     }
+//   console.log("You need to eat less");
+// } else if (){}
+// else if()
 
 // ternary Operator
 
+// console.log(fat ? "Noo I like food" : null);
+// loops
+
 // trim()
-
+let str = "   hi    ";
+console.log(str.trim());
 // trimEnd()
-
+console.log(str.trimEnd());
 // trimStart()
-
+console.log(str.trimStart());
 // startsWith()
-
+let text = "Hej, it's ME";
+console.log(text.startsWith("we"));
+console.log(text.startsWith("Hej"));
 // endsWith()
-
+console.log(text.endsWith("."));
+console.log(text.endsWith("s ME"));
 // charAt()
-
+let chr = "Ü";
+console.log(chr.charAt(0)); // == console.log(chr[0]);
+console.log(chr[0]);
+// arr[i][0]
+const arr = ["Hadi", "Olga"];
+console.log(arr[0][0] + arr[0][3]);
 // charCodeAt()
 //  will return integer between 0 and 65535 that replaces the UTF-16 code
-// common character codes UTF-16  UTF-8  ASCII   A 00001111
+
+// common character codes UTF-32 UTF-16  UTF-8  ASCII   A 00001111
+console.log(chr.charCodeAt(0));
+/*
+
+
+0    °
+1    ^
+2    !
+3  
+
+
+
+
+65535 س
+*/
