@@ -172,7 +172,7 @@ const monthCheck = (str) => {
   ];
   let seasons = ["Winter", "Spring", "Summer", "Autumn"];
   const currentSe = (monthName) => {
-    return "something";
+    return seasons[Math.floor(months.indexOf(monthName)) / 3];
   };
   let month = str
     .toLowerCase()
@@ -181,9 +181,9 @@ const monthCheck = (str) => {
     .join("");
   return month == ""
     ? `We couldn’t find any month in your text, sorry try again`
-    : `You have entered ${month}, which is in `;
+    : `You have entered ${month}, which is in ${currentSe(month)} `;
 };
-console.log(monthCheck("I love April"));
+console.log(monthCheck("I love June"));
 console.log(monthCheck("We need Kartoffel"));
 
 console.log("____________________");
