@@ -74,23 +74,10 @@ Boolean:
 
 [11/01/2021](jan/11-01/index.js)	- Review from previous week
 
-Boolean:
-- Boolean inversion with `!`
-Logical Thinking II:
-- What is an Algorithm?
-- Analyzing problems: Input and Output
-- Coming up with solutions: writing algorithms
-Decisions:
-- Conditional algorithms
-- The conditional statement: `if(<boolean>){ ... }`
-- Syntax debugging VIII: Unclosed curly braces
-- The default case: `else { ... }`”
 
-[12/01/2020](jan/12-01/index.js)	Multiple choice:
 
-- Testing multiple conditions: `else if (<boolean>){ ... }`
-- Executing code based on a value: `switch(<expression>){ ... }`
-- When to use: `switch` vs. `else if`
-- Construction work at DCI shorter day at class
+[12/01/2020](jan/12-01/index.js)	
+
+
 
 [13/01/2021](jan/13-01/index.js)- 
