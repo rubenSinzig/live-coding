@@ -110,10 +110,75 @@ Object.defineProperties(newPersonObject, {
 });
 console.log(newPersonObject.p1);
 // Object yourPersonObj. Create an object named person2. Loop through the object and print both the property and value of the object.
+const person2 = {
+  name: "Hadi",
+  age: 31,
+  city: "Berlin",
+};
+for (let prop in person2) {
+  console.log(`${prop} : ${person2[prop]}`);
+}
 
+// Create a function that returns an array of the properties of a javascript object.
+//   Example
+// let student = {
+//   name: "Mike",
+//   class: "4A"
+//   course: "English"
+// }
+// Expected output:
+//   ["name", "class", "course"]
+
+const objPro = (obj) => {
+  return Object.keys(obj);
+};
+
+console.log(objPro(person2));
+
+console.log(objPro(person));
+// Given the following object
+const student = {
+  firstName: "Zain",
+  lastName: "Oil",
+  class: 48,
+  print: function () {
+    console.log(
+      `${this.firstName} ${this.lastName} a student in class ${this.class}`
+    );
+  },
+};
+student.print();
+// Create a method that prints the following: "Zain Oil a student in class 48"
+
+// Get Values. Create a function that returns an array of all values of an object’s properties.
+//   Examples:
+const getObjectValues = {
+  choice1: "tea",
+  choice2: "coffee",
+  choice3: "milk",
+};
+// Expected output:
+//   ["tea", "coffee", "milk"]
+
+const objVal = (obj) => {
+  return Object.values(obj);
+};
+console.log(objVal(getObjectValues));
+
+const objectToArray = {
+  cats: 1,
+  dogs: 2,
+  turtles: 4,
+};
+//   Expected output:
+//   [["cats", 1], ["dogs", 2], ["turtles", 4]]
+
+function getKeysAndValues(obj) {
+  return Object.entries(obj);
+}
+
+console.log(getKeysAndValues(objectToArray));
 // delete
 
-// Create a function that returns an array of properties of a javascript object.
-
-// Create a function that returns an object has following output.
-// ABC  -> { A: 1, B: 1, C: 1 }
+delete objectToArray.cats;
+console.log(objectToArray);
