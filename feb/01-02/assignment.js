@@ -1,3 +1,4 @@
+console.log("--------------- Assignment One ---------------");
 // Write a function that accepts several parameters
 // and calculates the number of money that will have been saved as pension until a person retires.
 // The function should be self invoked and should have the following parameters:
@@ -39,3 +40,47 @@ let saveEachMonthInPercent = 5;
     );
   }
 })(currentAge, ageOfRetirement, salaryPerMonth, saveEachMonthInPercent);
+console.log("--------------- Assignment Two ---------------");
+// Create a function that accepts a text from user
+// and check if the user has entered a month name
+// if so print out that month and in which season it is.
+// I will be nice again to you and offer the arrays 😉
+//   const months = [
+//     "december",
+//     "january",
+//     "february",
+//     "march",
+//     "april",
+//     "may",
+//     "jun",
+//     "july",
+//     "august",
+//     "september",
+//     "october",
+//     "november"
+//   ];
+//   const seasons = ["Winter", "Spring", "Summer", "Autumn"];
+// Examples :
+// > monthCheck("I love Jun"); -> Jun is in Summer
+// > monthCheck("We need Kartoffel"); -> I couldn’t find any month in your text, sorry try again
+const months = [
+  "december",
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "jun",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+];
+const seasons = ["Winter", "Spring", "Summer", "Autumn"];
+// ############################## TRY AGAIN ##############################
+// const monthCheck = (str) =>
+//   str.toLowerCase().includes(months.map((el, i) => {}));
+// monthCheck("I love Jun"); // Jun is in Summer
+// monthCheck("We need Kartoffel"); // I couldn’t find any month in your text, sorry try again
+console.log("--------------- Assignment End ---------------");
