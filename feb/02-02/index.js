@@ -184,6 +184,42 @@ console.log(getKeysAndValues(objectToArray));
 
 delete objectToArray.cats;
 console.log(objectToArray);
+
+// Object.hasOwnProperty()
+const objectUserInfo = {
+  userName: "Zain",
+  age: 22,
+};
+console.log(objectUserInfo.hasOwnProperty("add"));
+// Object.seal()
+Object.seal(objectUserInfo);
+
+objectUserInfo.add = "Berlin";
+console.log(objectUserInfo);
+
+// [{},{},{}]
+
+// [[],[],[]]
+/* {
+  ob1:{
+
+  },
+  ob2:{},
+
+} */
+
+const hadiData = {
+  name: "Hadi",
+  age: 31,
+  kids: [
+    { name: "Zain", age: 6, class: "1st" },
+    { name: "Anna", age: 11 },
+  ],
+};
+console.log(hadiData.kids[0].age); // 22
+console.log(hadiData.kids[1]["age"]); //  11
+console.log(hadiData.kids[1]); // { name: 'Anna', age: 11 }
+
 console.log("----------------");
 // Check if a number is within a given range. Write a program that checks if a number is within the range of an object's min and max properties. Assume min <= max is always true.
 
@@ -198,9 +234,12 @@ console.log("----------------");
 // (5, { min: 5, max: 5 }) ➞ true
 
 function isWithInTheRange(num, obj) {
+  //      4 >=   0    &&    4  <=   5  -> true
+  // console.log(num >= obj.min);
   return num >= obj.min && num <= obj.max;
 }
 console.log(isWithInTheRange(4, { min: 0, max: 5 }));
+console.log(isWithInTheRange(0, { min: 33, max: 55 }));
 console.log("----------------");
 
 // Scrabble. Write a program that, given an array of scrabble tiles, counts the maximum score that a player can earn from the tiles in their hand.
@@ -225,9 +264,15 @@ function sumTotalScrabble(arr) {
   }
   return total;
 }
-// other way soon
-console.log("----------------");
 console.log(sumTotalScrabble(scrabble));
+//console.log(scrabble[0]["score"]);
+// other way soon
+const sumTotalScrabbleAdvancedVersion = (arr) => {
+  return arr.reduce((acc, cur) => acc + cur.score, 0);
+};
+console.log(sumTotalScrabbleAdvancedVersion(scrabble));
+
+console.log("----------------");
 // Is it an empty object? Write a program that returns true if an object is empty, and false if otherwise.
 
 // Examples:
@@ -249,6 +294,26 @@ console.log("----------------");
 
 // countLetters("tree") ➞ {t: 1, r: 1, e: 2}
 
+function countLetters(str) {
+  let arr = str.split("");
+  let result = {};
+  function countOccurrences(string, letter) {
+    let counter = 0;
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === letter) {
+        counter++;
+      }
+    }
+    return counter;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    let currentChar = arr[i];
+    result[currentChar] = countOccurrences(str, currentChar);
+  }
+  return result;
+}
+console.log(countLetters("tree"));
+console.log("----------------");
 // Free Shipping. Create a function that determines whether an online order should get free shipping. An order gets free shipping if the total cost of items exceeds €50.
 
 // Examples:
@@ -259,51 +324,84 @@ console.log("----------------");
 
 // freeShipping({ "Wool": 13.99, "Knitting Needles": 15.50, "Bag": 13.99 }) ➞ false
 
+const freeShipping = (obj) => {
+  let pricesArr = Object.values(obj); // [13.99,15.5,13.99]
+  let shoppingQueen = 50;
+  let totalOrder = pricesArr.reduce((acc, cur) => acc + cur, 0);
+  return totalOrder > shoppingQueen;
+};
+console.log(
+  freeShipping({ Wool: 13.99, "Knitting Needles": 15.5, Bag: 13.99 }) // false
+);
 console.log("----------------");
 
 // Programming Object.
 
-// const programming = {
-
-// languages: ["JavaScript", "Python", "Ruby"],
-
-// isChallenging: true,
-
-// isRewarding: true,
-
-// difficulty: 8,
-
-// jokes:
-
-// "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
-// };
+const programming = {
+  languages: ["JavaScript", "Python", "Ruby"],
+  isChallenging: true,
+  isRewarding: true,
+  difficulty: 8,
+  jokes:
+    "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke",
+};
 
 // Write the command to add the language "Go" to the end of the languages array.
-
+programming.languages.push("Go");
+console.log(programming);
 // Change the difficulty to the value of 7.
+programming.difficulty = 7;
+console.log(programming);
 
 // Using the delete keyword, write the command to remove the jokes key from the programming object.
+delete programming.jokes;
+console.log(programming);
 
 // Write a command to add a new key called isFun and a value of true to the programming object.
-
+programming["isFun"] = true;
 // Using a loop, iterate through the languages array and console.log all of the languages.
-
+let lang = programming.languages;
+for (let i = 0; i < lang.length; i++) {
+  console.log(lang[i]);
+}
 // Using a loop, console.log all of the keys in the programming object.
+let myKeys = Object.keys(programming);
+for (let keys of myKeys) {
+  console.log(keys);
+}
+// for in
+// for of
 
 // Using a loop, console.log all of the values in the programming object.
-
-// Create an object method where if the keys "isChallenging" and "isRewarding" have values of "true", then return "Learning the programming languages: "JavaScript, Python, Ruby, Go" is rewarding and challenging. Bonus: In a comment, explain what is printed if we console.log an object method without calling it and why.
+let myVal = Object.values(programming);
+for (let values of myVal) {
+  console.log(values);
+}
+// Create an object method where if the keys "isChallenging" and "isRewarding" have values of "true", then return "Learning the programming languages: "JavaScript, Python, Ruby, Go" is rewarding and challenging.
+// Bonus: In a comment, explain what is printed if we console.log an object method without calling it and why.
+programming.worthTry = function () {
+  if (this.isChallenging && this.isRewarding) {
+    return `Learning the programming languages ${this.languages}  is rewarding and challenging.`;
+  }
+};
 
 // Bonus:
 
 // Make sure that any other code cannot delete or change properties of the object.
+Object.seal(programming);
 console.log("----------------");
 
-// Create a function that returns an object has following output.
+// Bonus
+// Create a function that returns an object has following output, try this one in Advance array methods 💪🏻
 
 // Examples:
 
 // ABC -> { A: 1, B: 1, C: 1 } QQQ -> { Q: 3}
 
-function countLettersAdvancedVersion(str) {}
-console.log(countLettersAdvancedVersion("tree"));
+// Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
+// for farther information check https://en.wikipedia.org/wiki/Zodiac
+// Examples:
+// zodiac("14-02-2002")  -> Aquarius
+// zodiac("10-06-1984")  -> Gemini
+
+// one one cool for 😎
