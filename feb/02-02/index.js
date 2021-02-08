@@ -439,12 +439,11 @@ function zodiac(yearStr) {
         { signName: "Capricorn", from: "1222" },
         { signName: "Not real day!", from: "1232" },
       ];
-      // extra pro
+      // Extra Protection
       // if (this.birthDay > 31 || this.birthMonth >12){
       //   return "this is not a valid date"
       // }
       let monthDay = this.birthMonth + this.birthDay;
-      // 1123
       let i = 0;
       while (monthDay >= data[i].from && i < data.length) {
         i++;

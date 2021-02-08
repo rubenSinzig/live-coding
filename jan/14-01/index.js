@@ -7,7 +7,8 @@ var mainAdd = "Berlin";
 let str = "This is a long.";
 // bracket notions
 console.log(str[10]);
-// Escaping spatial characters (\n , \' , \" )
+// Escaping spatial characters ( \' , \" )
+// New line (\n)
 let strWithChr = "I'am   \n Hi";
 console.log(strWithChr);
 // numbers
