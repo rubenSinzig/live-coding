@@ -397,6 +397,16 @@ console.log("----------------");
 // Examples:
 
 // ABC -> { A: 1, B: 1, C: 1 } QQQ -> { Q: 3}
+const countLettersAdc = (str) => {
+  let arr = str.toLowerCase().split("");
+  console.log(arr);
+  let result = arr.reduce((acc, cur) => {
+    acc[cur] = acc[cur] ? acc[cur] + 1 : 1;
+    return acc;
+  }, {});
+  return result;
+};
+console.log(countLettersAdc("tree"));
 
 // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
 // for farther information check https://en.wikipedia.org/wiki/Zodiac
@@ -404,4 +414,46 @@ console.log("----------------");
 // zodiac("14-02-2002")  -> Aquarius
 // zodiac("10-06-1984")  -> Gemini
 
-// one one cool for 😎
+function zodiac(yearStr) {
+  let arr = yearStr.split("-");
+  console.log(arr);
+  const result = {
+    birthDay: arr[0],
+    birthMonth: arr[1],
+    birthYear: arr[2],
+    yourZodiac: function () {
+      data = [
+        { signName: "Not real day!", from: "0000" },
+        { signName: "Capricorn", from: "0101" },
+        { signName: "Aquarius", from: "0120" },
+        { signName: "Pisces", from: "0220" },
+        { signName: "Aries", from: "0321" },
+        { signName: "Taurus", from: "0420" },
+        { signName: "Gemini", from: "0521" },
+        { signName: "Cancer", from: "0621" },
+        { signName: "Leo", from: "0723" },
+        { signName: "Virgo", from: "0823" },
+        { signName: "Libra", from: "0923" },
+        { signName: "Scorpio", from: "1023" },
+        { signName: "Sagittarius", from: "1123" },
+        { signName: "Capricorn", from: "1222" },
+        { signName: "Not real day!", from: "1232" },
+      ];
+      // extra pro
+      // if (this.birthDay > 31 || this.birthMonth >12){
+      //   return "this is not a valid date"
+      // }
+      let monthDay = this.birthMonth + this.birthDay;
+      // 1123
+      let i = 0;
+      while (monthDay >= data[i].from && i < data.length) {
+        i++;
+      }
+      let yourZodiacName = data[i - 1].signName;
+      return `your Zodiac sign name ${yourZodiacName}`;
+    },
+  };
+  return result.yourZodiac();
+}
+console.log(zodiac("10-06-1989"));
+console.log(zodiac("14-02-2002"));
