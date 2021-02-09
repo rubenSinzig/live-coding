@@ -127,3 +127,13 @@ text += "o";
 text += "o";
 text += "l";
 console.log(text);
+const arrOfPe = [
+  [2, 33],
+  [44, 3],
+  [66, 4],
+];
+for (let i = 0; i < arrOfPe.length; i++) {
+  for (let j = 0; j < arrOfPe[i].length; j++) {
+    console.log(arrOfPe[i][j]);
+  }
+}
