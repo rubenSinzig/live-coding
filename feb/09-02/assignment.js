@@ -18,8 +18,6 @@
 // })
 // Expected output:
 // [["cats", 1], ["dogs", 2], ["turtles", 4]]
-//
-
 const objectToArray = (obj) => {
   return Object.entries(obj);
 };
