@@ -155,3 +155,12 @@ console.log(newCloneArr);
 const lastWay = names.slice(0);
 lastWay[0] = "cool";
 console.log(lastWay);
+
+const geometricalSequence1 = () => {
+  let result;
+  for (let i = 0; i < 9; i * 2) {
+    result += i;
+  }
+  return result;
+};
+console.log(geometricalSequence1());
