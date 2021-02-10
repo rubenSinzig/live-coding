@@ -39,8 +39,14 @@ let person = {
   job: "teacher",
 };
 const switchKeyValue = () => {
-  let copyPerson = { ...person };
-  // NOT FINISH !!!
+  let copyPerson = Object.entries(person);
+  let switchObj = {};
+  console.log(copyPerson);
+  copyPerson.map((el, i) => {
+    el.reverse();
+    switchObj[el[0]] = el[1];
+  });
+  return switchObj;
 };
 console.log(switchKeyValue());
 // 5. Return Keys and Values.
