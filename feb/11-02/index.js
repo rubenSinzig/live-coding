@@ -1,11 +1,11 @@
 // Destructuring objects as function parameters
-function fun(num, { name = "new" }) {
+function fun(num, { name }) {
   console.log(num);
   let firstName = { name };
   console.log(firstName);
 }
 
-fun(2, { age: 22 });
+fun(2, { name: "Hadi", age: 31, add: "B" });
 
 const userData = {
   firstName: "Steel",
@@ -74,11 +74,41 @@ console.log(Object.entries(zain));
 // Creat a constructor function that receive product details (productName,prise,inventory) thin build a method to display this data in clear outputted form
 // build two product using your constructor function
 // i.e : (Pepsi,2.33,2232) -> Form item Pepsi selling prise 2.33€. we have 2232 in our store
-
+function Product(productName, price, inventory) {
+  this.productName = productName;
+  this.price = price;
+  this.inventory = inventory;
+  this.display = function () {
+    console.log(
+      `From item ${this.productName} selling price ${this.price}€. we have ${this.inventory} in our store`
+    );
+  };
+}
+const pepsi = new Product("Pepsi", 2.33, 2232);
+pepsi.display();
 // get & set, create a car object that uses getter and setter method to get and set the following (modelName,modelNumber,enginCapacity)
 // first get the data
 // then set the data
 
+const car = {
+  modelName: "Audi",
+  modelNumber: "A8",
+  enginCapacity: 332,
+  get data() {
+    console.log(`${this.modelName}`);
+  },
+  set data({}) {
+    let arr = str.split(" ");
+    this.modelName = arr[0];
+  },
+};
+
 // class
 
-// constructor method
+// constructor method aka setup
+
+// instances properties after constructor
+
+// TV app
+
+// extends && super
