@@ -13,3 +13,31 @@
 // first get the data
 // then set the data
 //
+// TV app
+class Tv {
+  constructor(_brand, _channel = 1, _volume = 10) {
+    this.brand = _brand;
+    this.channel = _channel;
+    this.volume = _volume;
+  }
+  incVolume() {
+    if (this.volume < 100) {
+      this.volume++;
+      console.log(this.volume);
+    } else {
+      console.log("100 is max");
+    }
+  }
+  decVolume() {
+    if (this.volume > 0) {
+      this.volume--;
+    } else {
+      console.log("Mute");
+    }
+  }
+  reset() {
+    this.volume = 10;
+    this.channel = 1;
+  }
+}
+const samsung = constructor("SAMSUNG", 75, 15);
