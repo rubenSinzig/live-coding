@@ -79,8 +79,17 @@ const months = [
 ];
 const seasons = ["Winter", "Spring", "Summer", "Autumn"];
 // ############################## TRY AGAIN ##############################
-// const monthCheck = (str) =>
-//   str.toLowerCase().includes(months.map((el, i) => {}));
-// monthCheck("I love Jun"); // Jun is in Summer
-// monthCheck("We need Kartoffel"); // I couldn’t find any month in your text, sorry try again
+const monthCheck = (str) => {
+  let strToArr = str.toLowerCase().trim().split(" ");
+  // console.log(strToArr);
+  for (let i = 0; i < strToArr.length; i++) {
+    for (let j = 0; j < months.length; j++) {
+      if (months[j] == strToArr[i]) {
+        console.log();
+      }
+    }
+  }
+};
+monthCheck("I love Jun"); // Jun is in Summer
+monthCheck("We need Kartoffel"); // I couldn’t find any month in your text, sorry try again
 console.log("--------------- Assignment End ---------------");
