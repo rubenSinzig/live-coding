@@ -51,15 +51,16 @@ String:
   Number Pitfalls:
 - Dealing with NaN: `isNaN(<expression>)`, `typeof NaN`
 
-[07/01/2021](jan/07-01/index.js) 
+[07/01/2021](jan/07-01/index.js)
 
 Boolean:
+
 - Boolean inversion with `!`
-Logical Thinking II:
+  Logical Thinking II:
 - What is an Algorithm?
 - Analyzing problems: Input and Output
 - Coming up with solutions: writing algorithms
-Decisions:
+  Decisions:
 - Conditional algorithms
 - The conditional statement: `if(<boolean>){ ... }`
 - Syntax debugging VIII: Unclosed curly braces
@@ -84,55 +85,57 @@ Expressions:
 - Syntax debugging VII
 - Short circuit assignment: Assigning variable fallback with `||`
 
-[11/01/2021](jan/11-01/index.js) 
+[11/01/2021](jan/11-01/index.js)
 
 Declaring:
+
 - Functions declarations as values:
   `const <function name> = function(<parameters>){ ... }`
 - Arrow function shorthand:
   `const <function name> = (<parameters>) => { ... }`
 
 [12/01/2020](jan/12-01/index.js)
-Assignments 
+Assignments
 
 [13/01/2020](jan/13-01/index.js)
 Review from last topics
 
 [14/01/2020](jan/14-01/index.js)
-JavaScript 101 
-
+JavaScript 101
 
 [18/01/2020](jan/18-01/index.js)
 Conditional Repetition:
 
 Numerical Repetition:
+
 - Repeating code blocks a set number of times:
   `for(<initial state>, <end condition>, <step>){ ... }`
 - Breaking out of a loop: `break;`
 - Skipping an iteration: `continue;`
 - Complex iterations: Nesting `for` loops
-Array: Saving multiple values in one name
+  Array: Saving multiple values in one name
 - Assigning array literals:
   `const <array name> = [<value 1>, <value 2>, ...]`
 - Accessing array items with square brackets”
 
-
 [19/01/2020](jan/19-01/index.js)
+
 - Assigning array literals:
   `const <array name> = [<value 1>, <value 2>, ...]`
 - Accessing array items with square brackets
 - Re-assigning array items with square brackets
 - `const`s and array items
-Basic Array methods:
+  Basic Array methods:
 - Finding Items: `Array.prototype.indexOf(<item>)`
 - Adding items: `Array.prototype.push()`, `Array.prototype.unshift()`
 - Removing items: `Array.prototype.pop()`, `Array.prototype.shift()`
 - Manipulating arrays: `Array.prototype.reverse()`
 
 [20/01/2020](jan/20-01/index.js)
-More Array methods 
+More Array methods
 
 Function Scope:
+
 - Parameters scope
 - Declaring variables in functions
 - Global vs. Local scope: Variable reassignment in functions
@@ -144,30 +147,33 @@ Function Scope:
 
 [21/01/2020](jan/21-01/index.js)
 Declaring:
+
 - Functions declarations as values:
   `const <function name> = function(<parameters>){ ... }`
 - Arrow function shorthand:
   `const <function name> = (<parameters>) => { ... }`
-Advanced Array methods:
+  Advanced Array methods:
 - Higher order functions II:
-   Functions that accept function values (callbacks)
+  Functions that accept function values (callbacks)
 - Converting an array to a single value: `Array.prototype.reduce(<function>)`
 
 [25/01/2020](jan/21-01/index.js)
 Assignments
 
-
 [26/01/2020](jan/26-01/index.js)
 Function Scope:
+
 - Parameters scope
 - Declaring variables in functions
 - Global vs. Local scope: Variable reassignment in functions
 - Reading a program IV (reading functions only when they are called)
 
 Clones vs. References:
+
 - Shallow cloning objects and arrays: the spread operator `...`
 
 Advanced Parameters:
+
 - Default parameter values:
   `function(<parameter> = <default value>) { ... }`
 - Variable number of arguments: Rest params - `...args`
@@ -186,22 +192,39 @@ Block Scope:
 - First definition of closure: A function that contains at least one variable, and one nested scope
 - Encapsulation: Isolating scopes with IIFE vs. SIAF”
 
-
 [02/02/2021](feb/02-02/index.js)
 Objects
+
 - Object literals: Property definition
   `const <namespace> = { <key 1>: <value 1>, <key 2>: <value 2>, ... }`
 - Accessing properties with bracket notation (no variables)
 - Accessing properties with dot notation
-Object Scope:
+  Object Scope:
 - Methods definition
 - Using methods: Review of used methods so far
 - Creating methods
-Conversion and iterations:
+  Conversion and iterations:
 - Iterating over objects: `for(let <property name> in <object name>){ ... }`
 - Property names to array: `Object.keys(<object>)`
 - Accessing properties with bracket notation (w. vars)
 - Property values to array: `Object.values(<object>)`
 
 [04/02/2021](feb/04-02/index.js)
+
 - Iterating over arrays: `for(let <value name> of <array name>){ ... }`
+
+[08/02/2021](feb/08-02/index.js)
+
+[09/02/2021](feb/09-02/index.js)
+
+[10/02/2021](feb/10-02/index.js)
+Nesting arrays and objects:
+
+- Nesting and iterating over objects in arrays
+  Clones vs. References:
+- Simple values are always clones: String, Number, Boolean
+- Objects are references by default: Array and object literals
+- Shallow cloning objects and arrays: the spread operator `...`
+- Deep cloning objects and arrays: recursive function
+
+[11/02/2021](feb/11-02/index.js)

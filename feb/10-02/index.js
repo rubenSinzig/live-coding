@@ -32,9 +32,15 @@ function deepCopy(obj) {
   }
   // check it it's object
   if (typeof obj == "object") {
-    return Object.keys(obj)
-      .map((key) => ({ [key]: deepCopy(obj[key]) })) // [{},{},{},{}]
-      .reduce((acc, cur) => Object.assign(acc, cur), {});
+    return (
+      Object.keys(obj)
+        //                    userName: deepCopy("Hadi")
+        .map((key) => {
+          console.log(deepCopy(obj[key]));
+          return { [key]: deepCopy(obj[key]) };
+        }) // [{},{},{},{}]
+        .reduce((acc, cur) => Object.assign(acc, cur), {})
+    );
   }
   // return the obj and if was no object or no array return the argument itself
   return obj;
