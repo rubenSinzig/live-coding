@@ -33,7 +33,7 @@ userData.fullName; // getting the object data
 userData.fullName = "Hadi Nsreeny 31 true"; // filling the object
 userData.fullName; // getting the new data
 
-// constructor own
+// constructor our own 😬
 function Person(name, age, act) {
   this.name = name;
   this.age = age;
@@ -70,8 +70,15 @@ for (let [key, val] of Object.entries(zain)) {
   console.log(` ${key} : ${val}`);
 }
 
+console.log(Object.entries(zain));
 // Creat a constructor function that receive product details (productName,prise,inventory) thin build a method to display this data in clear outputted form
 // build two product using your constructor function
 // i.e : (Pepsi,2.33,2232) -> Form item Pepsi selling prise 2.33€. we have 2232 in our store
 
-// get & set, create a car object that uses getter and setter method to get and set the following ()
+// get & set, create a car object that uses getter and setter method to get and set the following (modelName,modelNumber,enginCapacity)
+// first get the data
+// then set the data
+
+// class
+
+// constructor method
