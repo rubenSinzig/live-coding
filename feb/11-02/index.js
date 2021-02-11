@@ -44,14 +44,14 @@ function Person(name, age, act) {
     );
   };
 }
-let zain = new Person("Zain", 21, ["sleep", "eat"]);
-zain.printOut();
+const newObj = new Person("Zain", 21, ["sleep", "eat"]);
+newObj.printOut();
 const olga = new Person("Olga", 40, "No thing");
 olga.printOut();
 
 // for in  object
-for (let prop in zain) {
-  console.log(`zain.${prop} : ${zain[prop]}`);
+for (let prop in newObj) {
+  console.log(`zain.${prop} : ${newObj[prop]}`);
 }
 
 let family = [
@@ -66,11 +66,11 @@ for (let i = 0; i < family.length; i++) {
 // forEach  arr
 family.forEach((arr) => arr.forEach((element) => console.log(element)));
 // for of  arr
-for (let [key, val] of Object.entries(zain)) {
+for (let [key, val] of Object.entries(newObj)) {
   console.log(` ${key} : ${val}`);
 }
 
-console.log(Object.entries(zain));
+console.log(Object.entries(newObj));
 // Creat a constructor function that receive product details (productName,prise,inventory) thin build a method to display this data in clear outputted form
 // build two product using your constructor function
 // i.e : (Pepsi,2.33,2232) -> Form item Pepsi selling prise 2.33€. we have 2232 in our store
@@ -95,19 +95,63 @@ const car = {
   modelNumber: "A8",
   enginCapacity: 332,
   get data() {
-    console.log(`${this.modelName}`);
+    console.log(
+      `The brand ${this.modelName} model ${this.modelNumber} has enginCapacity of ${this.enginCapacity}hp`
+    );
   },
-  set data({}) {
-    let arr = str.split(" ");
-    this.modelName = arr[0];
+  set data(obj) {
+    // let arr = str.split(" ");
+    // this.modelName = arr[0];
+    // this.modelNumber = arr[1];
+    // this.enginCapacity = arr[2]
+
+    this.modelName = obj.name;
+    this.modelNumber = obj.num;
+    this.enginCapacity = obj.cap;
   },
 };
-
+// "Hadi Nsreeny 1989 yes"
+car.data = { name: "BMW", num: "i8", cap: 33 };
+car.data;
 // class
+class Animals {
+  // constructor method aka setup
+  constructor(_kind, _hometown) {
+    this.kind = _kind;
+    this.hometown = _hometown;
+  }
+  // instances properties after constructor
+  display() {
+    console.log(`this very cute ${this.kind} lives in ${this.hometown}`);
+  }
+}
+console.log(Animals);
+const cat = new Animals("cat", "LA");
+cat.display();
 
-// constructor method aka setup
+console.log(cat);
+const newPet = new Animals("dog", "NY");
+newPet.display();
+console.log(typeof Animals);
+newPet.displayAge = () => {
+  console.log("Hi");
+};
 
-// instances properties after constructor
+newPet.displayAge();
+console.log(newPet);
+
+class Color {
+  constructor() {
+    this.name = "";
+    this.tep = 0;
+  }
+}
+
+const red = new Color();
+console.log(red);
+red.name = "RED";
+red.tep = 232;
+console.log(red);
 
 // TV app
 
