@@ -2,11 +2,20 @@
 // (productName,prise,inventory) then build a method to display this data
 // in clear outputted form
 // build two product using your constructor function
-// i.e : (Pepsi,2.33,2232) -> Form item Pepsi selling prise 2.33€. We have 2232 in our store.
-// function Product(productName, price, inventory) {
-//   //   this.productName = productName,
-// }
-// console.log(productDetails("Pepsi", 2.33, 2232));
+// i.e : (Pepsi,2.33,2232) -> From item Pepsi selling prise 2.33€. We have 2232 in our store.
+class Product {
+  constructor(_productName = "default", _price = 0, _inventory = 0) {
+    (this.product = _productName),
+      (this.price = _price),
+      (this.inventory = _inventory);
+  }
+  printOut() {
+    return `From item ${this.product} selling price ${this.price}€. We have ${this.inventory} in our store.`;
+  }
+}
+const pepsi = new Product("Pepsi", 2.33, 2232);
+console.log(pepsi.printOut());
+//
 // get & set
 // create a car object that uses getter and setter method to get and set
 // the following (modelName,modelNumber,enginCapacity)
