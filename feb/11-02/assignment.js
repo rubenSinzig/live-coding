@@ -21,6 +21,24 @@ console.log(pepsi.printOut());
 // the following (modelName,modelNumber,enginCapacity)
 // first get the data
 // then set the data
+const car = {
+  modelName: "VW",
+  modelNumber: "Golf 2.0 TDI",
+  enginCapacity: 170,
+  get fullCarData() {
+    console.log(
+      `You drive a ${this.modelName} type ${this.modelNumber} with ${this.enginCapacity}HP.`
+    );
+  },
+  set fullCarData(str) {
+    let strToArr = str.split(" ");
+    this.modelName = strToArr[0];
+    this.modelNumber = strToArr[1];
+    this.enginCapacity = strToArr[2];
+  },
+};
+car.fullCarData = "BMW 550i 330";
+car.fullCarData;
 //
 // TV app
 class Tv {
