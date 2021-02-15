@@ -160,10 +160,45 @@ class Tv {
     this.channel = _channel;
     this.volume = _volume;
   }
-  incVolume() {}
-  decVolume() {}
+  incVolume() {
+    // increase the volume
+    if (this.volume < 100) {
+      this.volume++;
+      console.log(this.volume);
+    } else {
+      console.log("This is too much");
+    }
+  }
+  decVolume() {
+    // decrease the volume
+    if (this.volume > 0) {
+      this.volume--;
+      console.log(this.volume);
+    } else {
+      console.log("NO sound");
+    }
+  }
   rest() {
     // volume and channel
+    this.channel = 1;
+    this.volume = 10;
+  }
+  randomChannel() {
+    // max 50
+    this.channel = Math.floor(Math.random() * 50) + 1;
+    console.log(`you are watching channel ${this.channel}`);
+  }
+  display() {
+    return `This Tv ${this.brand}, had ${this.channel} channels and the volume is on ${this.volume}`;
   }
 }
+
+const samsung = new Tv("SAMSUNG");
+console.log(samsung);
+samsung.incVolume();
+
+samsung.decVolume();
+const apple = new Tv("Apple", 30, 100);
+console.log(apple);
+
 // extends && super
