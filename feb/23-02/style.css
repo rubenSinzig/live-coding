@@ -1,9 +1,10 @@
 body {
   background-color: orange;
-  background-color: #ffa500;
-  /* background-image: url(bg-image.jpg); */
-  background-position: left top;
+  background-image: url("./cool.jpg");
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 p {
