@@ -1,3 +1,54 @@
 body {
-  background-color: gray;
+  background-color: orange;
+}
+
+p {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  /* Soon will talk about this  */
+  font-size: larger;
+  font-style: normal;
+  font-weight: bold;
+}
+
+li a {
+  color: silver;
+  font-size: medium;
+}
+
+nav ul {
+  background-color: snow;
+}
+
+#job {
+  color: steelblue;
+}
+
+#home {
+  color: violet;
+}
+
+.same {
+  background-color: yellow;
+}
+
+h1,
+h2,
+strong,
+.same {
+  color: rgb(0, 0, 0);
+}
+
+h1,
+h2 {
+  color: blue;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-weight: bold;
+}
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
 }
