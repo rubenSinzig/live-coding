@@ -1,5 +1,9 @@
 body {
   background-color: orange;
+  background-color: #ffa500;
+  /* background-image: url(bg-image.jpg); */
+  background-position: left top;
+  background-size: cover;
 }
 
 p {
@@ -16,7 +20,7 @@ li a {
 }
 
 nav ul {
-  background-color: snow;
+  background-color: rgba(104, 130, 113, 0.618);
 }
 
 #job {
@@ -35,7 +39,7 @@ h1,
 h2,
 strong,
 .same {
-  color: rgb(0, 0, 0);
+  color: rgba(104, 130, 113, 0.618);
 }
 
 h1,
