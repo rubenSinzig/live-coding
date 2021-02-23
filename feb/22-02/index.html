@@ -75,9 +75,15 @@
       <li>Eggs</li>
       **Hi **
     </ul>
-    <form action="action_page.php">
+    <form action="index.js">
       <label for="fn">First name:</label> <br />
-      <input type="text" name="firstname" id="fn" /> <br />
+      <input
+        type="text"
+        name="firstname"
+        id="fn"
+        placeholder="please write your name"
+      />
+      <br />
       <label for="ln">Last name:</label> <br />
       <input type="text" name="lastname" id="ln" /> <br />
       <input type="radio" name="gender" value="male" id="male" checked />
@@ -86,7 +92,10 @@
       <label for="female">Female</label> <br />
       <input type="checkbox" name="newsletter" id="newsletter" /> Newsletter
       <br />
+      <input type="checkbox" name="cool" id="cool" /> cool <br />
+      <input type="button" value="click me 😎" onclick="console.log('Hi')" />
       <input type="submit" value="Submit" />
+      <input type="reset" value="clear" />
     </form>
     <iframe
       width="560"
@@ -101,11 +110,26 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150518.30320661605!2d10.621292448274549!3d53.881121495462416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b20953f70b9df3%3A0xf4725f573e7e12b4!2zTMO8YmVjaw!5e0!3m2!1sde!2sde!4v1613999927858!5m2!1sde!2sde"
       width="600"
       height="450"
+      src="https://www.youtube.com/embed/JTNSCOPMtxU?controls=0&amp;start=224"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- https://goo.gl/maps/AT2B5Ghk4PaxMSbQ9 -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3839.068471481874!2d-47.9078002!3d-15.8003432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28135d84739659de!2sParque%20da%20Cidade%20Sarah%20Kubitschek!5e0!3m2!1sen!2sde!4v1614001575131!5m2!1sen!2sde"
+      width="400"
+      height="300"
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
     ></iframe>
+    <iframe
+      src="https://www.google.com/"
+      frameborder="1"
+      width="400"
+      height="340"
+    ></iframe>
   </body>
 </html>
-
 <!-- 127.0.0.1:5000/feb/22-02/index.html -->
