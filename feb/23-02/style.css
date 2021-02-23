@@ -1,0 +1,65 @@
+body {
+  background-color: orange;
+  background-image: url("./cool.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  /* Soon will talk about this  */
+  font-size: larger;
+  font-style: normal;
+  font-weight: bold;
+  border-top: black 2px solid;
+  border-bottom: none;
+  border-top: orange 4px solid;
+  border-style: dashed solid none solid;
+  border: 2px dashed #333333;
+}
+
+li a {
+  color: silver;
+  font-size: medium;
+}
+
+nav ul {
+  background-color: rgba(104, 130, 113, 0.618);
+}
+
+#job {
+  color: steelblue;
+}
+
+#home {
+  color: violet;
+}
+
+h1,
+h2,
+strong {
+  color: rgba(104, 130, 113, 0.618);
+}
+
+h1,
+h2 {
+  color: blue;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-weight: bold;
+  padding: 40px;
+}
+h1 {
+  font-size: 24px;
+  /* Never do this in your life */
+  margin-top: 400px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+}
+
+h2 {
+  font-size: 18px;
+}
