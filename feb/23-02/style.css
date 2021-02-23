@@ -1,3 +1,7 @@
+:root {
+  /* root setup */
+}
+
 body {
   background-color: orange;
   background-image: url("./cool.jpg");
@@ -20,22 +24,22 @@ p {
   border: 2px dashed #333333;
 }
 
-li a {
+/* li a {
   color: silver;
   font-size: medium;
-}
+} */
 
-nav ul {
+/* nav ul {
   background-color: rgba(104, 130, 113, 0.618);
-}
+} */
 
 #job {
   color: steelblue;
 }
 
-#home {
+/* #home {
   color: violet;
-}
+} */
 
 h1,
 h2,
@@ -49,7 +53,6 @@ h2 {
   font-family: Helvetica;
   font-weight: normal;
   font-weight: bold;
-  padding: 40px;
 }
 h1 {
   font-size: 24px;
@@ -58,8 +61,78 @@ h1 {
   margin-right: 20px;
   margin-bottom: 10px;
   margin-left: 200px;
+  padding: 40px;
 }
 
 h2 {
   font-size: 18px;
+}
+
+body {
+  border: black 2px solid;
+  margin: 5px;
+}
+
+section {
+  /* very good one */
+  /* view width */
+  width: 50vw;
+  /* view height */
+  height: 50vh;
+}
+article {
+  width: 80%;
+  height: 50%;
+  font-size: 1rem;
+}
+#main-text {
+  color: teal;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  line-height: 40px;
+  text-align: left;
+  text-transform: capitalize;
+  text-indent: 2vw;
+  text-decoration: lightblue wavy underline;
+  font-family: "Reggae One", cursive, Verdana, sans-serif;
+  /* rem  16px * num  = ??px */
+  /* em parent * num = ??px */
+  font-size: 3em;
+  font: italic bold 2rem Times, serif;
+}
+nav ul li a {
+  color: orange;
+  text-decoration: none;
+  background-color: navajowhite;
+}
+a:visited,
+a:link {
+  color: orange;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: gray;
+  color: brown;
+}
+form {
+  position: relative;
+  top: 4rem;
+  right: 0;
+}
+
+.img {
+  width: 6rem;
+  height: 3rem;
+  /* Use with care */
+  /* float: right; */
+  /* display: none; */
+  visibility: visible;
+}
+article {
+  clear: left;
 }
