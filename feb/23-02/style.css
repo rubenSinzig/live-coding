@@ -13,6 +13,11 @@ p {
   font-size: larger;
   font-style: normal;
   font-weight: bold;
+  border-top: black 2px solid;
+  border-bottom: none;
+  border-top: orange 4px solid;
+  border-style: dashed solid none solid;
+  border: 2px dashed #333333;
 }
 
 li a {
@@ -32,14 +37,9 @@ nav ul {
   color: violet;
 }
 
-.same {
-  background-color: yellow;
-}
-
 h1,
 h2,
-strong,
-.same {
+strong {
   color: rgba(104, 130, 113, 0.618);
 }
 
@@ -49,9 +49,15 @@ h2 {
   font-family: Helvetica;
   font-weight: normal;
   font-weight: bold;
+  padding: 40px;
 }
 h1 {
   font-size: 24px;
+  /* Never do this in your life */
+  margin-top: 400px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 200px;
 }
 
 h2 {
