@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
+}
+:root {
+  /* font-family: "Akaya Telivigala"; */
+}
+h1 {
+  font-family: "Akaya Telivigala";
+}
+.moon {
+  background-color: lightsteelblue;
+  width: 3rem;
+  height: 3rem;
+  border: black 2px solid;
+  border-radius: 0;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: powderblue;
+  border-radius: 5px;
+}
