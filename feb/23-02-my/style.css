@@ -1,3 +1,6 @@
+:root {
+  /* root settings */
+}
 body {
   background-color: black;
   color: silver;
@@ -10,13 +13,21 @@ p {
   border-bottom: silver 2px solid;
   padding-left: 0.75rem;
   padding-bottom: 0.5rem;
+  letter-spacing: 3px;
+  word-spacing: 6px;
 }
 footer,
 nav ul li a,
-nav ul {
-  font-family: Arial, Helvetica, sans-serif;
+nav ul,
+footer ul li {
+  font-family: "Indie Flower", cursive, Arial, Helvetica, sans-serif;
   background-color: rgb(192, 192, 192);
   color: black;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 article {
   margin: 2rem;
@@ -24,4 +35,13 @@ article {
   border-bottom: silver 1px solid;
   padding-left: 0.5rem;
   padding-bottom: 0.3rem;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+}
+nav ul li {
+  display: inline-block;
+  border: black 2px solid;
+}
+footer ul li {
+  display: inline-block;
 }
