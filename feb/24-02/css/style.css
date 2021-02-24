@@ -49,7 +49,6 @@ div {
   border-bottom: 0 solid transparent;
   border-right: 40px solid blue;
   transform: rotate(180deg);
-  filter: grayscale(100%);
 }
 .draw {
   width: 4rem;
