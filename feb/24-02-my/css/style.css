@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  src: url("../fonts/Comfortaa-VariableFont_wght.ttf");
+}
+body {
+  margin: 4rem;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+}
+.moon {
+  background-color: lightskyblue;
+  width: 10rem;
+  height: 10rem;
+  border: black 3px solid;
+  border-radius: 6rem;
+}
+input {
+  width: 15rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  font-size: larger;
+  margin: 1rem;
+}
+input:hover {
+  background-color: lightsalmon;
+}
+#line div {
+  display: inline-block;
+  margin: 3rem 1rem;
+}
+#circle {
+  background-color: olive;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 8rem;
+  border: black 2px solid;
+}
+#rectangle {
+  background-color: lightcoral;
+  width: 25rem;
+  height: 15rem;
+  border: black 2px solid;
+}
+#square {
+  background-color: lightskyblue;
+  width: 15rem;
+  height: 15rem;
+  border: black 2px solid;
+}
+#triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 15rem solid blue;
+  border-right: 25rem solid transparent;
+}
