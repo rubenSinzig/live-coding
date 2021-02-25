@@ -18,9 +18,14 @@ things you might want to pay more attention to
 /* CSS selectors */
 
 /* Element selector */
+html {
+  background-color: orange;
+}
 
 /* #ID selector */
-
+#cool {
+  background-color: orangered;
+}
 /* .class selector */
 
 /* element,element Selector
