@@ -27,24 +27,44 @@ html {
   background-color: orangered;
 }
 /* .class selector */
+.box {
+  background-color: orchid;
+}
 
 /* element,element Selector
   element AND element 
   */
+table,
+div {
+  background-color: paleturquoise;
+}
 
 /* element element Selector
   aka element inside element 
   */
+div p {
+  font-size: smaller;
+}
 
 /* element>element	 Selector  
   element parent element 
   */
 
+div > p {
+  font-family: "Times New Roman", Times, serif;
+  color: purple;
+}
 /* element+element  Selector
   element immediately after element */
+div + span {
+  background-color: rosybrown;
+}
 
 /* element1~element2 Selector 
   element preceded element */
+p ~ span {
+  background-color: royalblue;
+}
 
 /* [attribute] Selector */
 
