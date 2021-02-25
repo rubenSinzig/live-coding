@@ -105,26 +105,59 @@ span ~ p {
   height: 3rem;
 }
 
+/* longTrip long using * -> longTrip long */
+/* longTrip long using ~ -> long */
+
 /* pseudo class  */
+/* specifies a special state for that element */
 /* :hover */
+table:hover {
+  background-color: lightcoral;
+}
 
 /* :visited */
-
+a:visited,
+a:hover {
+  color: green;
+}
 /* :focus */
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid red;
+  box-shadow: 3px 3px 3px #ccc;
+}
 
 /* :active */
+a:active {
+  background-color: blue;
+}
 
 /* :checked */
-
-/* :target */
+[type="checkbox"]:checked {
+  width: 3rem;
+}
 
 /* :nth-child() */
 
-/* pseudo elements  */
-/* ::after  
-  :after css2 and ::after is css3*/
+/* tr:nth-child(3) {
+  background-color: blue;
+}
 
-/* ::before  
-    :before css2 and ::before is css3*/
+tr:nth-child(3n + 1) {
+  background-color: blue;
+} */
+tr:nth-last-child(1) {
+  background-color: blueviolet;
+}
 
-/* here we will */
+/* tr:nth-child(2n) td:nth-child(2) {
+  background-color: chocolate;
+} */
+
+tr:nth-child(2n + 1) :first-child {
+  background-color: chocolate;
+}
+tr:nth-child(1) :nth-child(n + 3):nth-child(-n + 5) {
+  background-color: crimson;
+  border: 2px solid black;
+}
