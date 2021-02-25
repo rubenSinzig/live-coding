@@ -67,20 +67,43 @@ span ~ p {
 }
 
 /* [attribute] Selector */
+[id] {
+  background-color: seagreen;
+}
 
 /* [attribute=value] Selector  */
+[type="submit"] {
+  border: none;
+  background-color: pink;
+}
 
 /* [attribute~=value] Selector
   containing the value */
 
+[alt~="sun"] {
+  border: 3px solid black;
+}
 /* [attribute^=value] Selector
   begins with the value */
+[class^="te"] {
+  /* border: 3px solid hotpink; */
+  color: hotpink;
+}
 
 /* [attribute$=value] Selector
   value ends with  */
 
+[class$="box"] {
+  /* border: 3px solid hotpink; */
+  width: 14rem;
+}
 /* [attribute*=value] Selector
   contains the substring */
+
+[class*="long"] {
+  /* border: 3px solid hotpink; */
+  height: 3rem;
+}
 
 /* pseudo class  */
 /* :hover */
@@ -103,3 +126,5 @@ span ~ p {
 
 /* ::before  
     :before css2 and ::before is css3*/
+
+/* here we will */
