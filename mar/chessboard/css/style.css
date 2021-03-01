@@ -1,0 +1,13 @@
+table {
+  border: 1rem black solid;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+td {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+tr:nth-child(2n) :nth-child(2n + 1),
+tr:nth-child(2n + 1) :nth-child(2n) {
+  background-color: gray;
+}
