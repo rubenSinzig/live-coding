@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: gray;
+}
+table {
+  padding: 00.1rem;
+  border: 0.1rem solid rgb(226, 226, 226);
+  margin: 2.5rem auto;
+}
+td {
+  width: 5rem;
+  height: 5rem;
+  background-color: black;
+}
+tr:nth-child(2n + 1) :nth-child(2n),
+tr:nth-child(2n) :nth-child(2n + 1) {
+  background-color: silver;
+}
