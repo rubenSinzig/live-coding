@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* pseudo elements VS  pseudo classes */
+/* pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). */
+/* more pseudo classes
+:right
+:target
+:valid
+:hover */
+
+/* pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s) */
+/* ::placeholder  */
+
+/* ::before  Vs :before */
+
+/* ::first-letter (:first-letter) */
+
+/* display:none vs opacity: 0 */
+
+/* vh & vw */
+
+/* visual content like img */
+/*  % , border-radius */

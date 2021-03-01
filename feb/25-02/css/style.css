@@ -161,3 +161,7 @@ tr:nth-child(1) :nth-child(n + 3):nth-child(-n + 5) {
   background-color: crimson;
   border: 2px solid black;
 }
+
+tr {
+  border: 2px solid black;
+}
