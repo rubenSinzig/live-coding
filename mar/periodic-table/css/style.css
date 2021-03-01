@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table {
+  width: 90vw;
+  height: 90vh;
+  margin: 5rem auto;
+}
+td {
+  border: 1px black solid;
+  border-radius: 10%;
+  text-align: center;
+  max-width: 0px;
+  transition: all 0.2s;
+}
+td:hover {
+  transform: scale(2);
+}
+td:empty {
+  border: 0;
+}
+/* Light Blue row*/
+tr:nth-last-child(2) td:nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(135, 206, 250, 0.76);
+}
+/* Dark Blue row*/
+tr:last-child td:nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(0, 128, 128, 0.76);
+}
+/*Coral Row*/
+tr:nth-child(2) :nth-child(13),
+tr:nth-child(n + 3):nth-child(-n + 4) td:nth-child(14),
+tr:nth-child(n + 4):nth-child(-n + 5) td:nth-child(15),
+tr:nth-child(n + 5):nth-child(-n + 6) td:nth-child(16) {
+  background-color: rgba(255, 127, 80, 0.76);
+}
+/*The single elements without hover*/
+tr:nth-child(6) td:nth-last-child(16):hover,
+tr:nth-child(7) td:nth-last-child(16):hover {
+  transform: none;
+}
