@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* body {
   background-color: red;
 } */
@@ -59,5 +60,24 @@ div[class="main-text"]::before {
 }
 /* vh & vw */
 
+.menu {
+  width: 100vw;
+  height: 15vh;
+  background-color: orange;
+}
+ul li {
+  display: inline-block;
+  /* This is Okay for now, soon  🙄 */
+  margin-right: 4vw;
+}
 /* visual content like img */
 /*  % , border-radius */
+.last-img {
+  width: 50vw;
+  height: 50vh;
+  overflow: hidden;
+}
+.last-img img {
+  width: 100%;
+  height: 50%;
+}
