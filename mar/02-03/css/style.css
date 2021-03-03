@@ -1,0 +1,358 @@
+/* chrome do not support this one */
+body :fullscreen {
+  color: indianred;
+  background-color: indigo;
+}
+/* Kenan */
+p:last-of-type {
+  color: red;
+  font-style: italic;
+}
+article :last-of-type {
+  color: red;
+}
+
+/* Vivi */
+/* CSS3 syntax --> ::first-line*/
+p {
+  background-color: darkseagreen;
+  font-size: 1rem;
+}
+p::first-line,
+span::first-line {
+  background-color: seagreen;
+}
+/* only works on block level elements, in this example it will not
+  work on <span> because span is an inline element */
+​ div::first-line {
+  color: salmon;
+  background-color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bolder;
+  word-spacing: 2rem;
+  text-transform: capitalize;
+  text-decoration-line: line-through;
+}
+/* CSS2 syntax --> :first-line */
+​
+  /* the length of the first line depends on many factors,
+  including the width of the element,
+  the width of the document
+  the font size of the text. */
+  ​
+  /* Allowed properties:
+  - all font related properties
+  - all background related properties
+  - the color property
+  - word-spacing
+  - letter-spacing
+  - text-decoration
+  - text-transform
+  - line-height
+  - text-shadow
+  - text-decoration
+  - text-decoration-color
+  - text-decoration-line
+  - text-decoration-style
+  - vertical-align.
+  ​
+  */
+
+  /* Sven */
+  ::slotted(p) {
+  font-weight: bold;
+  color: red;
+}
+slot[name="slot1"] {
+  text-decoration: underline;
+}
+slot[name="slot1"] + .siblingA {
+  color: whitesmoke;
+}
+slot[name="slot1"] ~ .siblingB {
+  color: orange;
+}
+slot[name="slot2"] + .siblingC {
+  color: blue;
+}
+/* Ahmad */
+one:empty {
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+}
+input {
+  height: 4vh;
+  width: 26vw;
+  border: none;
+  outline: none;
+  border-radius: 20%;
+}
+input::placeholder {
+  color: black;
+  font-size: 1rem;
+  font-style: italic;
+  background-color: chartreuse;
+}
+
+/* Alex */
+div,
+select {
+  margin: 20px;
+}
+p {
+  font-size: 30px;
+}
+h2 {
+  color: white;
+  background-color: black;
+}
+label {
+  font-size: 50px;
+}
+input[type="radio"] {
+  height: 5em;
+  width: 10%;
+}
+
+input[type="checkbox"] {
+  height: 5em;
+  width: 10%;
+}
+
+/* Radio element, when checked */
+input[type="radio"]:checked + label {
+  box-shadow: 0 0 0 3px orange;
+  color: orange;
+}
+
+/* Checkbox element, when checked */
+input[type="checkbox"]:checked + label {
+  box-shadow: 0 0 0 3px hotpink;
+  color: hotpink;
+}
+
+/* NTH-LAST-CHILD */
+div p:nth-last-child(odd) {
+  background-color: lightblue;
+}
+
+div p:nth-last-child(even) {
+  background-color: yellow;
+}
+
+p:nth-last-child(7) {
+  color: white;
+}
+
+/* Ali */
+/* The :first-child pseudo-class  */
+​ article p:first-child {
+  font-weight: bold;
+  color: blue;
+}
+​
+/* THe ::before pseudo-element creates a that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default. */
+​
+p::before {
+  content: "*";
+  background: chocolate;
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+​ p::after {
+  content: "*";
+  background: chocolate;
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+/* Dario */
+/* https: ; //docs.google.com/presentation/d/1Zbc45NIHssFobId19wGgQfspiZK5_YOqAL4xdh5DJaE/edit#slide=id.p */
+
+/* Angelos */
+::first-line {
+  color: rgb(128, 90, 0);
+  font-family: "Franklin Gothic Medium";
+  text-transform: uppercase;
+  background-color: rgb(255, 127, 127);
+}
+
+/* p:first-of-type class */
+div:first-of-type {
+  border: 20px solid;
+}
+a:first-of-type {
+  text-transform: uppercase;
+  border: 20px solid;
+}
+
+p::first-letter {
+  font-size: 80px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Hamza */
+/*Focus is Css pseudo-class 
+represents an element that has received focus 
+its triggered when the user clicks an item or tabs the key to select it*/
+​ #contact:focus {
+  background-color: red;
+  color: yellow;
+  font-size: larger;
+}
+/* after is Css pseudo-element 
+ we used to add pseudo-elements to the end (after) of elements with the content property
+ */
+#LG::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+/* Igal */
+
+input,
+button {
+  margin: 10px;
+}
+.focus-only:focus {
+  outline: 2px solid black;
+}
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+
+/* Iulian */
+/* Form style */
+form {
+  border: black 1px solid;
+  color: gray;
+  padding: 5px;
+}
+/* Input area style */
+input {
+  display: block;
+  padding: 4px;
+}
+/* form:focus-within style*/
+/* represents an element that has Received focus
+     or contains an element that has Received focus */
+​ form:focus-within {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+}
+
+/* Malte */
+/* // LVHA-order: :link — :visited — :hover — :active */
+​ a:link,
+a,
+a:visited {
+  color: red;
+}
+​ a:hover,
+a:focus {
+  color: orange;
+}
+​ a:active {
+  color: blue;
+}
+
+/* Marius */
+label {
+  display: block;
+  margin: 1px;
+  padding: 1px;
+}
+​ .field {
+  margin: 1px;
+  padding: 1px;
+}
+​ .testInput:invalid {
+  background-color: #ffdddd;
+}
+​ ​ #testForm:invalid {
+  border: 5px solid #ffdddd;
+}
+​ ​ .testInput:valid {
+  background-color: #ddffdd;
+}
+​ ​ #testForm:valid {
+  border: 5px solid #1d9e43;
+}
+​ ​ .testInput:required {
+  border-color: #800000;
+  border-width: 3px;
+}
+.testInput:required:invalid {
+  border-color: #c00000;
+}
+
+/* Maryam */
+/* pseudo class : placeholder-shown */
+​ input {
+  border: 1px solid black;
+  padding: 3px;
+}
+​ input.firstname:placeholder-shown {
+  border-color: teal;
+  background-color: yellowgreen;
+  color: maroon;
+  border-radius: 3px;
+}
+/* pseudo element :: placeholder */
+input.password::placeholder {
+  color: red;
+  font-size: 1;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Meriem */
+form {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin: 5rem;
+  padding: 5rem;
+  color: chocolate;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+label {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+input:required {
+  border: 1px solid rgb(18, 196, 47);
+}
+input:required:invalid {
+  border: 1px solid #c00000;
+}
+
+/* Omar */
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
+  border: 0;
+  box-shadow: none;
+  background-color: white;
+}
+textarea:-moz-read-write,
+textarea:read-write {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
