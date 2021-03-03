@@ -44,7 +44,39 @@ input {
 /* The switch */
 .switch {
   position: relative;
-  width: 6rem;
-  height: 3rem;
+  width: 4rem;
+  height: 2rem;
   margin-left: 1rem;
+  /* border: 2px red dashed; */
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.2s;
+  border-radius: 5rem;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  left: 0.25rem;
+  bottom: 0.35rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 100%;
+}
+
+input:checked + .slider {
+  background-color: lightsteelblue;
+}
+
+input:checked + .slider::before {
+  transform: translateX(2.5rem);
 }
