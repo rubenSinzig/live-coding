@@ -47,7 +47,7 @@ input {
   width: 4rem;
   height: 2rem;
   margin-left: 1rem;
-  /* border: 2px red dashed; */
+  border: 2px red dashed;
 }
 
 .slider {
