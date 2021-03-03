@@ -7,5 +7,30 @@
     <title>Fancy form</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <form action="index.js" method="GET">
+      <fieldset>
+        <legend>Personal info</legend>
+        <input type="text" name="name" placeholder="Enter your name" id="1" />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Your last name"
+          id="2"
+        />
+        <input type="datetime" name="bDay" id="3" />
+      </fieldset>
+      <fieldset>
+        <legend>Fav things</legend>
+        <input type="color" name="color" id="4" />
+        <input type="time" name="time" id="5" />
+      </fieldset>
+      <section class="toggle">
+        <label class="toggle-lable">Want more info?</label>
+        <input type="checkbox" name="moreInfo" />
+        <span class="silder"></span>
+      </section>
+      <input type="submit" value="Send" />
+    </form>
+  </body>
 </html>

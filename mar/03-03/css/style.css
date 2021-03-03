@@ -1,11 +1,24 @@
 /* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* form */
 
+body {
+  font-family: "Akaya Telivigala", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+/* form */
+form {
+  margin: 25% auto;
+  border: 2px red dashed;
+  width: 50%;
+  height: 50%;
+}
 /* fancy checkbox */
 
 /* Hide the ugly html checkbox */
