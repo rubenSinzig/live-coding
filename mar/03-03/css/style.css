@@ -19,8 +19,32 @@ form {
   width: 50%;
   height: 50%;
 }
+input {
+  margin: 2vh auto;
+  display: block;
+  width: 30%;
+  border-radius: 2rem;
+  border: none;
+  background-color: lightgray;
+}
 /* fancy checkbox */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Hide the ugly html checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
 /* The switch */
+.switch {
+  position: relative;
+  width: 6rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
