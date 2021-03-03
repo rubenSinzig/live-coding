@@ -1,5 +1,6 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +48,7 @@ input {
   width: 4rem;
   height: 2rem;
   margin-left: 1rem;
-  /* border: 2px red dashed; */
+  border: 2px red dashed;
 }
 
 .slider {
@@ -79,4 +80,11 @@ input:checked + .slider {
 
 input:checked + .slider::before {
   transform: translateX(2.5rem);
+}
+
+i {
+  font-size: 3rem;
+  color: aqua;
+  box-shadow: 3px 3px 3px red;
+  border-radius: 50%;
 }

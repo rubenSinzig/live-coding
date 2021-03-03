@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fancy form</title>
+    <link rel="icon" href="./img/icon.png" />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <form action="index.js" method="GET">
       <fieldset>
         <legend>Personal info</legend>
-        <input type="text" name="name" placeholder="Enter your name" id="1" />
+        <input type="text" name="name" placeholder="" id="1" />
+        &#241;
         <input
           type="text"
           name="lastName"
@@ -26,13 +29,15 @@
         <input type="time" name="time" id="5" />
       </fieldset>
       <section class="toggle">
-        <label class="toggle-lable">Want more info?</label>
+        <label class="toggle-lable">Want &nbsp; more info?</label>
         <label class="switch">
           <input type="checkbox" name="moreInfo" />
           <span class="slider"></span>
         </label>
       </section>
-      <input type="submit" value="Send" />
+      <i class="fas fa-people-arrows"></i>
+      <i class="fab fa-facebook-messenger"></i
+      ><input type="submit" value="Send" />
     </form>
   </body>
 </html>
