@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* flex container */
 .container {
   display: flex;
@@ -6,19 +11,28 @@
   height: 500px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .box {
   width: 150px;
   height: 150px;
+  margin: 1%;
   background-color: orchid;
+  order: 1;
 }
-
+/* stretch; */
 /* special effects */
 .box-main {
+  /*  order : sets the order to lay out an item in a flex */
+  order: -1;
+  /*  flex-grow : sets the flex grow facto, no negative numbers*/
+  flex-grow: 1;
   width: 150px;
-  height: 150px;
+
+  /* height: 150px; */
   background-color: palegreen;
   align-self: flex-start;
+  /* spicy flex */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,16 +45,13 @@
   background-color: slategray;
 }
 
-/* spicy flex */
-
-/*  order : sets the order to lay out an item in a flex */
-
 /* the shortcut  */
-
-/*  flex-grow : sets the flex grow facto, no negative numbers*/
 
 /*  flex-shrink : sets the flex shrink factor of a flex item, no negative numbers*/
 
 /* flex-wrap : sets whether flex items are forced onto one line or can wrap onto multiple lines */
 
 /* flex-direction : sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). */
+
+/* flex : sets how a flex item will grow or shrink to fit the space available in its flex container. */
+/* /* Three values: flex-grow | flex-shrink | flex-basis */
