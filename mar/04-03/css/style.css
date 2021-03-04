@@ -1,0 +1,46 @@
+/* flex container */
+.container {
+  display: flex;
+  background-color: orange;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: orchid;
+}
+
+/* special effects */
+.box-main {
+  width: 150px;
+  height: 150px;
+  background-color: palegreen;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px red das;
+}
+.baby {
+  margin: 2%;
+  width: 40px;
+  height: 40px;
+  background-color: slategray;
+}
+
+/* spicy flex */
+
+/*  order : sets the order to lay out an item in a flex */
+
+/* the shortcut  */
+
+/*  flex-grow : sets the flex grow facto, no negative numbers*/
+
+/*  flex-shrink : sets the flex shrink factor of a flex item, no negative numbers*/
+
+/* flex-wrap : sets whether flex items are forced onto one line or can wrap onto multiple lines */
+
+/* flex-direction : sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). */
