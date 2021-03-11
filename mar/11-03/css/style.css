@@ -5,6 +5,7 @@
 }
 :root {
   font-size: 16px;
+  --my-orange: rgba(235, 133, 8, 0.8);
 }
 
 /* font */
@@ -22,7 +23,7 @@ p {
 
 .menu {
   width: 100vw;
-  background-color: rgba(235, 133, 8, 0.8);
+  background-color: var(--my-orange);
 }
 .menu nav ul {
   height: 5vh;
@@ -60,15 +61,15 @@ li:hover {
   overflow: hidden;
 }
 .gray {
-  width: 50rem;
+  width: 70rem;
   height: 50rem;
   position: absolute;
-  right: -15rem;
-  bottom: -20rem;
+  right: -30rem;
+  bottom: -10rem;
   background-color: gray;
   z-index: -1;
   transform: rotate(-45deg);
-  border-radius: 10%;
+  border-radius: 10% 0;
 }
 /* positions */
 /* static aka Default*/
@@ -76,9 +77,9 @@ li:hover {
   width: 10rem;
   height: 10rem;
   position: absolute;
-  top: 0rem;
-  left: 0rem;
-  background-color: orange;
+  top: -6rem;
+  left: -3rem;
+  background-color: var(--my-orange);
   z-index: -1;
   transform: rotate(-45deg);
   border-radius: 10%;
