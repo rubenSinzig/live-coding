@@ -7,3 +7,37 @@
   font-size: 16px;
   /* Variables  */
 }
+
+main {
+  display: grid;
+  border: 2px red dashed;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 15rem 15rem 15rem; */
+  grid-template-rows: repeat(4, 1fr);
+  gap: calc(2rem + 5%);
+  /* row-gap: 5rem; */
+  grid-template-areas:
+    "menu menu menu"
+    "side-bar main-article main-article"
+    "side-bar sec-article sec-article"
+    "footer footer footer";
+}
+div {
+  border: 2px red dashed;
+}
+.menu {
+  grid-area: menu;
+}
+.side-bar {
+  grid-area: side-bar;
+}
+.main-article {
+  grid-area: main-article;
+}
+.sec-article {
+  grid-area: sec-article;
+}
+.footer {
+  grid-area: footer;
+}
