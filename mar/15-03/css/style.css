@@ -28,12 +28,24 @@ div {
 }
 .menu {
   grid-area: menu;
+  background-color: orange;
+}
+ul li {
+  display: inline-block;
 }
 .side-bar {
   grid-area: side-bar;
 }
 .main-article {
   grid-area: main-article;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-article div {
+  height: 3rem;
+  width: 3rem;
 }
 .sec-article {
   grid-area: sec-article;
