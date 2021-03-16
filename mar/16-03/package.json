@@ -1,12 +1,16 @@
 {
   "name": "16-03",
   "version": "1.0.0",
-  "description": "responsive webpage",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server index.html"
   },
-  "author": "Ruben",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-modules": "^1.0.1"
+  }
 }
