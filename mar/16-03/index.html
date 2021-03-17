@@ -36,7 +36,7 @@
       <div class="text">This is test text</div>
     </main>
     <!-- First step: live-server npm package -->
-    <!-- npm init -yes || npm init -y -->
+    <!-- npm init || npm init -yes || npm init -y -->
     <!-- npm i live-server -->
     <!-- Second step: add script into package.json -->
     <!-- "start":"liver-server index.html" -->
@@ -44,14 +44,13 @@
     <script>
         let clicked = false;
         document.querySelector('.hamburger').addEventListener("click",()=>{
-            clicked = !clicked
+        clicked= !clicked;
             console.log(clicked);
             if(clicked){
                 document.querySelector('.side-menu').style.cssText = "display: block; position: absolute;top: 3vh;left:0;z-index: 1;"
             } else{
                 document.querySelector('.side-menu').style.cssText = "display: none;"
             }
-           
         })
     </script>
   </body>
