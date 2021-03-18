@@ -41,21 +41,5 @@
         <li class="list-item">item 3</li>
       </ul>
     </footer>
-    <script>
-      let clicked = false;
-      const yourClick = () => {
-        let string = "";
-        clicked = !clicked;
-        if (clicked) {
-          string = "block";
-        } else {
-          string = "none";
-        }
-        document.querySelector(
-          ".subnav-content"
-        ).style.cssText = `display: ${string};transition:all 0.4s ease-in;`;
-      };
-      document.querySelector(".subnavbtn").addEventListener("click", yourClick);
-    </script>
   </body>
 </html>
