@@ -9,19 +9,20 @@
 }
 body {
   height: 100vh;
+  font-family: Tahoma, sans-serif;
 }
 .navbar {
   background-color: lightgray;
   display: flex;
   justify-content: flex-start;
   flex-flow: row;
-  font-family: Tahoma, sans-serif;
+  /* font-family: Tahoma, sans-serif; */
   position: relative;
   width: 100vw;
   height: 5vh;
 }
 
-.navbar::before {
+/* .navbar::before {
   content: "";
   display: block;
   position: absolute;
@@ -31,8 +32,57 @@ body {
   background-color: lightgray;
   left: 25%;
   top: 20%;
-}
+} */
+
+/* fancy menu */
+
 /* style items */
+a {
+  text-decoration: none;
+  color: white;
+}
+.list-item {
+  list-style: none;
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  background-color: orange;
+  z-index: 1;
+}
+
+/* style button */
+.subnavbtn {
+  border: none;
+  background-color: inherit;
+  font-size: 1.2rem;
+  font-family: Tahoma, sans-serif;
+  padding: 0.75rem;
+  color: white;
+  /* later more fun */
+}
+
+/* style menu container */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+/* hover */
+/* .subnavbtn:hover + .subnav-content {
+  display: block;
+  transition: var(--ani-move);
+} */
+.list-item:hover {
+  background-color: whitesmoke;
+  color: orange;
+  transition: var(--ani-move);
+}
+a:hover {
+  background-color: whitesmoke;
+  color: orange;
+  transition: var(--ani-move);
+}
 
 /* footer */
 footer {
@@ -41,7 +91,7 @@ footer {
   width: 100vw;
   background-color: orange;
 }
-footer::after {
+/* footer::after {
   content: "";
   display: block;
   position: absolute;
@@ -52,7 +102,7 @@ footer::after {
   right: 30%;
   bottom: 35%;
   z-index: -1;
-}
+} */
 footer ul {
   display: flex;
   justify-content: space-evenly;

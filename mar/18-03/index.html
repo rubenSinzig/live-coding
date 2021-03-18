@@ -10,7 +10,7 @@
   <body>
     <nav class="navbar">
       <nav class="subnav">
-        <button class="subnavbtn">About ▼</button>
+        <i class="subnavbtn">About ▼</i>
         <ul class="subnav-content">
           <li class="list-item"><a href="#">call 1</a></li>
           <li class="list-item"><a href="#">call 2</a></li>
@@ -18,7 +18,7 @@
         </ul>
       </nav>
       <nav class="subnav">
-        <button class="subnavbtn">Help ▼</button>
+        <i class="subnavbtn">Help ▼</i>
         <ul class="subnav-content">
           <li class="list-item">option 1</li>
           <li class="list-item">option 2</li>
@@ -26,7 +26,7 @@
         </ul>
       </nav>
       <nav class="subnav">
-        <button class="subnavbtn">More ▼</button>
+        <i class="subnavbtn">More ▼</i>
         <ul class="subnav-content">
           <li class="list-item">item 1</li>
           <li class="list-item">item 2</li>
@@ -41,5 +41,21 @@
         <li class="list-item">item 3</li>
       </ul>
     </footer>
+    <script>
+      let clicked = false;
+      const yourClick = (item) => {
+        let string = "";
+        clicked = !clicked;
+        if (clicked) {
+          string = "block";
+        } else {
+          string = "none";
+        }
+        document.querySelector(
+          ".subnav-content"
+        ).style.cssText = `display: ${string};transition:all 0.4s ease-in;`;
+      };
+      document.querySelector(".subnavbtn").addEventListener("click", yourClick);
+    </script>
   </body>
 </html>
