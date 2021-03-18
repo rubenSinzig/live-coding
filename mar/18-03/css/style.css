@@ -66,21 +66,21 @@ a {
   display: none;
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 30%;
 }
-/* hover */
-/* .subnavbtn:hover + .subnav-content {
+/* dropdown hover */
+.subnav:hover .subnav-content {
   display: block;
   transition: var(--ani-move);
-} */
+}
 .list-item:hover {
   background-color: whitesmoke;
-  color: orange;
+  color: rgba(79, 162, 190, 0.916);
   transition: var(--ani-move);
 }
 a:hover {
   background-color: whitesmoke;
-  color: orange;
+  color: rgba(79, 162, 190, 0.916);
   transition: var(--ani-move);
 }
 
