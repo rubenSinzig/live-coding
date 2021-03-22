@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <button>⎈</button>
+    <button onclick="showMenu()">⎈</button>
     <nav class="main-nav" id="menuBox">
       <ul>
         <li><a href="#">Home</a></li>
@@ -16,5 +16,18 @@
         <li><a href="#">Call</a></li>
       </ul>
     </nav>
+    <!-- ul>li.box$*4 -->
+    <!-- header+min+footer -->
+    <!-- nav>ul>li*3 -->
+    <script>
+      const showMenu = () => {
+        console.log("Hi, I am function");
+        if (menuBox.style.display == "none") {
+          menuBox.style.display = "block";
+        } else {
+          menuBox.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
