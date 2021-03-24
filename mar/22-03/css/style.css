@@ -5,6 +5,7 @@
 }
 :root {
   /* some var */
+  --my-orange: orange;
 }
 /* The menu 😎  */
 nav {
