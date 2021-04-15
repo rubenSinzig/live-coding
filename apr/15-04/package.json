@@ -1,5 +1,5 @@
 {
-  "name": "14-04",
+  "name": "15-04",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,6 +15,7 @@
     "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
     "publish": "gh-pages -d dist"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
