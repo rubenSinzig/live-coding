@@ -72,4 +72,34 @@
   }
 }
 
+// map
+
+$font-sizing: (
+  xs: 12px,
+  s: 14px,
+  m: 16px,
+  l: 20px,
+  xl: 40px,
+  xxl: 60px,
+);
+$orange-colors: (
+  light: rgb(214, 107, 25),
+  dark: rgb(214, 107, 14),
+  super: rgb(214, 107, 20),
+);
+
+@mixin font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    font-size: map-get($font-sizing, $size);
+  } @else {
+    @error "#{$size} this is not defined, Use #{font-sizing}";
+  }
+}
 // functions in sass
+// @function font-size($size) {
+//   @if map-has-key($font-sizing, $size) {
+//     @return map-get($font-sizing, $size);
+//   } @else {
+//     @error "#{$size} this is not defined, Use #{font-sizing}";
+//   }
+// }
