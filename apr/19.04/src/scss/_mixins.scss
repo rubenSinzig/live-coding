@@ -96,10 +96,10 @@ $orange-colors: (
   }
 }
 // functions in sass
-// @function font-size($size) {
-//   @if map-has-key($font-sizing, $size) {
-//     @return map-get($font-sizing, $size);
-//   } @else {
-//     @error "#{$size} this is not defined, Use #{font-sizing}";
-//   }
-// }
+@function font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    @return map-get($font-sizing, $size);
+  } @else {
+    @error "#{$size} this is not defined, Use #{font-sizing}";
+  }
+}
