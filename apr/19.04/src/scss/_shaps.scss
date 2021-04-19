@@ -1,0 +1,14 @@
+.triangle {
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    margin: 1rem;
+  }
+  &::before {
+    @include triangle(right);
+  }
+  &::after {
+    @include triangle(left);
+  }
+}
