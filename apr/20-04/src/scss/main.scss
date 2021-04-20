@@ -44,7 +44,7 @@ body {
     );
     // random() will return a number between 1-100 with no argument being passed to it, or when you pass in a single integer parameter to define the upper limit. random(20) will return a number between 1-20.
     height: random(60) + 10 + vh;
-    border-radius: 0 0 ((random(50) + px)) ((random(50) + 10 + px));
+    border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
     transform-origin: 0 0;
 
     @if (($i % 2) != 0) {
@@ -55,7 +55,8 @@ body {
         rgba(darken(gray, random(10)), 1)
       );
     }
-
+    // The lighten() function increases lightness by a fixed amount.
+    // The darken() function decreases lightness by a fixed amount.
     @include add-move-animation(random(5) + 1 + s);
   }
 }
