@@ -44,11 +44,11 @@ body {
     );
     // random() will return a number between 1-100 with no argument being passed to it, or when you pass in a single integer parameter to define the upper limit. random(20) will return a number between 1-20.
     height: random(60) + 10 + vh;
-    border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+    border-radius: 0 0 ((random(50) + px)) ((random(50) + 10 + px));
     transform-origin: 0 0;
 
     @if (($i % 2) != 0) {
-      border-radius: ((random(50) + 10 + px)) ((random(50) + 10 + px)) 0 0;
+      border-radius: ((random(50) + 10 + px)) ((random(20) + 10 + px)) 0 0;
       background: linear-gradient(
         to top right,
         lighten(gray, random(40)),
