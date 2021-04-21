@@ -47,7 +47,7 @@ function multiply() {
   // console.log(userNum);
   let resultText = "";
   for (let i = 1; i <= 10; i++) {
-    resultText += `${i} * ${userNum} = ${i * userNum} <br>`;
+    resultText += `${i} * ${userNum} ☘️ ${i * userNum} <br>`;
   }
   document.querySelector(".result").innerHTML = resultText;
 }
