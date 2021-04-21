@@ -2,7 +2,7 @@
 
 ## HTML & CSS
 
-[24/02/2020](feb/24-02)
+[00/02/2020](feb/00-02)
 
 Introduction to HTML
 
@@ -19,7 +19,7 @@ Introduction to HTML
 - Formatting Elements `<strong>`, `<em>`, `<sup>`, `<sub>`, `<b>`, `<i>`, `<mark>`
 - Form (action, method="POST"), input
 
-[25/02/2020](feb/25-02)
+[00/02/2020](feb/00-02)
 
 - Review from 24/02/2020
 - HTML + CSS
@@ -37,7 +37,7 @@ Introduction to HTML
 - Form (method="GET")
 - iframe
 
-[26/02/2020](feb/26-02)
+[00/02/2020](feb/00-02)
 
 - Review from 24 and 25/02/2020
 - The image tag: `<img src=""[URL]"">`
@@ -59,7 +59,7 @@ Introduction to HTML
 - `<img>` vs. `background-image`, `background-size`, `background-repeat`, `background-position`
 - Putting it all together with the `background` shorthand
 
-[27/02/2020](feb/27-02)
+[00/02/2020](feb/00-02)
 
 - Review from 26/02/2020
 - `:hover`, `:active`, `:visited`
@@ -82,7 +82,7 @@ Introduction to HTML
 - Hiding things with css `visibility` (vs. `display: none;`)
 - Making navbars accessible: The `<nav>` element
 
-[02/03/2020](mar/02-03)
+[00/03/2020](mar/00-03)
 Review from last week: HTML and CSS
 
 - element selectors, combining multiple selectors
@@ -97,7 +97,7 @@ Review from last week: HTML and CSS
 - `visibility` (vs. `display: none;`)
 - Periodic Table
 
-[04/03/2020](mar/04-03)
+[00/03/2020](mar/00-03)
 Review of past lessons (table, input,
 
 - `:nth-child() { ... }`
@@ -111,7 +111,7 @@ Review of past lessons (table, input,
 - Rounding images: `border-radius: [BORDER-SIZE]`, `%`
 - Chess board
 
-[09/03/2020](mar/09-03)
+[00/03/2020](mar/00-03)
 Review of past lessons
 
 - @font-face
@@ -127,7 +127,7 @@ Review of past lessons
 - fontawesome
 - `<i class=""fas [icon-class]""></i>`
 
-[10/03/2020](mar/10-03)
+[00/03/2020](mar/00-03)
 Review of past lessons
 
 - Making navbars accessible: The `<nav>` element
@@ -135,13 +135,8 @@ Review of past lessons
 - Aligning and justifying: css `justify-content` and `align-items`
 - Direction and wrapping: css `flex-direction` and `flex-wrap`
 - Small shorthand: css `flex-flow`
-- YouTube exercise
 
-11/03 continue working on YouTube exercise
-
-12/03 freecode training
-
-[16/03/2020](mar/16-03)
+[00/03/2020](mar/00-03)
 CSS Grid:
 
 - `.container { display: grid }`
@@ -153,13 +148,12 @@ CSS Grid:
 - Grid exercise
 - Mock up sign in page
 
-[17/03/2020](mar/17-03)
+[00/03/2020](mar/00-03)
 
 - css `position` and `static`, `relative`, `absolute`
 - Using our `@media` queries for layout
-- Exercise: Mock up of full webpage _Responsive_
 
-[18/03/2020](mar/18-03)
+[00/03/2020](mar/00-03)
 
 - Animations
 - `@keyframes [name] { ... }`
@@ -167,19 +161,14 @@ CSS Grid:
 - `from`, `to` and `%` directives
 - `animation-iteration-count`, `animation-direction`
 
-19/03
-more of Animations
-Exercise: X-menu
-
-[23/03/2020](mar/23-03)
+[00/03/2020](mar/00-03)
 
 - small example of connecting Javascript with HTML and CSS.
-- `svg`
+
 - Dealing with scrollers: css `overflow` property
 - Wrapping long words: css `overflow-wrap`
-  Exercise: Clippy website
 
-[24/03/2020](mar/24-03)
+[00/03/2020](mar/00-03)
 
 - connecting Javascript with HTML and CSS.
 - The `<script>` tag
@@ -187,16 +176,12 @@ Exercise: X-menu
 - Making a menu with fancy effects
 - Exercise: using `onclick` effect on the menu for the mobile app.
 
-[25/03/2020](mar/25-03)
+[00/03/2020](mar/00-03)
 
 - Review from previous days
 - Nice form elements
-- Manipulating classes: `Element.classList` methods
-- Exercise: Continue with YouTube app (check box)
 
-26/03 Exercise: The perfect menu
-
-[30/03/2020](mar/30-03)
+[00/03/2020](mar/00-03)
 
 - Bootstrap
 - Adding bootstrap to our project (with CDNs):
@@ -205,17 +190,13 @@ Exercise: X-menu
 - Navbar with bootstrap
 - Exercise: Build your own (random stuff with bootstrap)
 
-[31/03/2020](mar/31-03)
+[00/03/2020](mar/00-03)
 
 - Table with Bootstrap
 - Form with Bootstrap
 - Exercise: porfolio with Bootstrap
 
-01/04 Continue Portfolio project with Bootstrap
-
-02/04 Presentations of Portfolio project
-
-[14/04/2020](apr/14-04)
+[00/04/2020](apr/00-04)
 
 - Project Template HTML CSS boilerplate with built-in sass support
 - Installing dependencies: `npm install`
@@ -224,7 +205,7 @@ Exercise: X-menu
 - Publishing online: `npm run deploy`
 - Project structure: `scss` and `styles` folders
 
-[15/04/2020](apr/15-04)
+[00/04/2020](apr/00-04)
 
 - Installing sass: `npm install -g sass`
 - Creating input: `.scss` vs. `.sass`
@@ -237,7 +218,7 @@ Exercise: X-menu
 - Sass maps
 - Project: color guide in Sass
 
-[16/04/2020](apr/16-04)
+[00/04/2020](apr/00-04)
 
 - Review from previous days (Sass)
 - Defining mixins: `@mixin [name](){ ... }`
