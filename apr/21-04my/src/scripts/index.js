@@ -50,28 +50,28 @@ function count() {
     .querySelector("#vowels")
     .value.toLowerCase()
     .split("");
+  let result = 0;
   for (let i = 0; i <= strToArr.length; i++) {
-    let result = 0;
     switch (strToArr[i]) {
       case "a":
         result += 1;
-        continue;
+        break;
       case "e":
         result += 1;
-        continue;
+        break;
       case "i":
         result += 1;
-        continue;
+        break;
       case "o":
         result += 1;
-        continue;
+        break;
       case "u":
         result += 1;
-        continue;
+        break;
       default:
         break;
     }
   }
-  let output = `${userInput}: ${result}`;
+  let output = `${userInput} has ${result} vowels`;
   document.querySelector(".resultCounting").innerHTML = output;
 }
