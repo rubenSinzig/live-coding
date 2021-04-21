@@ -1,0 +1,26 @@
+// colors for background
+@mixin background-color($color) {
+  @if map-has-key($bg-colors, $color) {
+    background-color: map-get($bg-colors, $color);
+  } @else {
+    @error "#{$color} is not defined, use .src/abstracts/_variables.scss -> #{bg-colors}";
+  }
+}
+
+// help borders
+@mixin help-border {
+  border: 1px dashed red;
+}
+
+// center content
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// size for div
+@mixin size-item {
+  width: 12rem;
+  height: 5rem;
+}

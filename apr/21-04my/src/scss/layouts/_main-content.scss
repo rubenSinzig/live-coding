@@ -1,0 +1,33 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  @include background-color(dark);
+  @include center;
+  flex-direction: column;
+  color: $font-color;
+}
+
+.selection {
+  @include center;
+  margin: 1rem;
+  .select-num {
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+  }
+}
+
+.main-calculate {
+  @include center;
+  .calculate {
+    @include center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    @include size-item;
+    margin: 1rem;
+  }
+  button {
+    width: 8rem;
+    height: 2rem;
+  }
+}

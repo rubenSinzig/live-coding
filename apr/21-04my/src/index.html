@@ -8,52 +8,51 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <!-- User number one -->
-    <select name="number" id="numOne" class="select-num">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
+    <div class="selection">
+      <!-- User number one -->
+      <input
+        type="number"
+        name="number"
+        id="numOne"
+        class="select-num"
+        value="10"
+      />
 
-    <!-- User number otwo -->
-    <select name="number" id="numTwo" class="select-num">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
+      <!-- User number otwo -->
+      <input
+        type="number"
+        name="number"
+        id="numTwo"
+        class="select-num"
+        value="10"
+      />
+    </div>
 
-    <br />
-    <!-- Multiply -->
-    <button onclick="multiply()">Multiply</button>
-    <div class="resultMultiply"></div>
+    <div class="main-calculate">
+      <!-- Multiply -->
+      <div class="calculate">
+        <button onclick="multiply()">Multiply</button>
+        <div class="resultMultiply"></div>
+      </div>
+      <!-- Divide -->
+      <div class="calculate">
+        <button onclick="divide()">Divide</button>
+        <div class="resultDivide"></div>
+      </div>
+      <!-- Add -->
+      <div class="calculate">
+        <button onclick="adding()">Add</button>
+        <div class="resultAdd"></div>
+      </div>
 
-    <!-- Divide -->
-    <button onclick="divide()">Divide</button>
-    <div class="resultDivide"></div>
+      <!-- Minus -->
+      <div class="calculate">
+        <button onclick="minus()">Minus</button>
+        <div class="resultMinus"></div>
+      </div>
 
-    <!-- Add -->
-    <button onclick="adding()">Add</button>
-    <div class="resultAdd"></div>
-
-    <!-- Minus -->
-    <button onclick="minus()">Minus</button>
-    <div class="resultMinus"></div>
-
-    <!-- import index.js file -->
-    <script src="./scripts/index.js"></script>
+      <!-- import index.js file -->
+      <script src="./scripts/index.js"></script>
+    </div>
   </body>
 </html>
