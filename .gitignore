@@ -1,1 +1,5 @@
+# Only Mac file
 .DS_Store
+
+# VS code config
+.vscode/ 
