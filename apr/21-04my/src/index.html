@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
+    <link rel="stylesheet" href="" />
   </head>
   <body>
+    <!-- User number one -->
     <select name="number" id="numOne" class="select-num">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -19,6 +21,8 @@
       <option value="9">9</option>
       <option value="10">10</option>
     </select>
+
+    <!-- User number otwo -->
     <select name="number" id="numTwo" class="select-num">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -33,9 +37,22 @@
     </select>
 
     <br />
+    <!-- Multiply -->
+    <button onclick="multiply()">Multiply</button>
+    <div class="resultMultiply"></div>
 
-    <button onclick="multiply()">Calculate</button>
-    <div class="result"></div>
+    <!-- Divide -->
+    <button onclick="divide()">Divide</button>
+    <div class="resultDivide"></div>
+
+    <!-- Add -->
+    <button onclick="adding()">Add</button>
+    <div class="resultAdd"></div>
+
+    <!-- Minus -->
+    <button onclick="minus()">Minus</button>
+    <div class="resultMinus"></div>
+
     <!-- import index.js file -->
     <script src="./scripts/index.js"></script>
   </body>

@@ -1,9 +1,43 @@
+// function for multiply
 function multiply() {
-  let userNumOne = document.querySelector("#numOne").value;
-  let userNumTwo = document.querySelector("#numTwo").value;
-  let resultText = "";
+  let userNumOne = parseInt(document.querySelector("#numOne").value);
+  let userNumTwo = parseInt(document.querySelector("#numTwo").value);
+  let resultMul = "";
 
-  resultText += `${userNumOne} * ${userNumTwo} = ${userNumOne * userNumTwo}`;
+  resultMul += `${userNumOne} * ${userNumTwo} = ${userNumOne * userNumTwo}`;
 
-  document.querySelector(".result").innerHTML = resultText;
+  document.querySelector(".resultMultiply").innerHTML = resultMul;
+}
+
+// function for divide
+function divide() {
+  let userNumOne = parseInt(document.querySelector("#numOne").value);
+  let userNumTwo = parseInt(document.querySelector("#numTwo").value);
+  let resultDiv = "";
+
+  resultDiv += `${userNumOne} / ${userNumTwo} = ${userNumOne / userNumTwo}`;
+
+  document.querySelector(".resultDivide").innerHTML = resultDiv;
+}
+
+// function for add
+function adding() {
+  let userNumOne = parseInt(document.querySelector("#numOne").value);
+  let userNumTwo = parseInt(document.querySelector("#numTwo").value);
+  let resultAdd = "";
+
+  resultAdd += `${userNumOne} + ${userNumTwo} = ${userNumOne + userNumTwo}`;
+
+  document.querySelector(".resultAdd").innerHTML = resultAdd;
+}
+
+// function for minus
+function minus() {
+  let userNumOne = parseInt(document.querySelector("#numOne").value);
+  let userNumTwo = parseInt(document.querySelector("#numTwo").value);
+  let resultMin = "";
+
+  resultMin += `${userNumOne} - ${userNumTwo} = ${userNumOne - userNumTwo}`;
+
+  document.querySelector(".resultMinus").innerHTML = resultMin;
 }
