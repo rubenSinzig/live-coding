@@ -43,7 +43,6 @@ function minus() {
 }
 
 // function for counting the number of vowels
-// It doesn't work try to find a solution later
 function count() {
   let userInput = document.querySelector("#vowels").value;
   let strToArr = document

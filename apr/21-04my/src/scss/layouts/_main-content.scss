@@ -1,3 +1,4 @@
+// body -> color, size & display flex
 body {
   width: 100vw;
   height: 100vh;
@@ -7,6 +8,7 @@ body {
   color: $font-color;
 }
 
+// input field for numbers
 .selection {
   @include center;
   margin: 1rem;
@@ -17,6 +19,7 @@ body {
   }
 }
 
+// buttons and results
 .main-calculate {
   @include center;
   .calculate {
@@ -32,6 +35,7 @@ body {
   }
 }
 
+// task -> count the number of vowels
 .task {
   width: 80vw;
   @include center;
