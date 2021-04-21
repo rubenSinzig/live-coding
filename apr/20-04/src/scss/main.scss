@@ -60,7 +60,9 @@ body {
     @include add-move-animation(random(5) + 1 + s);
   }
 }
-
+.item:nth-child(#{random($items-count)}) {
+  border: 3px solid red;
+}
 .item:nth-child(odd) {
   align-self: end;
   transform-origin: 0 100%;
