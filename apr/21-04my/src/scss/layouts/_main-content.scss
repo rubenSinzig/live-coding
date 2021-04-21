@@ -31,3 +31,24 @@ body {
     height: 2rem;
   }
 }
+
+.task {
+  width: 80vw;
+  @include center;
+  flex-direction: column;
+  border-top: 1px solid rgb(161, 161, 161);
+  h2,
+  button,
+  input,
+  div {
+    margin: 1rem;
+  }
+  button {
+    width: 8rem;
+    height: 2rem;
+  }
+  input {
+    width: 10rem;
+    height: 2rem;
+  }
+}
