@@ -48,18 +48,21 @@ body {
     transform-origin: 0 0;
 
     @if (($i % 2) != 0) {
-      border-radius: ((random(50) + 10 + px)) ((random(50) + 10 + px)) 0 0;
+      border-radius: ((random(50) + 10 + px)) ((random(20) + 10 + px)) 0 0;
       background: linear-gradient(
         to top right,
         lighten(gray, random(40)),
         rgba(darken(gray, random(10)), 1)
       );
     }
-
+    // The lighten() function increases lightness by a fixed amount.
+    // The darken() function decreases lightness by a fixed amount.
     @include add-move-animation(random(5) + 1 + s);
   }
 }
-
+.item:nth-child(#{random($items-count)}) {
+  border: 3px solid red;
+}
 .item:nth-child(odd) {
   align-self: end;
   transform-origin: 0 100%;
