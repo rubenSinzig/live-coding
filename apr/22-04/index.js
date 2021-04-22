@@ -38,3 +38,13 @@ moreClass.classList.add("text");
 moreClass.classList.add("small");
 moreClass.classList.add("cool", "flex-size");
 console.log(moreClass.classList);
+moreClass.classList.remove("flex-size");
+console.log(moreClass.classList);
+let classArr = ["classOne", "classTwo"];
+
+moreClass.classList.add(...classArr);
+console.log(moreClass.classList);
+//
+
+moreClass.style.color = "red";
+moreClass.style.cssText = "font-size: 2.0rem; color: blue;";
