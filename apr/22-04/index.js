@@ -12,7 +12,6 @@
 // Node tree https://dom.spec.whatwg.org/#concept-node
 
 const container = document.querySelector(".container");
-console.log(container);
 
 const spanList = document.querySelectorAll(".container span");
 console.log(spanList);
@@ -20,3 +19,22 @@ spanList.forEach((span) => {
   span.innerHTML = "Nice 🤓 <br>";
   span.style.backgroundColor = "orange";
 });
+
+console.log(spanList.length);
+spanList[2].style.backgroundColor = "red";
+
+const menu = document.querySelector("#menuList");
+
+// const highlight = document.querySelector(".highlight");
+// highlight.style.backgroundColor = "yellow";
+
+// + >
+const highlight = document.querySelectorAll("li[class='highlight']");
+console.log(highlight);
+highlight[0].style.backgroundColor = "blue";
+
+const moreClass = document.querySelector(".main");
+moreClass.classList.add("text");
+moreClass.classList.add("small");
+moreClass.classList.add("cool", "flex-size");
+console.log(moreClass.classList);
