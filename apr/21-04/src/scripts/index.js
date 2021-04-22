@@ -51,3 +51,10 @@ function multiply() {
   }
   document.querySelector(".result").innerHTML = resultText;
 }
+// function one() {
+//   two();
+// }
+// function two() {
+//   one();
+// }
+// one();
