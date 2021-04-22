@@ -10,19 +10,20 @@ function cb() {
 console.log(first(cb()));
 
 // map
-const names = ["Zain", "Olga", "Nancy", "Nancy2"];
+const names = ["Zain", "Olga", "Nancy", "Nancy21"];
 //const heyNames = names.map((item, index) => `Hi ${item}, you live in ${index}`);
-const heyNames = names.map((name) => `Hi ${name}`);
+const heyNames = names.map((name, index) => `Hi ${name}`);
 
 console.log(heyNames);
 //console.log(names);
 // reduce
+
 const numArr = [2, 3, 4, 5, 6, 78, 8];
 const reducer = (acc, cur) => acc + cur;
 const totalArr = numArr.reduce(reducer, 0);
 console.log(totalArr);
 // filter
-const filterArr = names.filter((item) => item.length == 7);
+const filterArr = names.filter((item, index) => item.length == 7);
 console.log(filterArr);
 
 // find
@@ -31,9 +32,9 @@ console.log(findVal);
 
 // fill
 const numbers = [2, 4, 5, 67, 8, 8, 9, 5, 4];
-//numbers.fill(3);
+//numbers.fill(3,3,3);
 console.log(numbers);
-
+// nodemon index.js
 // some
 const isEven = (item) => item % 2 == 0;
 console.log(numbers.some(isEven));

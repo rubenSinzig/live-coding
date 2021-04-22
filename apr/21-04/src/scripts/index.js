@@ -42,19 +42,30 @@ function change() {
   headerText.style.backgroundColor = "orange";
 }
 
-function multiply() {
-  let userNum = document.querySelector("#num").value;
+function calc() {
+  let num1 = document.querySelector("#num1").value;
+  let num2 = document.querySelector("#num2").value;
+  let math = document.querySelector("#math").value;
   // console.log(userNum);
-  let resultText = "";
-  for (let i = 1; i <= 10; i++) {
-    resultText += `${i} * ${userNum} ☘️ ${i * userNum} <br>`;
+  // let resultText = "";
+  // for (let i = 1; i <= 10; i++) {
+  //   resultText += `${i} * ${userNum} ☘️ ${i * userNum} <br>`;
+  // }
+  let mathResult = 0;
+  console.log(num1);
+  switch (math) {
+    case "+":
+      mathResult = parseInt(num1) + parseInt(num2);
+      break;
+    case "-":
+      mathResult = parseInt(num1) - parseInt(num2);
+      break;
+    case "*":
+      mathResult = parseInt(num1) * parseInt(num2);
+      break;
+    case "/":
+      mathResult = parseInt(num1) / parseInt(num2);
+      break;
   }
-  document.querySelector(".result").innerHTML = resultText;
+  document.querySelector(".result").innerHTML = mathResult;
 }
-// function one() {
-//   two();
-// }
-// function two() {
-//   one();
-// }
-// one();

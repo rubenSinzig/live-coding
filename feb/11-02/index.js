@@ -46,6 +46,7 @@ function Person(name, age, act) {
 }
 const newObj = new Person("Zain", 21, ["sleep", "eat"]);
 newObj.printOut();
+console.log(newObj);
 const olga = new Person("Olga", 40, "No thing");
 olga.printOut();
 
