@@ -28,7 +28,7 @@ const menu = document.querySelector("#menuList");
 // const highlight = document.querySelector(".highlight");
 // highlight.style.backgroundColor = "yellow";
 
-// + >
+// + > ~
 const highlight = document.querySelectorAll("li[class='highlight']");
 console.log(highlight);
 highlight[0].style.backgroundColor = "blue";
@@ -41,10 +41,22 @@ console.log(moreClass.classList);
 moreClass.classList.remove("flex-size");
 console.log(moreClass.classList);
 let classArr = ["classOne", "classTwo"];
-
+// adding more classes to the div using ...
 moreClass.classList.add(...classArr);
 console.log(moreClass.classList);
-//
+
+// keep on mind font-size in js fontSize
 
 moreClass.style.color = "red";
 moreClass.style.cssText = "font-size: 2.0rem; color: blue;";
+
+const theme = () => {
+  const mood = document.querySelector("#light-dark").checked;
+  body = document.querySelector("body").style;
+  console.log(mood);
+  if (mood) {
+    body.backgroundColor = "black";
+  } else {
+    body.backgroundColor = "white";
+  }
+};
