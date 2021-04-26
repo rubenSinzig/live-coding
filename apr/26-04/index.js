@@ -20,13 +20,13 @@ const addToList = () => {
     let newLi = document.createElement("li");
     let text = document.createTextNode(userData);
     newLi.appendChild(text);
-    // newLi.style.color = colorGen();
+    newLi.style.color = colorGen();
     document.querySelector(".result").appendChild(newLi);
     document.querySelector("#userData").value = "";
-    const listItems = document.querySelectorAll("li");
-    listItems.forEach((item) => {
-      item.style.color = colorGen();
-    });
+    // const listItems = document.querySelectorAll("li");
+    // listItems.forEach((item) => {
+    //   item.style.color = colorGen();
+    // });
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }
