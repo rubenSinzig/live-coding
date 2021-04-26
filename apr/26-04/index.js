@@ -1,3 +1,6 @@
+// document.write("Hi I am text");
+//document.write("<h1> Hi h1>");
+
 const create = () => {
   // 1. step
   const newElement = document.createElement("div");
@@ -12,7 +15,7 @@ const create = () => {
 
 const addToList = () => {
   let userData = document.querySelector("#userData").value;
-  //   console.log(userData);
+  console.log(userData);
   if (userData != "") {
     let newLi = document.createElement("li");
     let text = document.createTextNode(userData);
@@ -23,6 +26,3 @@ const addToList = () => {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }
 };
-
-// document.write("Hi I am text");
-//document.write("<h1> Hi h1>");
