@@ -11,14 +11,14 @@
 ## Class Topics
 
 1. Go to the following link to find the Javascript topics with the dates:  
-   ## [Javascript](README-JS.md)
+   ## [Javascript](JS-README.md)
 
 
 
 2. Go to the following link to find the HTML topics with the dates:   
-   ## [HTML & CSS](README-HTML-CSS.md)
+   ## [HTML & CSS](HTML-CSS-README.md)
 
 
 
 3. Go to the following link to find the DOM topics with the dates:  
-   ## [DOM](README-DOM.md)
+   ## [DOM](DOM-DOM.md)
