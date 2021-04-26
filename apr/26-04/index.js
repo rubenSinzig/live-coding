@@ -78,3 +78,11 @@ const keyCheck = (event) => {
 
 // Adding event listener to the form
 document.querySelector("form").addEventListener("submit", addToList);
+
+//          01234678
+let text = "Hadi Nsreeny";
+["H", "a", "d", "i"];
+console.log(text[1]);
+console.log(Math.random());
+console.log(Math.random() * 16);
+console.log(Math.floor(Math.random() * 16));
