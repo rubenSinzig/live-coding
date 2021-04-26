@@ -21,7 +21,7 @@ Introduction to HTML
 
 [00/02/2020](feb/00-02)
 
-- Review from 24/02/2020
+
 - HTML + CSS
 - Inline styles: DON'T `<p style=""color: red;"">`
 - Document styles: SOMETIMES `<style>` tag
@@ -39,7 +39,7 @@ Introduction to HTML
 
 [00/02/2020](feb/00-02)
 
-- Review from 24 and 25/02/2020
+
 - The image tag: `<img src=""[URL]"">`
 - Image size`width`
 - Framing images: `px`
@@ -61,7 +61,7 @@ Introduction to HTML
 
 [00/02/2020](feb/00-02)
 
-- Review from 26/02/2020
+
 - `:hover`, `:active`, `:visited`
 - Image links: wrapping `<img>` with `<a>`
 - CSS adjacent sibling combinator (+): `img + p { ... }`
@@ -128,7 +128,7 @@ Review of past lessons
 - `<i class=""fas [icon-class]""></i>`
 
 [00/03/2020](mar/00-03)
-Review of past lessons
+
 
 - Making navbars accessible: The `<nav>` element
 - Flexible boxes: `display: flex`, flex child & flex parent concept
