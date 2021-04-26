@@ -228,7 +228,7 @@ CSS Grid:
 - Sass maps
 - Project: color guide in Sass
 
-[19/04/2020](apr/19-04)
+[19/04/2020](apr/19.04)
 
 - Review from previous days (Sass)
 - Defining mixins: `@mixin [name](){ ... }`
