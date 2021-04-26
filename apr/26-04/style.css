@@ -4,7 +4,7 @@ body {
   width: 100vh;
   flex-direction: column;
 }
-.form {
+form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,4 +47,7 @@ li div button {
 .completed {
   /* some fancy styles */
   text-decoration: line-through;
+}
+.done {
+  /* something */
 }
