@@ -27,6 +27,14 @@ const addToList = () => {
     // listItems.forEach((item) => {
     //   item.style.color = colorGen();
     // });
+    const newContainer = document.createElement("div");
+    const doneButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+    doneButton.innerHTML = "✓";
+    deleteButton.innerHTML = "✗";
+    newContainer.appendChild(doneButton);
+    newContainer.appendChild(deleteButton);
+    newLi.appendChild(newContainer);
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }
