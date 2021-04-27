@@ -25,3 +25,12 @@
 - `document.querySelector(<selector string>)`
 - `document.querySelectorAll(<selector string>)`
 - Project: Dom-querying
+
+[26/04/2020](apr/26-04)
+
+- `document.write()` and script injection
+- Creating Elements: `document.createElement(<tag name>)`
+- Adding elements to the page: `Element.appendChild(<Element object>)`"
+- ToDo app with DOM
+
+
