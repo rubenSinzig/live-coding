@@ -1,6 +1,6 @@
 // document.write("Hi I am text");
-//document.write("<h1> Hi h1>");
-
+//document.write("<h1> Hi <h1>");
+const arr = [];
 const create = () => {
   // 1. step
   const newElement = document.createElement("div");
@@ -35,21 +35,25 @@ const addToList = (e) => {
     const newContainer = document.createElement("div");
     const doneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
+
     // const checkBox = document.createElement("input");
     // checkBox.type = "checkbox";
     // newContainer.appendChild(checkBox);
     // Adding some text
     doneButton.innerHTML = "✓";
     deleteButton.innerHTML = "✗";
+
     // Injecting the buttons into the container
     newContainer.appendChild(doneButton);
     newContainer.appendChild(deleteButton);
+
     // Adding class
     doneButton.classList.add("done");
     newLi.appendChild(newContainer);
     // Complete function
     // toggle will check if the class name exist, will remove it and if it's not will add it
     const check = () => newLi.classList.toggle("completed");
+
     // const del = () => newLi.remove() ;
     // Adding event listener to my buttons
     deleteButton.addEventListener("click", () => newLi.remove());
