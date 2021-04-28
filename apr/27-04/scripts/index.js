@@ -45,7 +45,7 @@ const colorGen = () => {
   }
   // one more thing
   result += "50";
-  console.log(result);
+  // console.log(result);
   return result;
 };
 
@@ -72,18 +72,16 @@ food.forEach(({ style: item }) => {
 
 // Select all even allergy-info items. Give the even items a different background color.
 //const allergy = document.querySelectorAll(".allergies li");
-const allergy = document.querySelectorAll(".allergy-info");
-allergy.forEach(({ style }, i) => {
-  if (i % 2 == 0) {
-    style.backgroundColor = colorGenOtherWay();
-  }
-});
 // const allergy = document.querySelectorAll(".allergy-info");
 // allergy.forEach(({ style }, i) => {
 //   if (i % 2 == 0) {
 //     style.backgroundColor = colorGenOtherWay();
 //   }
 // });
+const allergy = document.querySelectorAll(".allergy-info:nth-child(even)");
+allergy.forEach(({ style }) => {
+  style.backgroundColor = colorGenOtherWay();
+});
 
 // Make the allergy-warning appear as a column in the center of the page.
 
@@ -100,6 +98,25 @@ footer.style.display = "flex";
 footer.style.flexFlow = "row wrap";
 footer.style.justifyContent = "center";
 const foodItems = document.querySelectorAll(".food-desc");
+const media = window.matchMedia("(max-width: 400px)");
+console.log(media);
 foodItems.forEach(({ style }) => {
+  console.log(style);
   style.border = "5px solid orange";
+  style.borderRadius = "100%";
+  style.height = "7rem";
+  style.width = "7rem";
+  style.display = "flex";
+  style.justifyContent = "center";
+  style.alignItems = "center";
+  style.margin = "1rem";
+  if (media.matches) {
+    // mobile
+    style.flexFlow = "column";
+    style.backgroundColor = "red";
+  } else {
+    // desktop
+    style.flexFlow = "row";
+    style.backgroundColor = "orange";
+  }
 });
