@@ -41,6 +41,6 @@ function keyPress(e) {
 }
 
 const userInput = document.querySelector("#userInput");
-userInput.addEventListener("keyup", keyUp);
-userInput.addEventListener("keydown", keyDown);
-userInput.addEventListener("keypress", keyPress);
+userInput.addEventListener("keyup", keyUp); // always the last
+userInput.addEventListener("keydown", keyDown); // always the first
+userInput.addEventListener("keypress", keyPress); // the middle event between down and up
