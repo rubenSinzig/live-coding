@@ -25,8 +25,8 @@ function move(e) {
   if (e.code == "KeyD") goRight();
   if (e.code == "KeyA") goLeft();
   if (e.code == "KeyY") goDown();
-  console.log(hStandPoint);
-  console.log(vStandPoint);
+  console.log(window.innerHeight);
+  console.log(window.innerWidth);
   if (
     window.innerHeight / 4 <= vStandPoint &&
     window.innerWidth - 70 <= hStandPoint
