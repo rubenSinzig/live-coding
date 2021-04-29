@@ -33,4 +33,22 @@
 - Adding elements to the page: `Element.appendChild(<Element object>)`"
 - ToDo app with DOM
 
+[27/04/2020](apr/27-04)
 
+- DOM Querying: Getting elements from `document`
+- Selecting elements with `document.getElementById(<id string>)`
+- Element objects: quick overview in the console
+- Element style: Changing css styles with `HTMLElement.style` property
+- Selecting by CSS query: `document.querySelector(<selector string>)`
+- Getting more than one element: `document.querySelectorAll(<selector string>)`
+
+[28/04/2020](apr/28-04)
+
+- DOM Traversing: Jumping from one element to its relative
+- Node vs. Element: 
+  Comparing `Node.previousSibling` and `Element.previousElementSibling`
+- Getting an element's closest parent: `Element.closest(<selector string>)`
+- Testing an element against a selector: `Element.matches(<selector string>)`
+- Getting all children of an element: `ParentNode.children`
+- Selecting specific children: `ParentNode.querySelector(<selector string>)`
+- Finding more traversal techniques: MDN
