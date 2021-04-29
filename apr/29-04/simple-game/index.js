@@ -3,20 +3,20 @@
 let hStandPoint = 0;
 let vStandPoint = 0;
 function goUp() {
-  hStandPoint -= 10;
-  mini.style.top = hStandPoint + "px";
+  vStandPoint -= 10;
+  mini.style.top = vStandPoint + "px";
 }
 function goDown() {
-  hStandPoint += 10;
-  mini.style.top = hStandPoint + "px";
+  vStandPoint += 10;
+  mini.style.top = vStandPoint + "px";
 }
 function goRight() {
-  vStandPoint += 10;
-  mini.style.left = vStandPoint + "px";
+  hStandPoint += 10;
+  mini.style.left = hStandPoint + "px";
 }
 function goLeft() {
-  vStandPoint -= 10;
-  mini.style.left = vStandPoint + "px";
+  hStandPoint -= 10;
+  mini.style.left = hStandPoint + "px";
 }
 
 function move(e) {
@@ -25,6 +25,13 @@ function move(e) {
   if (e.code == "KeyD") goRight();
   if (e.code == "KeyA") goLeft();
   if (e.code == "KeyY") goDown();
+  console.log(hStandPoint);
+  console.log(vStandPoint);
+  if (
+    window.innerHeight / 4 <= vStandPoint &&
+    window.innerWidth - 70 <= hStandPoint
+  )
+    alert("cool you are winner");
 }
 const mini = document.querySelector(".mini");
 const body = document.querySelector("body");
