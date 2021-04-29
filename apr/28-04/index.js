@@ -44,7 +44,10 @@ const lettersArr = ["a", "b"];
 const numbers = [0, 1, 2];
 lettersArr.push.apply(lettersArr, numbers);
 console.info(lettersArr); // ["a", "b", 0, 1, 2]
-
+/*  to put it in words 
+apply it’s a method will take a value and array(or array-like object )
+will execute the function that it’s being applied to (push in our example but it can be any other function/method )
+so in our case we passed the whole array to compare it with the result of the function call so I don’t have repeat or I don’t push until my function came back with a result */
 // get me now all the comments please 😅
 let allComments = (element) => {
   let arr = [];
