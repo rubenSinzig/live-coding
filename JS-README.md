@@ -94,7 +94,7 @@ Declaring:
 - Arrow function shorthand:
   `const <function name> = (<parameters>) => { ... }`
 
-[12/01/2020](jan/12-01/index.js)
+[12/01/2020](jan/12-01/assignments.js)
 Assignments
 
 [13/01/2020](jan/13-01/index.js)
