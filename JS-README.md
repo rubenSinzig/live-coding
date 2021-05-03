@@ -215,6 +215,8 @@ Objects
 
 [08/02/2021](feb/08-02/index.js)
 
+
+
 [09/02/2021](feb/09-02/index.js)
 
 [10/02/2021](feb/10-02/index.js)
@@ -228,3 +230,5 @@ Nesting arrays and objects:
 - Deep cloning objects and arrays: recursive function
 
 [11/02/2021](feb/11-02/index.js)
+-  Destructuring objects as function parameters
+
