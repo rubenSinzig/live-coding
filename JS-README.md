@@ -214,10 +214,14 @@ Objects
 - Iterating over arrays: `for(let <value name> of <array name>){ ... }`
 
 [08/02/2021](feb/08-02/index.js)
+- callbacks
+- Array advanced methods(map,filter,reduce, sort, every, some)
+- Loops, SIAF, IIFE , closure, 
 
 
 
 [09/02/2021](feb/09-02/index.js)
+- Clones vs. References
 
 [10/02/2021](feb/10-02/index.js)
 Nesting arrays and objects:
