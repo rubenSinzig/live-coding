@@ -209,9 +209,7 @@ Objects
 - Accessing properties with bracket notation (w. vars)
 - Property values to array: `Object.values(<object>)`
 
-[04/02/2021](feb/04-02/index.js)
 
-- Iterating over arrays: `for(let <value name> of <array name>){ ... }`
 
 [08/02/2021](feb/08-02/index.js)
 - callbacks
