@@ -141,7 +141,7 @@ Review of past lessons
 - css `position` and `static`, `relative`, `absolute`
 - Using our `@media` queries for layout
 
-[11/03/2020](mar/00-03)
+[11/03/2020](mar/11-03)
 
 - Review from previous days
 - Nice form elements
