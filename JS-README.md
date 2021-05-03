@@ -94,16 +94,16 @@ Declaring:
 - Arrow function shorthand:
   `const <function name> = (<parameters>) => { ... }`
 
-[12/01/2020](jan/12-01/assignments.js)
+[12/01/2021](jan/12-01/assignments.js)
 Assignments
 
-[13/01/2020](jan/13-01/index.js)
+[13/01/2021](jan/13-01/index.js)
 Review from last topics
 
-[14/01/2020](jan/14-01/index.js)
+[14/01/2021](jan/14-01/index.js)
 JavaScript 101
 
-[18/01/2020](jan/18-01/index.js)
+[18/01/2021](jan/18-01/index.js)
 Conditional Repetition:
 
 Numerical Repetition:
@@ -118,7 +118,7 @@ Numerical Repetition:
   `const <array name> = [<value 1>, <value 2>, ...]`
 - Accessing array items with square brackets”
 
-[19/01/2020](jan/19-01/index.js)
+[19/01/2021](jan/19-01/index.js)
 
 - Assigning array literals:
   `const <array name> = [<value 1>, <value 2>, ...]`
@@ -131,7 +131,7 @@ Numerical Repetition:
 - Removing items: `Array.prototype.pop()`, `Array.prototype.shift()`
 - Manipulating arrays: `Array.prototype.reverse()`
 
-[20/01/2020](jan/20-01/index.js)
+[20/01/2021](jan/20-01/index.js)
 More Array methods
 
 Function Scope:
@@ -145,7 +145,7 @@ Function Scope:
 - Counting iterations: the counter variable, `++`, `--`
 - Reading a program III (keeping track of state).
 
-[21/01/2020](jan/21-01/index.js)
+[21/01/2021](jan/21-01/index.js)
 Declaring:
 
 - Functions declarations as values:
@@ -157,10 +157,10 @@ Declaring:
   Functions that accept function values (callbacks)
 - Converting an array to a single value: `Array.prototype.reduce(<function>)`
 
-[25/01/2020](jan/21-01/index.js)
+[25/01/2021](jan/21-01/index.js)
 Assignments
 
-[26/01/2020](jan/26-01/index.js)
+[26/01/2021](jan/26-01/index.js)
 Function Scope:
 
 - Parameters scope
@@ -178,7 +178,7 @@ Advanced Parameters:
   `function(<parameter> = <default value>) { ... }`
 - Variable number of arguments: Rest params - `...args`
 
-[28/01/2020](jan/28-01/index.js)
+[28/01/2021](jan/28-01/index.js)
 Assignments
 
 [01/02/2021](feb/01-02/index.js)
