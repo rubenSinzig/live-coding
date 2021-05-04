@@ -48,6 +48,7 @@ form.addEventListener("submit", (e) => {
 });
 changeColor.addEventListener("click", (e) => {
   e.preventDefault();
+  // do something cool :)
   form.style.backgroundColor = "orange";
 });
 form.addEventListener("reset", () => {
