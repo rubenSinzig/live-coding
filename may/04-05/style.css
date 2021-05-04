@@ -1,7 +1,7 @@
 .done {
   position: relative;
   /* border: 2px dashed red; */
-  /* display: none; */
+  display: none;
   padding: 1rem;
   border-radius: 10px;
   background-color: lime;
