@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+  background-color: yellow;
+}
+main {
+  font-family: "Itim", cursive;
+}
+footer {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  font-size: smaller;
+}
