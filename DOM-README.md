@@ -52,3 +52,9 @@
 - Getting all children of an element: `ParentNode.children`
 - Selecting specific children: `ParentNode.querySelector(<selector string>)`
 - Finding more traversal techniques: MDN
+
+[29/04/2020](apr/29-04)
+
+- Event listeners
+- update to the generate password exercise
+- simple game

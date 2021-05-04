@@ -51,6 +51,10 @@ const lettersArr = ["a", "b"];
 const numbers = [0, 1, 2];
 lettersArr.push.apply(lettersArr, numbers);
 console.info(lettersArr); // ["a", "b", 0, 1, 2]
+/*  to put it in words 
+apply it’s a method will take a value and array(or array-like object )
+will execute the function that it’s being applied to (push in our example but it can be any other function/method )
+so in our case we passed the whole array to compare it with the result of the function call so I don’t have repeat or I don’t push until my function came back with a result */
 // get me now all the comments please 😅
 let allComments = (element) => {
   let arr = [];
@@ -61,20 +65,20 @@ let allComments = (element) => {
   });
   return arr;
 };
-
+console.log(allComments(document));
 // childElementCount will tell you how many child elements this element has
 // firstChild , lastChild
 // firstElementChild , lastElementChild
 // nextSibling , previousSibling
 // nextElementSibling , previousElementSibling
 // innerHTML ,  innerText , textContent
-//console.log(allComments(document));
+
 // nice work from two people in our class 🦾
-const allChildren2 = Array.from(document.querySelector("body").childNodes);
-console.log(allChildren2);
-allChildren2.forEach((child) => {
-  if (child.nodeType == 8) console.log(child);
-});
+// const allChildren2 = Array.from(document.querySelector("body").childNodes);
+// console.log(allChildren2);
+// allChildren2.forEach((child) => {
+//   if (child.nodeType == 8) console.log(child);
+// });
 
 const copy = () => {
   let text = document.querySelector(".userInput");
@@ -83,10 +87,10 @@ const copy = () => {
 };
 document.querySelector(".copyButton").addEventListener("click", copy);
 // other way
-const allEll = document.querySelectorAll("*");
-console.log(allEll);
-allEll.forEach((elem) =>
-  elem.childNodes.forEach((node) => {
-    if (node.nodeName === "#comment") console.log(node);
-  })
-);
+// const allEll = document.querySelectorAll("*");
+// console.log(allEll);
+// allEll.forEach((elem) =>
+//   elem.childNodes.forEach((node) => {
+//     if (node.nodeName === "#comment") console.log(node);
+//   })
+// );
