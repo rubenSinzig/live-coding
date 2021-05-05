@@ -20,11 +20,18 @@ function weekend(e) {
   const userName = document.querySelector("#userName").value;
   const result = document.querySelector(".result");
   if (userName != "") {
-    result.innerHTML = `Hey ${userName}, Today is ${getDayName()}, ${
-      5 - date.getDay()
-    } days let till weekend`;
+    let daysLeft = 5 - date.getDay();
+    console.log(daysLeft);
+    let text = "";
+    if (daysLeft > 0) {
+      text = `${daysLeft} days let till weekend`;
+    } else {
+      text = `and it's already weekend. Enjoy your party 🎉`;
+    }
+    result.innerHTML = `Hey ${userName}, Today is ${getDayName()}, ${text}`;
   } else {
     document.querySelector("#userName").placeholder = "Do it now";
   }
 }
+
 checkNow.addEventListener("click", weekend);
