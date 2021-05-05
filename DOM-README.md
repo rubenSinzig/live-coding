@@ -58,3 +58,28 @@
 - Event listeners
 - update to the generate password exercise
 - simple game
+
+[03/05/2020](may/03-05)
+
+- recap
+- Q & A
+
+[04/05/2020](may/04-05)
+
+- User Events (interaction) and Browser Events (loading, etc...)
+- Keyboard Events: `keydown`, `keyup`
+- The event object properties: A console example
+- Getting the target of the event: `Event.target`
+- Form events: `submit`, `reset`, `Event.preventDefault()`
+- Getting form values on submit: 
+  `target.elements[<id>]`, `target.elements[<name>]`, `Element.value`"
+- Mouse Events: `click`, `mouseenter`, `mouseleave`
+- Removing event listeners: 
+  `EventTarget.removeEventListener(<namespace>, <function reference>)`
+- Listening to browser events: `DOMContentLoaded` event
+- Finding more events on MDN"
+- 4 exercises (currency converter * weekend count-down * numeral-system converter * image-slider )
+
+[05/05/2020](may/05-05)
+
+- JSON
