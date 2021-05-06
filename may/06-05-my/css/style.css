@@ -18,22 +18,34 @@ body {
 }
 /* main container */
 .container {
-  border: 1px dashed red;
   width: 50%;
   height: calc(100% - 2rem);
   padding: 1rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
+  overflow: auto;
+}
+.api-class {
+  background-color: rgb(253, 180, 151);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  color: rgb(54, 54, 54);
+}
+h3 {
+  margin-bottom: 0.2rem;
+  color: rgb(24, 24, 24);
 }
 /* buttons */
 .container > button {
   width: 10rem;
   height: 2rem;
+  margin-bottom: 1rem;
   border: none;
   background-color: rgb(255, 158, 119);
   border-radius: 7px;
-  color: rgb(77, 77, 77);
+  color: rgb(59, 59, 59);
   font-size: 0.9rem;
 }
 /* hover for buttons */
