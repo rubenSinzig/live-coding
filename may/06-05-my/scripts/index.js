@@ -6,7 +6,7 @@ document.querySelector(".year").innerHTML = year;
 const todos = document.querySelector(".todos");
 const comments = document.querySelector(".comments");
 todos.addEventListener("click", fetchTodos);
-comments.addEventListener(".click", fetchComments);
+comments.addEventListener("click", fetchComments);
 
 // function for todos
 function fetchTodos() {
@@ -25,6 +25,28 @@ function fetchTodos() {
         `;
       });
       document.querySelector(".resultTodos").innerHTML = output;
+    })
+    .catch((err) => console.log(err));
+}
+
+// function for comments
+function fetchComments() {
+  fetch("https://jsonplaceholder.typicode.com/comments")
+    .then((response) => response.json())
+    .then((data) => {
+      let userData = "<h3>Comments API response</h3> ";
+      data.forEach((comment) => {
+        let { id, name, email, postId, body } = comment;
+        userData += `
+          <div id="${id}" class="api-class">
+          <h4>Post-ID: ${postId}</h4>
+          <p>User-Name: ${name}</p>
+          <p>E-Mail: ${email}</p>
+          <p>Message: ${body}</p>
+          </div>
+          `;
+      });
+      document.querySelector(".resultComments").innerHTML = userData;
     })
     .catch((err) => console.log(err));
 }
