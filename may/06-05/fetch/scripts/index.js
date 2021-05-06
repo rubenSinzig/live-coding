@@ -20,7 +20,7 @@ function fetchJsonFile() {
         userCard += `
         <div class='card' id=${id}>
         <div class='avatar'>${photo}</div>
-      ${name}, <span>${age}</span>old, and I live in <span>${city}</span>
+      ${name}, <span>${age}</span> old, and I live in <span>${city}</span>
         </div>
         `;
       });
