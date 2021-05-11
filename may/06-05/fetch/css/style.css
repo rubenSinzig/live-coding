@@ -20,3 +20,7 @@
 .avatar {
   font-size: 4rem;
 }
+li {
+  text-align: left;
+  align-self: flex-start;
+}

@@ -26,7 +26,7 @@ function fetchJsonFile() {
       });
       document.querySelector(".result").innerHTML = userCard;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(`So this is what happened ${err}`));
 }
 // API
 //  Application Programming Interface
@@ -35,8 +35,10 @@ function fetchJsonFile() {
 
 // we will use
 // https://jsonplaceholder.typicode.com/photos
-function fetchApi() {
-  fetch("https://jsonplaceholder.typicode.com/photos")
+
+function fetchImagesApi() {
+  // this is a GET req
+  fetch("https://jsonplaceholder.typiode.com/photos")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -53,5 +55,27 @@ function fetchApi() {
       });
       document.querySelector(".result").innerHTML = userCard;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(`So this is what happened ${err}`));
+}
+// 200 happy days for me
+// 404 File not found
+function fetchToDosApi() {
+  // this is a GET req
+  fetch("https://jsonplaceholder.typicode.com/todos")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      let userCard = "<h2>ToDos API response </h2>";
+      data.forEach((toDo) => {
+        let { userId, id, title, completed } = toDo;
+        userCard += `
+        <li id=${id} >
+        <span>${title}</span>
+      <input type='checkbox' ${completed ? "checked" : ""}>
+        </li>
+        `;
+      });
+      document.querySelector(".result").innerHTML = userCard;
+    })
+    .catch((err) => console.log(`So this is what happened ${err}`));
 }
