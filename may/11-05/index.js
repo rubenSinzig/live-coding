@@ -21,11 +21,13 @@ const userStatus = new Promise((resolve, reject) => {
 });
 userStatus
   .then((obj) => {
+    console.log(obj);
     document.querySelector(
       ".result"
     ).innerHTML = `${obj.status} and he/she is ${obj.emoji}`;
   })
   .catch((err) => {
+    console.log(err);
     document.querySelector(
       ".result"
     ).innerHTML = `${err.status} and he/she is ${err.emoji}`;
@@ -48,7 +50,7 @@ function secondStep(response) {
     resolve(`We have been waiting for you ${response}`);
   });
 }
-// stepOne("Zain")
+// stepOne("Hadi")
 //   .then((response) => {
 //     console.log("response just arrive");
 //     return secondStep(response);
