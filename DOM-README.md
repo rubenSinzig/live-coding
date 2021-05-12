@@ -101,3 +101,12 @@
 - Promisifying: Converting `setTimeout()` to a promise
 - Breaking Promises
 - fetch() and fetch API
+
+[11/05/2020](may/11-05)
+
+- promises
+- async await
+
+[12/05/2020](may/12-05)
+
+- tic tac toe (XO) with DOM
