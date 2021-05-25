@@ -1,19 +1,18 @@
 function App() {
+  function handelSubmit(e) {
+    e.preventDefault();
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="header" id="h1">
+        Hi, this is React App
+      </h1>
+      {console.log("Hi")}
+      <h2>this is a text</h2>
+      <form onSubmit={handelSubmit}>
+        <input type="text" placeholder="Enter your name" />
+      </form>
+      <img className="pic" src="./img/tree.jpeg" alt="big tree" />
     </div>
   );
 }
