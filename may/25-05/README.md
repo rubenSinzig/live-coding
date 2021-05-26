@@ -16,3 +16,12 @@ The web app manifest provides information about an application (such as name, au
 
 Tool for measuring the real life performance of your app(very new to React)
 more on that [web-vitals](https://www.npmjs.com/package/web-vitals)
+
+## To start React Project
+
+```
+ $ npx create-react-app <app-name>
+ $ cd <app-name>
+ $ npm i node-sass
+ $ npm start
+```
