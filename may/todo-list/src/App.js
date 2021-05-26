@@ -1,20 +1,27 @@
 import { useState } from "react";
 
 function App() {
-  const [clicks, setClicks] = useState(0);
+  const [userInput, setUserInput] = useState("");
+  const [list, setList] = useState([]);
 
-  function increment() {
-    setClicks(clicks + 1);
+  function changeHandel(e) {
+    console.log(e.target.value);
+    setUserInput(e.target.value.trim());
   }
-  function decrement() {
-    setClicks((prevState) => prevState - 1);
+  function add(e) {
+    e.preventDefault();
   }
   return (
     <div>
-      You click {clicks} times!
-      <br />
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <form onSubmit={add}>
+        <input
+          type="text"
+          value={userInput}
+          onChange={changeHandel}
+          placeholder="type something"
+        />
+        <input type="submit" value="Add" />
+      </form>
     </div>
   );
 }
