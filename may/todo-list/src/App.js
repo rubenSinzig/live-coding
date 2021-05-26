@@ -4,13 +4,17 @@ function App() {
   const [clicks, setClicks] = useState(0);
 
   function increment() {
-    setClicks((prevState) => prevState + 1);
+    setClicks(clicks + 1);
+  }
+  function decrement() {
+    setClicks((prevState) => prevState - 1);
   }
   return (
     <div>
       You click {clicks} times!
       <br />
-      <button onClick={increment}>Click me 😎</button>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
 }
