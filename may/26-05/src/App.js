@@ -1,7 +1,9 @@
 import { Text, Hallo } from "./components/Text";
+
 let name = "Hadi";
 const names = ["Zain", "Olga", "Nancy"];
 const listItems = names.map((name, i) => <li key={i}>{name}</li>);
+
 function App() {
   return (
     <div>
