@@ -10,7 +10,7 @@ const List = (props) => {
   }
   function submitHandle(e) {
     e.preventDefault();
-    // trim
+    // prevState holds on the value of state before any update on the state
     props.setList((prevState) => [
       ...prevState,
       { id: prevState.length, title: userInput.trim(), done: false },
