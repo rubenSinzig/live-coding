@@ -7,6 +7,9 @@
 
 [26/05/2020](may/26-05)
 
-- React components, props
+- React components, props, state
+
+[27/05/2020](may/todo-list)
+
 - React toDo app
 
