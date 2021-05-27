@@ -9,7 +9,7 @@
 
 - React components, props, state
 
-[27/05/2020](todo-list)
+[27/05/2020](may/todo-list)
 
 - React toDo app
 
