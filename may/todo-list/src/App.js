@@ -1,28 +1,33 @@
-import { useState } from "react";
-
+//import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import List from "./components/List";
+import ToDos from "./components/ToDos";
 function App() {
-  const [userInput, setUserInput] = useState("");
   const [list, setList] = useState([]);
-
-  function changeHandel(e) {
-    console.log(e.target.value);
-    setUserInput(e.target.value.trim());
-  }
-  function add(e) {
-    e.preventDefault();
-  }
+  const remove = (itemToRemove) => {
+    const newArr = list.filter((item) => item.id !== itemToRemove);
+    setList(newArr);
+  };
+  const check = (itemToCheck) => {
+    console.log(itemToCheck);
+    list.filter((item) => {
+      if (item.id === itemToCheck) {
+        item.done = !item.done;
+      }
+      return item;
+    });
+    console.log(list);
+  };
+  console.log(list);
   return (
-    <div>
-      <form onSubmit={add}>
-        <input
-          type="text"
-          value={userInput}
-          onChange={changeHandel}
-          placeholder="type something"
-        />
-        <input type="submit" value="Add" />
-      </form>
-    </div>
+    <React.Fragment>
+      <Header />
+      <List setList={setList} />
+      <ToDos list={list} remove={remove} check={check} />
+      <Footer />
+    </React.Fragment>
   );
 }
 
