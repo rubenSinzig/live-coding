@@ -83,3 +83,30 @@
 [05/05/2020](may/05-05)
 
 - JSON
+- Brief overview of IIFE and the Module pattern
+- Advantages of scope isolation and encapsulation
+- Using modules in the browser: `<script type=""module"" src=""..."">`
+- Connecting files: The `import` and `export` keywords"
+"Imports and Exports:
+- Default exports vs. named exports
+- Destructuring imports
+
+[06/05/2020](may/06-05)
+
+- The request response cycle - Client perspective
+- Non-Blocking Promises
+- Blocking vs. Non-Blocking code: A brief example, `window.setTimeout()`
+- Race conditions: Reading non blocking code
+- Promises
+- Promisifying: Converting `setTimeout()` to a promise
+- Breaking Promises
+- fetch() and fetch API
+
+[11/05/2020](may/11-05)
+
+- promises
+- async await
+
+[12/05/2020](may/12-05)
+
+- tic tac toe (XO) with DOM
