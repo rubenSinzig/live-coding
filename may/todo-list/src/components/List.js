@@ -11,11 +11,14 @@ const List = (props) => {
   function submitHandle(e) {
     e.preventDefault();
     // prevState holds on the value of state before any update on the state
-    props.setList((prevState) => [
-      ...prevState,
-      { id: prevState.length, title: userInput.trim(), done: false },
-    ]);
-    setUserInput("");
+
+    if (userInput.length) {
+      props.setList((prevState) => [
+        ...prevState,
+        { id: prevState.length, title: userInput.trim(), done: false },
+      ]);
+      setUserInput("");
+    }
   }
   return (
     <form onSubmit={submitHandle}>
