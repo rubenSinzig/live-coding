@@ -1,7 +1,20 @@
+// Body Setup
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: lightgray;
 }
-.userInput {
+// Text input
+input[type="text"] {
   border: 0 none;
-  width: 8rem;
+  width: 10rem;
+}
+// Every other list item
+li:nth-child(2n) {
+  background-color: orange;
+}
+// To remove style from list
+li {
+  list-style: none;
 }
