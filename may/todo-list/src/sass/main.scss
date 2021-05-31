@@ -18,3 +18,13 @@ li:nth-child(2n) {
 li {
   list-style: none;
 }
+
+// Footer
+.footer {
+  background-color: gray;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

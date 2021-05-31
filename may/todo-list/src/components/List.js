@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const List = (props) => {
-  //   console.log(props);
-  //   console.log(props.setList);
+  // console.log(props);
+  // console.log(props.setList);
   const [userInput, setUserInput] = useState("");
   function changeHandle(e) {
     // console.log(e.target.value);
@@ -10,7 +10,7 @@ const List = (props) => {
   }
   function submitHandle(e) {
     e.preventDefault();
-    // trim
+    // prevState holds on the value of state before any update on the state
     props.setList((prevState) => [
       ...prevState,
       { id: prevState.length, title: userInput.trim(), done: false },
