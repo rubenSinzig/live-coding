@@ -11,17 +11,15 @@ function App() {
     const newArr = list.filter((item) => item.id !== itemToRemove);
     setList(newArr);
   };
+
   const check = (itemToCheck) => {
     // itemToCheck has the id for that specific item
-    console.log(itemToCheck);
-    list.filter((item) => {
-      if (item.id === itemToCheck) {
-        // revers done
-        item.done = !item.done;
-      }
-      return item;
+    setList((prevState) => {
+      return prevState.filter((item) => {
+        if (item.id === itemToCheck) item.done = !item.done;
+        return item;
+      });
     });
-    console.log(list);
   };
   // React Fragments allow you to wrap multiple elements without adding an extra node to the DOM. This can be useful when rendering multiple child elements/components in a single parent component.
   return (
