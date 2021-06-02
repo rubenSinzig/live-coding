@@ -13,3 +13,18 @@
 
 - React toDo app
 
+[31/05/2020](may/31-05)
+
+- react app example, displaying posts on page 
+- importing data from json file
+
+[01/06/2020](jun/01-06)
+
+- deploying react app with gh-pages
+
+[02/06/2020](jun/02-06)
+
+- morse code translator with react
+
+
+
