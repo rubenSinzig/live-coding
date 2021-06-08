@@ -3,24 +3,34 @@ import List from "./components/List";
 
 function App() {
   const [count, setCount] = useState(0);
-  //const [log, setLog] = useState(false);
+  const [log, setLog] = useState(false);
+
+  // // Stop useEffect from running on every render
+  // useEffect(() => {
+  //   if (!count && count) {
+  //     console.log("I am Ready");
+  //   }
+  // }, [count]);
+
+  // // Only Run Once, on Mount
+  // useEffect(() => {
+  //   console.log("I am Ready");
+  // }, []);
+
+  // Run useEffect on State Change
   useEffect(() => {
-    console.log("I am Ready ");
-  }, []);
+    if (count) {
+      console.log("I am Ready");
+    }
+  }, [count]);
 
   return (
     <React.Fragment>
       <button onClick={() => setCount(count + 1)}>+</button>
-      <List setCount={setCount} />
+      <List setCount={setCount} setLog={setLog} />
       <h3>{count}</h3>
     </React.Fragment>
   );
 }
-/*
-Stop useEffect from running on every render
-Only Run Once, on Mount
-Run useEffect on State Change
-Run useEffect When a Prop Changes
 
-*/
 export default App;
