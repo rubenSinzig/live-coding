@@ -11,14 +11,8 @@ const App = () => {
       setLoading(false);
     }, 1000);
   }, []);
-
-  function changeHandle(e) {
-    setUserInput(e.target.value);
-  }
-  function submitHandle(e) {
-    e.preventDefault();
-    let textToUrl = encodeURIComponent(userInput);
-    console.log(textToUrl);
+  const getCountry = (countryName) => {
+    let textToUrl = encodeURIComponent(countryName);
     let endPoint = `https://restcountries.eu/rest/v2/name/${textToUrl}`;
 
     // fetch(endPoint)
@@ -28,6 +22,14 @@ const App = () => {
     axios(endPoint)
       .then(({ data }) => setResults(data))
       .catch((err) => console.log(`Your had an ${err}`));
+  };
+  function changeHandle(e) {
+    setUserInput(e.target.value);
+  }
+  function submitHandle(e) {
+    e.preventDefault();
+    getCountry(userInput);
+    setUserInput("");
   }
   if (loading) return <Loading />;
 
@@ -42,7 +44,7 @@ const App = () => {
         />
         <button type="submit">Search</button>
       </form>
-      <Country results={results} />
+      <Country results={results} getCountry={getCountry} />
     </React.Fragment>
   );
 };
