@@ -11,9 +11,9 @@ const App = () => {
       setLoading(false);
     }, 1000);
   }, []);
-  const getCountry = (countryName) => {
+  const getCountry = (status, countryName) => {
     let textToUrl = encodeURIComponent(countryName);
-    let endPoint = `https://restcountries.eu/rest/v2/name/${textToUrl}`;
+    let endPoint = `https://restcountries.eu/rest/v2/${status}/${textToUrl}`;
 
     // fetch(endPoint)
     // .then((res)=> res.json())
@@ -28,7 +28,7 @@ const App = () => {
   }
   function submitHandle(e) {
     e.preventDefault();
-    getCountry(userInput);
+    getCountry("name", userInput);
     setUserInput("");
   }
   if (loading) return <Loading />;
