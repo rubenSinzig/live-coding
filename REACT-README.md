@@ -34,3 +34,7 @@
 
 - axios
 - fetching from an API with axios
+
+[14/06/2020](jun/14-06)
+
+- online-shop with react
