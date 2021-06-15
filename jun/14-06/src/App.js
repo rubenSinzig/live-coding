@@ -32,6 +32,7 @@ const App = () => {
     e.preventDefault();
     lookUp();
   };
+  console.log(process.env);
   return (
     <React.Fragment>
       {
