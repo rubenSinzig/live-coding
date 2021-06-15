@@ -5,15 +5,18 @@ const ProductInfo = (props) => {
   const selectedItem = props.data.filter((item) => item.id == props.id);
   console.log(selectedItem);
 
-  const moreInfo = selectedItem.map((item) => {
-    const { id, productName, icon, inventory, price } = item;
-    return (
-      <li key={id}>
-        <h2>{productName} </h2>
-        <h5>{price}€</h5>
-      </li>
-    );
-  });
+  const moreInfo = selectedItem.length
+    ? selectedItem.map((item) => {
+        const { id, productName, icon, inventory, price } = item;
+        return (
+          <li key={id}>
+            <h2>{productName} </h2>
+            <h5>{price}€</h5>
+          </li>
+        );
+      })
+    : "Sorry, something went wrong";
+
   return (
     <React.Fragment>
       <h3>Product farther infos</h3>
