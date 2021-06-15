@@ -26,5 +26,15 @@
 
 - morse code translator with react
 
+[07/06/2020](jun/07-06)
 
+- useEffect and its equivalent in class components
 
+[08/06/2020](jun/08-06)
+
+- axios
+- fetching from an API with axios
+
+[14/06/2020](jun/14-06)
+
+- online-shop with react
