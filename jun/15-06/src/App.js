@@ -24,6 +24,10 @@ const App = () => {
           exact
           component={() => <Products data={Data} />}
         />
+        {
+          // more about match
+          // https://reactrouter.com/web/api/match
+        }
         <Route
           path="/product/:id"
           component={({ match }) => {

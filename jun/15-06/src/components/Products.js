@@ -16,6 +16,7 @@ const Product = ({ data }) => {
   });
   return (
     <React.Fragment>
+      <h3>Products </h3>
       <ul>{items}</ul>
     </React.Fragment>
   );

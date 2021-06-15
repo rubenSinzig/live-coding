@@ -21,7 +21,9 @@ const ProductInfo = (props) => {
     <React.Fragment>
       <h3>Product farther infos</h3>
       <ul>{moreInfo}</ul>
-      <Link to="/product">Back</Link>
+      <Link to="/product" style={{ textDecoration: "none" }}>
+        Back
+      </Link>
     </React.Fragment>
   );
 };
