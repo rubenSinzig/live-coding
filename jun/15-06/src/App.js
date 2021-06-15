@@ -8,7 +8,6 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Soon from "./components/Soon";
-
 const App = () => {
   return (
     <Router>
@@ -27,9 +26,10 @@ const App = () => {
         />
         <Route
           path="/product/:id"
-          component={({ match }) => (
-            <ProductInfo data={Data} id={match.params.id} />
-          )}
+          component={({ match }) => {
+            console.log(match);
+            return <ProductInfo data={Data} id={match.params.id} />;
+          }}
         />
         {
           //  <Route  path="/products"
@@ -37,7 +37,9 @@ const App = () => {
           // <Products data={Data} />
           // </Route>
         }
-        <Route path="/soon" component={Soon} />
+        <Route path={() => "/main" || "/admin" || "/any-other-word"}>
+          <Soon />
+        </Route>
       </Switch>
     </Router>
   );
