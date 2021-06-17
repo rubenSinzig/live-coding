@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import DownloadLink from "react-download-link";
 
 import Data from "./data.json";
 import Products from "./components/Products";
