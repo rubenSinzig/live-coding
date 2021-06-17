@@ -10,6 +10,16 @@ import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Soon from "./components/Soon";
 const App = () => {
+  const getTheFile = (url) =>
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            resolve(data);
+          });
+      });
+    }, 1000);
   return (
     <Router>
       <Menu />
@@ -17,8 +27,8 @@ const App = () => {
 
       <DownloadLink
         label="Click to download my cv"
-        filename="./test.txt"
-        exportFile={() => "Some text here...."}
+        filename="test.txt"
+        exportFile={() => Promise.resolve(getTheFile("./test.txt"))}
       />
       <Switch>
         {
