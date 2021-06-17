@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import DownloadLink from "react-download-link";
 
 import Data from "./data.json";
 import Products from "./components/Products";
@@ -13,6 +14,11 @@ const App = () => {
     <Router>
       <Menu />
       <h1 className="jumbotron">Online Store</h1>
+      <DownloadLink
+        label="Click to download my cv"
+        filename="./test.txt"
+        exportFile={() => "Downloading...."}
+      />
       <Switch>
         {
           // <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
