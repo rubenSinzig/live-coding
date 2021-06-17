@@ -38,3 +38,9 @@
 [14/06/2020](jun/14-06)
 
 - online-shop with react
+
+[15/06/2020](jun/15-06)
+
+- react-router-dom
+- online-shop react (continue)
+- project: portfolio with react (start)
