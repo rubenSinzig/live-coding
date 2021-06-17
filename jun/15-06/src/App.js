@@ -14,10 +14,11 @@ const App = () => {
     <Router>
       <Menu />
       <h1 className="jumbotron">Online Store</h1>
+
       <DownloadLink
         label="Click to download my cv"
         filename="./test.txt"
-        exportFile={() => "Downloading...."}
+        exportFile={() => "Some text here...."}
       />
       <Switch>
         {
