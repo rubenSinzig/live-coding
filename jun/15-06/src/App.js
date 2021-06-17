@@ -9,25 +9,14 @@ import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Soon from "./components/Soon";
 const App = () => {
-  const getTheFile = (url) =>
-    new Promise((resolve) => {
-      fetch(url)
-        .then((response) => response.text())
-        .then((data) => {
-          resolve(data);
-        });
-    });
-
   return (
     <Router>
       <Menu />
       <h1 className="jumbotron">Online Store</h1>
+      <a href="./test.txt" download>
+        Click to download
+      </a>
 
-      <DownloadLink
-        label="Click to download my cv"
-        filename="test.txt"
-        exportFile={() => Promise.resolve(getTheFile("test.txt"))}
-      />
       <Switch>
         {
           // <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
