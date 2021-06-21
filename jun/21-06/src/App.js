@@ -2,6 +2,7 @@ import React, { useRef, Fragment } from "react";
 
 function App() {
   const [counter, setCounter] = React.useState(0);
+  const [like, setLike] = React.useState(false);
   const userTextInput = useRef(null);
   const count = useRef(0);
 
@@ -20,6 +21,7 @@ function App() {
       {console.log(count.current)}
       <h6>Counter with State</h6>
       <button onClick={() => setCounter(counter + 1)}>{counter}</button>
+      <button onClick={() => setLike(!like)}>{like ? "👍🏻" : "👎🏻"}</button>
     </Fragment>
   );
 }
