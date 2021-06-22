@@ -1,0 +1,12 @@
+body {
+  background-color: orange;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    background-color: lightgray;
+    border-radius: 5%;
+  }
+}

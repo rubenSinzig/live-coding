@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import Data from "./data.json";
 import ProductList from "./components/ProductList";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { fab } from "@fortawesome/free-brands-svg-icons";
 // import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FaBeer } from "react-icons/fa";
 import { WiAlien, WiNightAltThunderstorm } from "react-icons/wi";
 
-//library.add(fab, faCheckSquare, faCoffee);
+// library.add(fab, faCheckSquare, faCoffee);
 const App = () => {
   const [data, setData] = useState(Data);
   const [userInput, setUserInput] = useState("");

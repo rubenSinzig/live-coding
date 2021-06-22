@@ -13,6 +13,10 @@ const App = () => {
     <Router>
       <Menu />
       <h1 className="jumbotron">Online Store</h1>
+      <a href="./test.txt" download>
+        Click to download
+      </a>
+
       <Switch>
         {
           // <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
