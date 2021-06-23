@@ -44,3 +44,11 @@
 - react-router-dom
 - online-shop react (continue)
 - project: portfolio with react (start)
+
+[21/06/2020](jun/21-06)
+
+- useRef
+
+[22/06/2020](jun/22-06)
+
+- context API
