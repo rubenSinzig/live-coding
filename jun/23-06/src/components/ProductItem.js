@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductItem = ({ info, addToCart }) => {
+const ProductItem = ({ info, contextObj }) => {
   const { id, productName, icon, price, inventory } = info;
 
   return (
@@ -11,7 +11,9 @@ const ProductItem = ({ info, addToCart }) => {
       <button
         disabled={inventory === 0}
         onClick={() => {
-          addToCart(info);
+          contextObj.setStore((prevState) => {
+            return { ...prevState, cart: [...prevState.cart, info] };
+          });
         }}
       >
         {inventory > 0 ? "Add to cart" : "Sold out"}
