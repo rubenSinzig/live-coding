@@ -9,6 +9,10 @@ export default class App extends React.Component {
       isLogged: false,
       data: { name: "Hadi", age: 31 },
     };
+    this.sum = function () {
+      console.log("Hi I am functions built in const");
+    };
+    // this.sum= ()=>{}
     this.handleSub = this.handleSub.bind(this);
   }
   // Es6 Function
@@ -20,12 +24,11 @@ export default class App extends React.Component {
 
   render() {
     this.newUser = () => console.log("Hi I am inside render ");
-
     this.newUser();
-
     return (
       <div>
         {this.print()}
+        {this.sum()}
         {this.handleSub()}
         {display("Hi, I like React")}
         <h1>
