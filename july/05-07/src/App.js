@@ -1,7 +1,7 @@
 import React from "react";
 import { add, display } from "./helpers";
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,7 @@ export default class App extends React.Component {
   }
   // Es6 Function
   print = () => console.log("Hi I am Es6 function and I don't need to be bind");
-  // Function need to be bind
+  // Function need's to be bind
   handleSub() {
     console.log("Hi I need to be bind");
   }
@@ -38,3 +38,4 @@ export default class App extends React.Component {
     );
   }
 }
+export default App;
