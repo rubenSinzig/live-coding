@@ -8,6 +8,7 @@ const ParentComponent = (props) => {
   const { store, changeName } = props;
   return (
     <Fragment>
+      {store.userName}
       <button onClick={() => changeName("Zain")}>Click me</button>
       <ChildComponent store={store} />
     </Fragment>

@@ -1,6 +1,6 @@
 // step 2
 const allReducers = (state, action) => {
-  console.log(action);
+  console.log(action.payload);
   switch (action.type) {
     case "INCREMENT":
       return {
