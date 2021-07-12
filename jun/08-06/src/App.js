@@ -12,6 +12,7 @@ const App = () => {
     }, 1000);
   }, []);
   const getCountry = (status, countryName) => {
+    console.log(encodeURIComponent(" 猫 "));
     let textToUrl = encodeURIComponent(countryName);
     let endPoint = `https://restcountries.eu/rest/v2/${status}/${textToUrl}`;
 

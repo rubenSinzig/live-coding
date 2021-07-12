@@ -5,8 +5,9 @@ import ProductList from "./components/ProductList";
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { fab } from "@fortawesome/free-brands-svg-icons";
 // import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
-import { FaBeer } from "react-icons/fa";
+import { FaBeer, FaBitcoin } from "react-icons/fa";
 import { WiAlien, WiNightAltThunderstorm } from "react-icons/wi";
+// https://react-icons.github.io/react-icons/
 
 // library.add(fab, faCheckSquare, faCoffee);
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
       <h3>
         Lets go for a <FaBeer /> with <WiAlien /> when it's
         <WiNightAltThunderstorm />
+        <FaBitcoin />
       </h3>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
