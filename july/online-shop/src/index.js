@@ -1,9 +1,3 @@
-// npm i react-redux
-// const store ={
-//     counter:0,
-//     userName:"Hadi"
-// }
-
 import React from "react";
 import ReactDOM from "react-dom";
 import "./sass/main.scss";

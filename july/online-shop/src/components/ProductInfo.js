@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 const ProductInfo = (props) => {
   const { store, id } = props;
-  console.log(store);
+  // console.log(store);
   const product = store.products[id];
-  console.log(product);
+  // console.log(product);
   return (
     <div>
       <h2>

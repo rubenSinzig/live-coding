@@ -73,8 +73,11 @@ const allReducers = (state = {}, action) => {
         },
         cart: newCart,
       };
-    // case"EMPTY_CART":
-    // return ;
+    case "EMPTY_CART":
+      return {
+        products: allProductsJson,
+        cart: {},
+      };
     default:
       return state;
   }

@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
-import { checkout } from "../actions";
+import { checkout, emptyCart } from "../actions";
 
 import ShoppingCartItem from "./ShoppingCartItem";
 
 const ShoppingCart = (props) => {
-  const { items, checkout } = props;
+  const { items, checkout, emptyCart } = props;
   const itemsInCart = items.map((item) => (
     <ShoppingCartItem item={item} key={item.id} />
   ));
@@ -17,7 +17,12 @@ const ShoppingCart = (props) => {
         {items.reduce((sum, item) => sum + item.price * item.quantity, 0)}
       </p>
       <div>
-        <button onClick={checkout}>Checkout</button>
+        <button onClick={emptyCart} disabled={!items.length}>
+          Empty cart
+        </button>
+        <button onClick={checkout} disabled={!items.length}>
+          Checkout
+        </button>
       </div>
     </Fragment>
   );
@@ -28,5 +33,6 @@ const mapStoreToProps = (store) => ({
 });
 const mapActionsToProps = {
   checkout,
+  emptyCart,
 };
 export default connect(mapStoreToProps, mapActionsToProps)(ShoppingCart);

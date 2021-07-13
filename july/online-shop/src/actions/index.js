@@ -24,5 +24,10 @@ const checkout = () => {
     type: "CHECKOUT",
   };
 };
+const emptyCart = () => {
+  return {
+    type: "EMPTY_CART",
+  };
+};
 
-export { addProduct, removeOne, removeAll, checkout };
+export { addProduct, removeOne, removeAll, checkout, emptyCart };
