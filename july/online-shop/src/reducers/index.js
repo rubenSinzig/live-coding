@@ -2,7 +2,7 @@ import allProductsJson from "../data.json";
 const allReducers = (state = {}, action) => {
   const { cart, products } = state;
   const { product } = action;
-  const { id, productName, price } = product || {};
+  const { id, productName, price, icon } = product || {};
   let quantity, inventory, newCart;
 
   switch (action.type) {
@@ -26,6 +26,7 @@ const allReducers = (state = {}, action) => {
             id,
             productName,
             price,
+            icon,
             quantity: quantity + 1,
           },
         },
@@ -34,6 +35,7 @@ const allReducers = (state = {}, action) => {
       console.log(
         "Thank you for spending all your money with us, see you soon 😉"
       );
+      // Not ready yet
       return {
         products: allProductsJson,
         cart: {},
