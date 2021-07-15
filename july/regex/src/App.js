@@ -45,7 +45,7 @@ const App = () => {
   } else {
     console.log("Noooo");
   }
-  console.log(emailCheck(".ex@gmail.com.com"));
+  console.log(emailCheck("ex@gmail.com"));
   // console.log(visaCheck("2394u39u5"));
   // console.log(visaCheck("333-5556-7777"));
   // console.log(phoneCheck("030-5534444"));
