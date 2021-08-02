@@ -15,7 +15,7 @@
 // });
 
 // this is the real deal
-const args = process.argv.slice(2);
+//const args = process.argv.slice(2);
 //console.log(args);
 // fs (File System) built-in module in NodeJs
 const fs = require("fs");
@@ -30,3 +30,8 @@ fs.writeFile("./text/new.txt", "This is file created in NodeJs", (err) => {
   if (err) throw err;
   console.log("Done ✅ ");
 });
+const args = process.argv.slice(2);
+// let stars = args[0];
+// let header = args[1];
+// const print = require("./stars");
+// print(stars, header);
