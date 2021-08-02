@@ -2,6 +2,8 @@ import React from "react";
 import { add, display } from "./helpers";
 
 class App extends React.Component {
+  // this is state full Component which has a state in it.
+  // state less Component has no state.
   constructor(props) {
     super(props);
     this.state = {

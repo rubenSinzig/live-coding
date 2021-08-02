@@ -21,6 +21,9 @@ const App = () => {
         {
           // <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
         }
+        {
+          // URL
+        }
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route
@@ -31,6 +34,7 @@ const App = () => {
         {
           // more about match
           // https://reactrouter.com/web/api/match
+          // /product/id=4
         }
         <Route
           path="/product/:id"

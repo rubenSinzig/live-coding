@@ -8,6 +8,11 @@
 const Gallery = (props) => {
   const { Data } = props;
   console.log(Data);
-  return <div></div>;
+  const imgLists = Data.map((item) => (
+    <li key={item.id}>
+      <img src={`${process.env.PUBLIC_URL}/img/${item.img}`} />
+    </li>
+  ));
+  return <ul>{imgLists}</ul>;
 };
 export default Gallery;

@@ -3,7 +3,8 @@ import React from "react";
 const Country = ({ results, getCountry }) => {
   const lands = results.map((obj, i) => {
     console.log(obj);
-    const { name, flag, capital, population, borders, languages } = obj;
+    let { name, flag, capital, population, borders, languages } = obj;
+    // option 1 flag = flag || "./img/untitled.jpg";
     return (
       <div key={i}>
         <h2>{name}</h2>
@@ -24,7 +25,14 @@ const Country = ({ results, getCountry }) => {
             </h6>
           ))}
         </h5>
-        <img src={flag} alt={name} className="flag" />
+        {
+          // option 2
+        }
+        <img
+          src={flag ? flag : "./img/untitled.jpg"}
+          alt={name}
+          className="flag"
+        />
       </div>
     );
   });
