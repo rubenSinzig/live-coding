@@ -2,7 +2,7 @@
 
 ## DOM
 
-[21/04/2020](apr/21-04)
+[21/04/2021](apr/21-04)
 
 - DOM aka Document Object Module
 - DOM tree
@@ -15,7 +15,7 @@
 - `window.prompt()` and `window.alert()`
 - Project: The Guessing Game
 
-[22/04/2020](apr/22-04)
+[22/04/2021](apr/22-04)
 
 - window.alert === alert
 - document.querySelectorAll() will return A non-live `NodeList` 🧐
@@ -26,14 +26,14 @@
 - `document.querySelectorAll(<selector string>)`
 - Project: Dom-querying
 
-[26/04/2020](apr/26-04)
+[26/04/2021](apr/26-04)
 
 - `document.write()` and script injection
 - Creating Elements: `document.createElement(<tag name>)`
 - Adding elements to the page: `Element.appendChild(<Element object>)`"
 - ToDo app with DOM
 
-[27/04/2020](apr/27-04)
+[27/04/2021](apr/27-04)
 
 - DOM Querying: Getting elements from `document`
 - Selecting elements with `document.getElementById(<id string>)`
@@ -42,7 +42,7 @@
 - Selecting by CSS query: `document.querySelector(<selector string>)`
 - Getting more than one element: `document.querySelectorAll(<selector string>)`
 
-[28/04/2020](apr/28-04)
+[28/04/2021](apr/28-04)
 
 - DOM Traversing: Jumping from one element to its relative
 - Node vs. Element: 
@@ -53,18 +53,18 @@
 - Selecting specific children: `ParentNode.querySelector(<selector string>)`
 - Finding more traversal techniques: MDN
 
-[29/04/2020](apr/29-04)
+[29/04/2021](apr/29-04)
 
 - Event listeners
 - update to the generate password exercise
 - simple game
 
-[03/05/2020](may/03-05)
+[03/05/2021](may/03-05)
 
 - recap
 - Q & A
 
-[04/05/2020](may/04-05)
+[04/05/2021](may/04-05)
 
 - User Events (interaction) and Browser Events (loading, etc...)
 - Keyboard Events: `keydown`, `keyup`
@@ -80,7 +80,7 @@
 - Finding more events on MDN"
 - 4 exercises (currency converter * weekend count-down * numeral-system converter * image-slider )
 
-[05/05/2020](may/05-05)
+[05/05/2021](may/05-05)
 
 - JSON
 - Brief overview of IIFE and the Module pattern
@@ -91,7 +91,7 @@
 - Default exports vs. named exports
 - Destructuring imports
 
-[06/05/2020](may/06-05)
+[06/05/2021](may/06-05)
 
 - The request response cycle - Client perspective
 - Non-Blocking Promises
@@ -102,11 +102,11 @@
 - Breaking Promises
 - fetch() and fetch API
 
-[11/05/2020](may/11-05)
+[11/05/2021](may/11-05)
 
 - promises
 - async await
 
-[12/05/2020](may/12-05)
+[12/05/2021](may/12-05)
 
 - tic tac toe (XO) with DOM
