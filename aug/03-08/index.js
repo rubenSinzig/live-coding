@@ -1,5 +1,8 @@
 const fs = require("fs");
 const math = require("./math");
+// import converter.js
+const converter = require("./converter.js");
+
 // create file
 // writeFile will create or over write
 fs.writeFile("./new.txt", "This is file created in NodeJs", (err) => {
@@ -95,9 +98,9 @@ fs.open("./testFileTwo", "w", (err) => {
 });
 
 // create new JS file
-// fs.writeFile("./math.js", "", (err) => {
+// fs.writeFile("./converter.js", "", (err) => {
 //   if (err) throw err;
-//   console.log("math.js is created ✅");
+//   console.log("converter.js is created ✅");
 // });
 
 console.log(math);
@@ -107,3 +110,6 @@ console.log("Math");
 console.log(`x + y = ${math.sum(x, y)} `);
 console.log(`x - y = ${math.sub(x, y)} `);
 console.log(`x + y = ${math.multi(x, y)} `);
+
+// converter.js
+console.log(`${converter.convert("ABC")}`);
