@@ -54,7 +54,7 @@ function parsNum(arg) {
 }
 const args = process.argv.slice(2);
 const [operation, ...rest] = args;
-const numbers = rest.map(parsNum);
+//const numbers = rest.map(parsNum);
 // sum 2 4 f
 // avg 33 5 3 2 55
 
