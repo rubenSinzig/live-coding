@@ -8,12 +8,14 @@
 // process object
 //console.log(process);
 //console.log(process.argv);
+
 //console.log(`Hey ${process.argv[2]}`);
 //
 // process.argv.forEach((item, i) => {
 //   console.log(`${i} : ${item}`);
 // });
-
+// The first index returns the absolute pathname of the executable that started the Node.js process.
+// The second index has the absolute pathname of the file
 // this is the real deal
 //const args = process.argv.slice(2);
 //console.log(args);
@@ -54,7 +56,7 @@ function parsNum(arg) {
 
 const args = process.argv.slice(2);
 const [operation, ...rest] = args;
-const numbers = rest.map(parsNum);
+//const numbers = rest.map(parsNum);
 // sum 2 4 f
 // avg 33 5 3 2 55
 
@@ -70,4 +72,5 @@ function med(numArray) {
       console.log("I can not do this task yet, please write sum or avg");
   }
 }
+
 med(numbers);
