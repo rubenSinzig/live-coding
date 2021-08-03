@@ -1,7 +1,10 @@
 const fs = require("fs");
 // create file
 // writeFile will create or over write
-
+fs.writeFile("./new.txt", "This is file created in NodeJs", (err) => {
+  if (err) throw err;
+  console.log("Done ✅ ");
+});
 // appendFile will create file
 fs.appendFile("newText.txt", "I am text from NodeJs 😎 \n", (err) => {
   if (err) throw err;
@@ -41,3 +44,7 @@ fs.copyFile("./original.txt", "./copyFromOG.txt", (err) => {
 // open file
 // fs flags
 // https://nodejs.org/docs/latest-v12.x/api/fs.html#fs_file_system_flags
+fs.open("newText.txt", "w", (err, data) => {
+  if (err) throw err;
+  console.log("File is opened, Done ✅");
+});
