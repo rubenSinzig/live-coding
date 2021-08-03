@@ -84,3 +84,9 @@ fs.open("./testFileTwo", "w", (err) => {
   if (err) throw err;
   console.log("testFileTwo is opened ✅");
 });
+
+// create new JS file
+// fs.writeFile("./math.js", "", (err) => {
+//   if (err) throw err;
+//   console.log("math.js is created ✅");
+// });
