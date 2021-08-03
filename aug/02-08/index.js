@@ -38,6 +38,7 @@ fs.writeFile("./text/new.txt", "This is file created in NodeJs", (err) => {
 function sum(numArray) {
   return numArray.reduce((sum, n) => sum + n, 0);
 }
+
 function avg(numArray) {
   return sum(numArray) / numArray.length;
 }
@@ -50,6 +51,7 @@ function parsNum(arg) {
   }
   return number;
 }
+
 const args = process.argv.slice(2);
 const [operation, ...rest] = args;
 const numbers = rest.map(parsNum);
@@ -68,3 +70,4 @@ function med(numArray) {
       console.log("I can not do this task yet, please write sum or avg");
   }
 }
+med(numbers);
