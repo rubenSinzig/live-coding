@@ -2,7 +2,7 @@
 
 - introduction to node
 - file system fs
-- reading and writing files: blocking and non-blocking
+- Argv
 
 [03/08/2021](aug/03-08)
 
