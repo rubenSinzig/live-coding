@@ -12,7 +12,7 @@ class OpenWeatherClient {
       `&units=metric&appid=${this.apiKey}`;
     return axios
       .get(URL)
-      .then((res) => res.data)
+      .then((res) => console.log(res.data))
       .catch((err) => Promise.reject(err.response.data.message));
   }
   async getWeather(city, country) {
