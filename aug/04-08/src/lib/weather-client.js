@@ -1,6 +1,6 @@
 const axios = require("axios");
 const url = require("url");
-
+// export class OpenWeatherClient
 class OpenWeatherClient {
   constructor(apiKey) {
     this.apiKey = apiKey;
@@ -24,7 +24,7 @@ class OpenWeatherClient {
   }
 }
 
-// 450f -30 /2 = c
+// (450f -30) / 2 = c simple method to convert from Fahrenheit to Celsius (Not super accurate 😅)
 
 // http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${this.apiKey}
 
