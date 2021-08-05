@@ -17,6 +17,6 @@ function formatData(data) {
 module.exports = async function weather(city, country) {
   const client = new OpenWeatherClient(API_KEY);
   const currentData = await client.getWeather(city, country);
-  // console.log(currentData);
+  console.log(currentData);
   return formatData(currentData);
 };

@@ -14,6 +14,6 @@ prepareString = (str) => {
     let fixedWord = word.trim();
     return fixedWord.charAt(0).toUpperCase() + fixedWord.slice(1).toLowerCase();
   });
-  console.log(newArray.join(" ").replace(/[^a-zA-Z ]/g, ""));
+  console.log(newArray.join(" ").replace(/[^a-zA-Z]/g, ""));
 };
 prepareString(args);
