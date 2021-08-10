@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
+<<<<<<< HEAD
     "deploy": "chmod +x src/index.js && sudo npm link",
+=======
+    "deploy": "chmod +x src/index.js &&  npm link",
+>>>>>>> b55ed0d1b1bb2b1a02e51881ad6672fb470163d8
     "undeploy": "npm unlink"
   },
   "author": "",
