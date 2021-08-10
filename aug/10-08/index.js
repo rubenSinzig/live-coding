@@ -7,10 +7,10 @@
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 // HTTP Methods
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // http://localhost:5000/
 app.get("/", (req, res) => {
