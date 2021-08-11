@@ -1,0 +1,32 @@
+[
+  {
+    "userName": "ruben123",
+    "firstName": "Ruben",
+    "lastName": "Sinzig",
+    "password": "1592$KknR?"
+  },
+  {
+    "userName": "bri58",
+    "firstName": "Tina",
+    "lastName": "Müller",
+    "password": "tinA558!"
+  },
+  {
+    "userName": "mike-micha",
+    "firstName": "Micheal",
+    "lastName": "Schneider",
+    "password": "Passwort123"
+  },
+  {
+    "userName": "pc-freak",
+    "firstName": "Thomas",
+    "lastName": "Schauer",
+    "password": "Regen+Wolken"
+  },
+  {
+    "userName": "apple-fan",
+    "firstName": "Steffen",
+    "lastName": "Woriz",
+    "password": "Wortiz852"
+  }
+]
