@@ -18,14 +18,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // json setup old school
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(bodyParser.raw());
+// const bodyParser = require("body-parser");
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.raw());
 // json cool method
 app.use(express.json());
 
-//root route
+// root route
 
 // db init
 
