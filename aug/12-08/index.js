@@ -56,7 +56,14 @@ app.get("/add", async (req, res) => {
 app.get("/find", async (req, res) => {
   //url  /find?id=1
   const idToFind = req.query.id;
-  res.send(await db.get("articles").find({ id: idToFind }).value());
+  const result = await db.get("articles").find({ id: idToFind }).value();
+  let text = "";
+  if (result) {
+    text = result;
+  } else {
+    text = "sorry, not found";
+  }
+  res.send(text);
 });
 // update
 
