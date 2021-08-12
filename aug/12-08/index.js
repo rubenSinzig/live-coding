@@ -66,8 +66,32 @@ app.get("/find", async (req, res) => {
   res.send(text);
 });
 // update
+app.get("/update", async (req, res) => {
+  //url /update
+  await db.update("num", (n) => n + 1).write();
+  const num = db.get("num").value();
+  res.send(`num was updated, now num is = ${num}`);
+});
+
+app.get("/user", async (req, res) => {
+  //url /user?name=Hadi
+  const name = req.query.name;
+  await db.set("user.name", name).write();
+  res.send(`Hey ${name}`);
+});
 
 // delete
+app.delete("/delete", async (req, res) => {
+  // to remove an article
+  //url /delete?title=water
+  //   const title = req.query.title;
+  //   await db.get("articles").remove({ title: title }).write();
+  //   res.status(200).send(`Your ${title} has been removed`);
+  // to remove p
+  // url /delete
+  db.unset("user.name").write();
+  res.status(200).send("user.name has been removed");
+});
 
 app.listen(PORT, () => {
   console.log(`server listen on http://localhost:${PORT}`);
