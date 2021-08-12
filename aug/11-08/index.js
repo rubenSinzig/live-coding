@@ -9,6 +9,8 @@ require("dotenv").config();
 // express
 const express = require("express");
 const app = express();
+// import .json
+const data = require("./data.json");
 // to help express read json :)
 app.use(express.json());
 app.use(logger);
@@ -57,9 +59,14 @@ app.post("/login", (req, res) => {
 	"pass":"000callme000"
 }
   */
-  const userName = req.body.userName;
-  const pass = req.body.pass;
-  if (userName === "Hadi" && pass === "000callme000") {
+
+  const userName = req.query.userName;
+  const pass = req.query.pass;
+
+  const loginName = data.find((ele) => userName == ele.userName);
+  const loginPW = data.find((ele) => pass == ele.password);
+
+  if (userName === loginName.userName && pass === loginPW.password) {
     res.status(200).send(`Welcome ${userName}`);
   } else {
     res.status(401).send("invalid username or pass");
