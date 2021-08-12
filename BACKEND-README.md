@@ -18,3 +18,13 @@
 [05/08/2021](aug/05-08)
 
 - creating a server and running it on some port on the local host
+
+[10/08/2021](aug/10-08)
+
+- making routes
+- handling get & post requests
+
+[11/08/2021](aug/11-08)
+
+- intro to database
+- local database lowdb

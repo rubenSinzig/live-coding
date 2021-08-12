@@ -30,5 +30,5 @@
 
 
 
-4. Go to the following link to find the REACT topics with the dates:  
+4. Go to the following link to find the BACKEND topics with the dates:  
    ## [BACKEND](BACKEND-README.md)
