@@ -52,7 +52,7 @@ app.get("/add", async (req, res) => {
 });
 
 // find
-
+console.log(db.articles);
 app.get("/find", async (req, res) => {
   //url  /find?id=1
   const idToFind = req.query.id;
