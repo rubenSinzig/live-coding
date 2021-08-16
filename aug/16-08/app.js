@@ -8,16 +8,38 @@ app.use(morgan("dev"));
 
 // Middleware
 //  app.use((req, res, next) => {
-//   if (!req.query.userName) return next(createError(401, "Login to see this page"));
+//   if (!req.query.userName) return next(createError(401, "Login to see this page."));
 //   next();
 // });
+
+app.use("/admin", (req, res, next) => {
+  if (!req.query.userName)
+    return next(createError(401, "Please login to see this page."));
+  next();
+});
 // localhost:5000/users (GET PUT POST,...)
 app.use("/users", userRouter);
 app.use("/books", bookRouter);
+
+// any error might happen
+// app.use((req, res, next) => {
+//   const error = new Error("Noooooo this is not cool");
+//   error.status = 404;
+//   next(error);
+// });
+// app.use((error, req, res, next) => {
+//   res.status(error.status || 500);
+//   res.json({
+//     error: {
+//       message: error.message,
+//     },
+//   });
+// });
+
 // root
 //Url localhost:5000/
 app
-  .get("/", (req, res) => {
+  .get("/", (error, req, res) => {
     console.log("GET");
     res.status(200).json({ text: "This is a GET req" });
   })
@@ -33,5 +55,18 @@ app
     console.log("DELETE");
     res.status(200).json({ text: "This is a DELETE req" });
   });
+
+// bill error
+app.post("/bill", (req, res, next) => {
+  // if
+  next(
+    createError(402, `You don't have 💶`, {
+      detail: {
+        yourBalance: 400,
+        itemCost: 6000,
+      },
+    })
+  );
+});
 
 module.exports = app;
