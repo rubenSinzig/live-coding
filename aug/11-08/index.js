@@ -13,7 +13,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 // import .json
-const data = require("./data.json");
+const data = require("./data.json"); // do with lowdb
 // to help express read json :)
 app.use(express.json());
 app.use(logger);
@@ -63,17 +63,19 @@ app.post("/login", (req, res) => {
 }
   */
 
-  const userName = req.query.userName;
-  const pass = req.query.pass;
+  const userName = req.body.userName;
+  const pass = req.body.pass;
 
   const loginName = data.find((ele) => userName == ele.userName);
   const loginPW = data.find((ele) => pass == ele.password);
 
-  if (userName === loginName.userName && pass === loginPW.password) {
-    res.status(200).send(`Welcome ${userName}`);
-  } else {
-    res.status(401).send("invalid username or pass");
-  }
+  console.log(loginPW, loginName);
+
+  // if (userName === loginName.userName && pass === loginPW.password) {
+  //   res.status(200).send(`Welcome ${userName}`);
+  // } else {
+  //   res.status(401).send("invalid username or pass");
+  // }
 });
 // GET method  http://localhost:5000/api
 app.get("/api", (req, res) => {
