@@ -42,3 +42,9 @@
 
 - intro to database
 - local database lowdb
+
+[16/08/2021](aug/16-08)
+
+- simple CRUD OPs (post, get, put, delete)
+- simple middleware (example: error-handling middleware)
+- handling multiple requests in one route
