@@ -59,6 +59,6 @@
 [23/08/2021](aug/23-08)
 
 - REST API
-- MongoDB scheemas
+- MongoDB schemas
 - example: simple server with REST API all CRUD OPs with 
 MongoDB using mongoose
