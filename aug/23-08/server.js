@@ -15,11 +15,11 @@ To start new express project
  json script
  "start": "nodemon server.js"
  */
-
-//CRUD aka Creat Retrieve Update Delete
-
 // MongoDB with Express
-// But first REST API (REpresentational State Transfer) aka server can do (create, delete, update, read)requests
+
+// Your DB is able to CRUD aka Creat Retrieve Update Delete
+
+// Your server is able to REST API (REpresentational State Transfer) aka server can do (create, delete, update, read)requests
 require("dotenv").config();
 const http = require("http");
 const app = require("./app");
