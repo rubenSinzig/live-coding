@@ -83,6 +83,7 @@ router.delete("/:name", getEmployee, async (req, res) => {
 router.patch("/:name", getEmployee, async (req, res) => {
   console.log(req.body);
   console.log(res.employee);
+
   if (req.body.name) {
     res.employee.name = req.body.name;
   }
@@ -102,4 +103,6 @@ router.patch("/:name", getEmployee, async (req, res) => {
   }
 });
 
+// router.route("/").get(getAllEmp).post(addNewEmp);
+// router.route("/:name").get().post()
 module.exports = router;
