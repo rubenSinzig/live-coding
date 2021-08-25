@@ -22,4 +22,5 @@ app.use("/employees", employees);
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to our app");
 });
+
 module.exports = app;

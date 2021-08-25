@@ -3,21 +3,22 @@ const router = express.Router();
 const EmployeesData = require("../model/employeesModel");
 const {
   getEmployee,
-  getAllEmployee,
-  addNewEmployee,
+  getAllEmployees,
+  getAdd,
+  // addNewEmployee,
   getOneEmployee,
   updateOneEmployee,
-  deleteOneEmployee,
-  updateAllEmployeeData,
+  // deleteOneEmployee,
+  // updateAllEmployeeData,
 } = require("../controllers/employeeController");
 // root route
 // GET all employees , POST new employee
-//router.route("/").get(getAllEmployee).post(addNewEmployee);
+router.route("/").get(getAllEmployees); //.post(addNewEmployee);
 // route with name value
-// router
-//   .route("/:name")
-//   .get(getEmployee, getOneEmployee)
-//   .patch(getEmployee, updateOneEmployee)
+router
+  .route("/:name")
+  .get(getEmployee, getOneEmployee)
+  .patch(getEmployee, updateOneEmployee);
 //   .put(getEmployee, updateAllEmployeeData)
 //   .delete(getEmployee, deleteOneEmployee);
 
