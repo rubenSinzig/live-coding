@@ -15,7 +15,7 @@ mongoose
   .catch((error) => {
     console.log(`There was a problem ${error.message}`);
   });
-
+// http:localhost:5000/employees
 const employees = require("./router/employees");
 app.use("/employees", employees);
 
