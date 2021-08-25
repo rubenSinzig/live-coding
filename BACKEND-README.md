@@ -62,3 +62,8 @@
 - MongoDB schemas
 - example: simple server with REST API all CRUD OPs with 
 MongoDB using mongoose
+- introducing routes
+
+[25/08/2021](aug/25-08)
+
+- adding controllers to the previous example project (employees server+database)
