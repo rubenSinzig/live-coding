@@ -10,6 +10,7 @@ const {
   updateOneEmployee,
   deleteOneEmployee,
   updateAllEmployeeData,
+  updateManyEmployees,
 } = require("../controllers/employeeController");
 // root route
 // GET all employees , POST new employee
@@ -30,9 +31,9 @@ router
 // UPDATE aka PUT http://localhost:3000/employees/:name -->  update employee by name
 
 // Get many employees by address
-// router.get("/search/:add", getAdd, (req, res) => {
-//   res.status(200).json(res.employee);
-// });
+router.get("/search/:add", getAdd, (req, res) => {
+  res.status(200).json(res.employee);
+});
 // // Update many employees by Address
-// router.put("/update/:add", getAdd, updateManyEmployees);
+router.put("/update/:add", getAdd, updateManyEmployees);
 module.exports = router;

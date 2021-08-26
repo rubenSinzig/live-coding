@@ -29,7 +29,7 @@ const getAdd = async (req, res, next) => {
   let employee;
   try {
     employee = await EmployeesData.find({ add: req.params.add });
-    if (employee == null) {
+    if (employee.length == 0) {
       // NOt found
       return res.status(404).json({ message: "Sorry, NOT FOUND." });
     }
@@ -155,7 +155,24 @@ const updateAllEmployeeData = async (req, res) => {
 
 // Update All Employee  upon criteria
 
-const updateManyEmployees = async (req, res) => {};
+const updateManyEmployees = async (req, res) => {
+  try {
+    // update many
+    await EmployeesData.updateMany(
+      { add: req.params.add },
+      {
+        $set: {
+          add: req.body.add,
+        },
+      }
+    );
+    // 200 for Successful OK
+    res.status(200).json({ message: "Add got update" });
+  } catch (err) {
+    // 400 for Bad request
+    res.status(400).json({ message: err.message });
+  }
+};
 
 module.exports = {
   getEmployee,
@@ -166,4 +183,5 @@ module.exports = {
   addNewEmployee,
   deleteOneEmployee,
   updateAllEmployeeData,
+  updateManyEmployees,
 };
