@@ -48,3 +48,22 @@
 - simple CRUD OPs (post, get, put, delete)
 - simple middleware (example: error-handling middleware)
 - handling multiple requests in one route
+
+[19/08/2021](aug/19-08)
+
+- Database: SQL(mySql) vs NoSQL(MongoDB)
+- MongoDB compass
+- CRUD OPs with MongoDB
+- MongoDB in Terminal
+
+[23/08/2021](aug/23-08)
+
+- REST API
+- MongoDB schemas
+- example: simple server with REST API all CRUD OPs with 
+MongoDB using mongoose
+- introducing routes
+
+[25/08/2021](aug/25-08)
+
+- adding controllers to the previous example project (employees server+database)

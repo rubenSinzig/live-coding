@@ -19,7 +19,7 @@ router
   .route("/:name")
   .get(getEmployee, getOneEmployee)
   .patch(getEmployee, updateOneEmployee)
-  //.put(getEmployee, updateAllEmployeeData)
+  .put(getEmployee, updateAllEmployeeData)
   .delete(getEmployee, deleteOneEmployee);
 
 // GET  http://localhost:3000/employees/ -->  get all employees

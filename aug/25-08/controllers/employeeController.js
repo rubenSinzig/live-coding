@@ -56,6 +56,7 @@ const getAllEmployee = async (req, res) => {
           employeeId: employee._id,
           employeeName: employee.name,
           age: employee.age,
+          Address: employee.add,
           employeeAddedDate: employee.employeeAddedDate,
           request: {
             type: "GET",
@@ -114,7 +115,6 @@ const addNewEmployee = async (req, res) => {
     });
   }
 };
-
 // DELETE one Employee upon criteria
 const deleteOneEmployee = async (req, res) => {
   try {
@@ -129,6 +129,28 @@ const deleteOneEmployee = async (req, res) => {
     });
   }
 };
+// PUT
+const updateAllEmployeeData = async (req, res) => {
+  try {
+    await EmployeesData.updateOne(
+      { name: req.params.name },
+      {
+        $set: {
+          name: req.body.name,
+          age: req.body.age,
+          add: req.body.add,
+        },
+        $currentDate: {
+          employeeAddedDate: Date.now,
+        },
+      }
+    );
+    // 200 OK
+    res.status(200).json({ message: "Employee Got updates" });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
 
 module.exports = {
   getEmployee,
@@ -138,4 +160,5 @@ module.exports = {
   updateOneEmployee,
   addNewEmployee,
   deleteOneEmployee,
+  updateAllEmployeeData,
 };
