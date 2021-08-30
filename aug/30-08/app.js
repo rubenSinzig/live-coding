@@ -42,7 +42,7 @@ app.post("/", (req, res) => {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       city: faker.address.city(),
-      imageUrl: faker.image.imageUrl(),
+      avatar: faker.image.avatar(),
     });
     try {
       fakeData.save();
