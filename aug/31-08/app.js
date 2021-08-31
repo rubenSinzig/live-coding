@@ -17,11 +17,6 @@ mongoose
     console.log(`There was error ${err.message}`);
   });
 // Middleware get user by ID
-// await
-// findOne({_id:})
-// findByID(req.params.id)
-// No user (404)
-// next()
 const getUserByID = async (req, res, next) => {
   //const userByID = await UserModel.findOne({_id:req.params.id})
   const userByID = await UserModel.findById({ _id: req.params.id });
@@ -35,7 +30,6 @@ const getUserByID = async (req, res, next) => {
   res.user = userByID;
   next();
 };
-
 // Get all
 app.get("/", async (req, res) => {
   try {
