@@ -66,14 +66,22 @@ app.get("/:id", getUserByID, async (req, res) => {
     res.status(err.status).json({ message: err.message });
   }
 });
+// https://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate
 // patch one
 app.patch("/:id", getUserByID, async (req, res) => {
   try {
     //                                        id, the updates , options, callback
-    const userByID = await UserModel.findByIdAndUpdate(req.params.id, {
-      name: req.body.name || res.user.name,
-      city: req.body.city || res.user.city,
-    });
+    const userByID = await UserModel.findByIdAndUpdate(
+      req.params.id,
+      {
+        name: req.body.name || res.user.name,
+        city: req.body.city || res.user.city,
+      },
+      {
+        new: true,
+      }
+    );
+    res.status(200).json({ message: "This user got an update", userByID });
   } catch (err) {
     res.status(err.status).json({ message: err.message });
   }
