@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const faker = require("faker");
 // Get you the
 const path = require("path");
-const fakeModel = require("./model/user");
+const FakeModel = require("./model/user");
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
@@ -25,7 +25,7 @@ app.set("views", path.resolve(__dirname, "views"));
 
 app.get("/", (req, res) => {
   // res.render("home", { message: "Test" });
-  fakeModel.find((err, data) => {
+  FakeModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else if (data) {
@@ -38,11 +38,11 @@ app.get("/", (req, res) => {
 });
 app.post("/", (req, res) => {
   for (let i = 0; i < 10; i++) {
-    const fakeData = new fakeModel({
+    const fakeData = new FakeModel({
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       city: faker.address.city(),
-      imageUrl: faker.image.imageUrl(),
+      avatar: faker.image.avatar(),
     });
     try {
       fakeData.save();
@@ -52,5 +52,6 @@ app.post("/", (req, res) => {
   }
   res.redirect("/");
 });
-
+//                              width, height, type, random, https
+console.log(faker.image.imageUrl(300, 300, "avatar", true, true));
 module.exports = app;
