@@ -52,5 +52,6 @@ app.post("/", (req, res) => {
   }
   res.redirect("/");
 });
-
+//                              width, height, type, random, https
+console.log(faker.image.imageUrl(300, 300, "avatar", true, true));
 module.exports = app;
