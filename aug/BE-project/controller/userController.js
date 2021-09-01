@@ -9,7 +9,7 @@ userController.getAllUsers = async (req, res) => {
     const users = await UserData.find();
     res.status(200).json(users);
   } catch (err) {
-    res.status(err.message).json({ message: err.message });
+    res.status(err.status).json({ message: err.message });
   }
 };
 
