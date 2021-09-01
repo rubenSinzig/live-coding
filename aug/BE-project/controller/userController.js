@@ -43,13 +43,13 @@ userController.updateUserData = async (req, res) => {
         $set: {
           userName: req.body.userName,
           userPass: req.body.userPass,
+          fbw: req.body.fbw,
           age: req.body.age,
           toolStack: req.body.toolStack,
           email: req.body.email,
         },
       }
     );
-
     res.status(200).json({ message: "User being updated ✅" });
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -60,11 +60,12 @@ userController.updateUserData = async (req, res) => {
 userController.patchUserData = async (req, res) => {
   try {
     const userByName = await UserData.findOneAndUpdate(
-      req.params.id,
+      { userName: req.params.name },
       {
         userName: req.body.userName || res.user.userName,
         userPass: req.body.userPass || res.user.userPass,
         age: req.body.age || res.user.age,
+        fbw: req.body.fbw || res.user.fbw,
         toolStack: req.body.toolStack || res.user.toolStack,
         email: req.body.email || res.user.email,
       },
@@ -81,7 +82,7 @@ userController.patchUserData = async (req, res) => {
 };
 
 // Display one user
-userController.displayUser = async (req, res) => {
+userController.displayUser = async (err, req, res, next) => {
   try {
     res.status(200).send(res.user);
   } catch (err) {
