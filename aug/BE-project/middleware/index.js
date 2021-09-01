@@ -17,7 +17,7 @@ userMdd.getUser = async (req, res, next) => {
 };
 
 // Check entries
-userMdd.checkUserData = async (req, res, next) => {
+userMdd.checkUserData = (req, res, next) => {
   const { userName, userPass, age, fbw, email } = req.body;
   // you can do !userName or userName == null both are cool
   if (!userName || !userPass || age == null || fbw == null || email == null) {
