@@ -73,6 +73,7 @@ app.patch("/:id", getUserByID, async (req, res) => {
       },
       {
         new: true,
+        // see only name as results
       }
     );
     res.status(200).json({ message: "This user got an update", userByID });
