@@ -19,14 +19,8 @@ userMdd.getUser = async (req, res, next) => {
 // Check entries
 userMdd.checkUserData = async (req, res, next) => {
   const { userName, userPass, age, fbw, email } = req.body;
-
-  if (
-    userName == null ||
-    userPass == null ||
-    age == null ||
-    fbw == null ||
-    email == null
-  ) {
+  // you can do !userName or userName == null both are cool
+  if (!userName || !userPass || age == null || fbw == null || email == null) {
     return res
       .status(400)
       .json({ message: "We need your (userName, userPass, age, fbw, email )" });
