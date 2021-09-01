@@ -13,7 +13,7 @@ router
     userMdd.checkFbW,
     userController.addNewUser
   );
-// URL http://localhost:5000/users/:name
+// URL http://localhost:5000/user/:name
 router
   .route("/:name")
   .put(userMdd.getUser, userController.updateUserData)

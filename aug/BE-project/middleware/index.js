@@ -36,7 +36,7 @@ userMdd.checkUserData = async (req, res, next) => {
 // Check Age
 userMdd.checkAge = async (req, res, next) => {
   const { age } = req.body;
-  if (age < 18) {
+  if (parseInt(age, 10) < 18) {
     return res.status(400).json({
       message:
         "We can not validate your user. we don't accept pp that are below 18 years of age",
@@ -48,9 +48,10 @@ userMdd.checkAge = async (req, res, next) => {
 // Check FbW
 userMdd.checkFbW = async (req, res, next) => {
   const { fbw } = req.body;
-  if (fbw != 48) {
+  if (parseInt(fbw, 10) != 48) {
     return res.status(400).json({
-      message: "We can not validate your user. They are not a member of FBW48",
+      message:
+        "We can not validate your user. They are not a member of FBW48-1",
     });
   }
   next();
