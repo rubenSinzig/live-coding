@@ -80,10 +80,9 @@ userController.patchUserData = async (req, res) => {
   }
 };
 
-// Display one users
+// Display one user
 userController.displayUser = async (req, res) => {
   try {
-    // Age and FbW will be displayed in "" but this is just postman thing :)
     res.status(200).send(res.user);
   } catch (err) {
     res.status(err.status).json({ message: err.message });

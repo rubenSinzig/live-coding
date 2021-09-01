@@ -36,7 +36,7 @@ userMdd.checkUserData = async (req, res, next) => {
 // Check Age
 userMdd.checkAge = async (req, res, next) => {
   const { age } = req.body;
-  if (age < 18) {
+  if (parseInt(age, 10) < 18) {
     return res.status(400).json({
       message:
         "We can not validate your user. we don't accept pp that are below 18 years of age",
@@ -48,9 +48,10 @@ userMdd.checkAge = async (req, res, next) => {
 // Check FbW
 userMdd.checkFbW = async (req, res, next) => {
   const { fbw } = req.body;
-  if (fbw != 48) {
+  if (parseInt(fbw, 10) != 48) {
     return res.status(400).json({
-      message: "We can not validate your user. They are not a member of FBW48",
+      message:
+        "We can not validate your user. They are not a member of FBW48-1",
     });
   }
   next();
@@ -60,6 +61,9 @@ userMdd.checkFbW = async (req, res, next) => {
 userMdd.userNameCapitalized = async (req, res, next) => {
   const { userName } = res.user;
   let userNameArr = userName.split(" ");
+  // nancy so long
+  // console.log("userName", userName);
+  // console.log("userName array", userNameArr);
   let userNameFinally = [];
   for (let i = 0; i < userNameArr.length; i++) {
     userNameFinally.push(
@@ -74,8 +78,7 @@ userMdd.userNameCapitalized = async (req, res, next) => {
 // Sort toolStack arr alphabetically
 userMdd.toolStackArrSort = async (req, res, next) => {
   const { toolStack } = res.user;
-  const sortedArray = toolStack.sort();
-  res.user.toolStack = sortedArray;
+  res.user.toolStack = toolStack.sort();
   next();
 };
 
@@ -83,8 +86,8 @@ userMdd.toolStackArrSort = async (req, res, next) => {
 userMdd.strToNum = async (req, res, next) => {
   const { age, fbw } = res.user;
 
-  res.user.age = parseInt(age);
-  res.user.fbw = parseInt(fbw);
+  res.user.age = parseInt(age, 10);
+  res.user.fbw = parseInt(fbw, 10);
   next();
 };
 
