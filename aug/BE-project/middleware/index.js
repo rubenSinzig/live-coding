@@ -61,6 +61,9 @@ userMdd.checkFbW = async (req, res, next) => {
 userMdd.userNameCapitalized = async (req, res, next) => {
   const { userName } = res.user;
   let userNameArr = userName.split(" ");
+  // nancy so long
+  // console.log("userName", userName);
+  // console.log("userName array", userNameArr);
   let userNameFinally = [];
   for (let i = 0; i < userNameArr.length; i++) {
     userNameFinally.push(
@@ -75,8 +78,7 @@ userMdd.userNameCapitalized = async (req, res, next) => {
 // Sort toolStack arr alphabetically
 userMdd.toolStackArrSort = async (req, res, next) => {
   const { toolStack } = res.user;
-  const sortedArray = toolStack.sort();
-  res.user.toolStack = sortedArray;
+  res.user.toolStack = toolStack.sort();
   next();
 };
 
@@ -84,8 +86,8 @@ userMdd.toolStackArrSort = async (req, res, next) => {
 userMdd.strToNum = async (req, res, next) => {
   const { age, fbw } = res.user;
 
-  res.user.age = parseInt(age);
-  res.user.fbw = parseInt(fbw);
+  res.user.age = parseInt(age, 10);
+  res.user.fbw = parseInt(fbw, 10);
   next();
 };
 
