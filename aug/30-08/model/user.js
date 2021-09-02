@@ -4,6 +4,7 @@ const fakerSchema = new mongoose.Schema({
   lastName: String,
   city: String,
   avatar: String,
+  // imageUrl:String
 });
 
 module.exports = mongoose.model("fakerCollection", fakerSchema);

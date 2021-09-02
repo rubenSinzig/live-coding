@@ -14,6 +14,7 @@ To start new express project
  mkdir model views
  touch views/home.ejs
  touch model/user.js
+ touch controller/index.js
  json script
  "start": "nodemon server.js"
  // use users -> create new DB in mongo or use that if it's already there.

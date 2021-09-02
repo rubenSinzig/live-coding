@@ -18,7 +18,7 @@ userController.getAllUsers = async (req, res) => {
   }
 };
 // ADD 10 new users
-userController.addNewUser = async (req, res) => {
+userController.addTenNewUsers = async (req, res) => {
   for (let i = 0; i < 10; i++) {
     const fakeData = new FakeModel({
       firstName: faker.name.firstName(),

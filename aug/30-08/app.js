@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
+// User controller
 const userController = require("./controller");
 
-const mongoose = require("mongoose");
-
-// Get you the
+// Get you the path
 const path = require("path");
 
+const mongoose = require("mongoose");
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
@@ -19,11 +19,13 @@ mongoose
     console.log(`There was error ${err.message}`);
   });
 // console.log(path.resolve(__dirname, "views"));
-
+// App setting Engine
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
 
-app.get("/", userController.getAllUsers);
-app.post("/", userController.addNewUser);
+app
+  .route("/")
+  .get(userController.getAllUsers)
+  .post(userController.addTenNewUsers);
 
 module.exports = app;
