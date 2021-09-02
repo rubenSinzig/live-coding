@@ -2,12 +2,13 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
+// User controller
+const userController = require("./controller");
+
+// Get you the path
+const path = require("path");
 
 const mongoose = require("mongoose");
-const faker = require("faker");
-// Get you the
-const path = require("path");
-const FakeModel = require("./model/user");
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
@@ -17,42 +18,15 @@ mongoose
   .catch((err) => {
     console.log(`There was error ${err.message}`);
   });
-// console.log(path.resolve(__dirname, "views"));
-// console.log(faker.animal.dog());
 
+// App setting Engine
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
+//console.log(path.resolve(__dirname, "views"));
 
-app.get("/", (req, res) => {
-  // res.render("home", { message: "Test" });
-  FakeModel.find((err, data) => {
-    if (err) {
-      console.log(err);
-    } else if (data) {
-      // res.render("home",{data:data})
-      res.render("home", { data });
-    } else {
-      res.render("home", { data: {} });
-    }
-  });
-});
-app.post("/", (req, res) => {
-  for (let i = 0; i < 10; i++) {
-    const fakeData = new FakeModel({
-      firstName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
-      city: faker.address.city(),
-      avatar: faker.image.avatar(),
-      // imageURL : faker.image.imageUrl(300, 300, "avatar", true, true)
-    });
-    try {
-      fakeData.save();
-    } catch (err) {
-      console.log(err);
-    }
-  }
-  res.redirect("/");
-});
-//                              width, height, type, random, https
-console.log(faker.image.imageUrl(300, 300, "avatar", true, true));
+app
+  .route("/")
+  .get(userController.getAllUsers)
+  .post(userController.addTenNewUsers);
+
 module.exports = app;
