@@ -11,7 +11,7 @@ To start new express project
  npm i faker
  npm i nodemon --save-dev
  touch server.js app.js
- mkdir model views
+ mkdir model views controller
  touch views/home.ejs
  touch model/user.js
  touch controller/index.js
