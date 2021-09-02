@@ -18,10 +18,11 @@ mongoose
   .catch((err) => {
     console.log(`There was error ${err.message}`);
   });
-// console.log(path.resolve(__dirname, "views"));
+
 // App setting Engine
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
+//console.log(path.resolve(__dirname, "views"));
 
 app
   .route("/")
