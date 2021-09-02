@@ -17,16 +17,10 @@ userMdd.getUser = async (req, res, next) => {
 };
 
 // Check entries
-userMdd.checkUserData = async (req, res, next) => {
+userMdd.checkUserData = (req, res, next) => {
   const { userName, userPass, age, fbw, email } = req.body;
-
-  if (
-    userName == null ||
-    userPass == null ||
-    age == null ||
-    fbw == null ||
-    email == null
-  ) {
+  // you can do !userName or userName == null both are cool
+  if (!userName || !userPass || age == null || fbw == null || email == null) {
     return res
       .status(400)
       .json({ message: "We need your (userName, userPass, age, fbw, email )" });
@@ -35,7 +29,7 @@ userMdd.checkUserData = async (req, res, next) => {
 };
 
 // Check Age
-userMdd.checkAge = async (req, res, next) => {
+userMdd.checkAge = (req, res, next) => {
   const { age } = req.body;
   if (parseInt(age, 10) < 18) {
     return res.status(400).json({
@@ -47,7 +41,7 @@ userMdd.checkAge = async (req, res, next) => {
 };
 
 // Check FbW
-userMdd.checkFbW = async (req, res, next) => {
+userMdd.checkFbW = (req, res, next) => {
   const { fbw } = req.body;
   if (parseInt(fbw, 10) != 48) {
     return res.status(400).json({
@@ -59,7 +53,7 @@ userMdd.checkFbW = async (req, res, next) => {
 };
 
 // Display username
-userMdd.userNameCapitalized = async (req, res, next) => {
+userMdd.userNameCapitalized = (req, res, next) => {
   const { userName } = res.user;
   let userNameArr = userName.split(" ");
   // nancy so long
@@ -77,14 +71,14 @@ userMdd.userNameCapitalized = async (req, res, next) => {
 };
 
 // Sort toolStack arr alphabetically
-userMdd.toolStackArrSort = async (req, res, next) => {
+userMdd.toolStackArrSort = (req, res, next) => {
   const { toolStack } = res.user;
   res.user.toolStack = toolStack.sort();
   next();
 };
 
 // Turn age and fbw into numbers
-userMdd.strToNum = async (req, res, next) => {
+userMdd.strToNum = (req, res, next) => {
   const { age, fbw } = res.user;
 
   res.user.age = parseInt(age, 10);
