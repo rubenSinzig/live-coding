@@ -29,4 +29,7 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.post("/submit", (req, res) => {
+  // req has form data
+});
 module.exports = app;
