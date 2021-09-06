@@ -51,7 +51,7 @@ app.post(
   "/submit",
   // req.body
   body("email", "Please write valid email ").isEmail(),
-  // next
+  //  if any of this functions said true then it will ove to next :)
   // isMobilePhone
   // isEmail()
   // isPostalCode
@@ -67,7 +67,11 @@ app.post(
   (req, res) => {
     // req has form data
     // req.body.email
-    // email pass passConf
+    // req.body.pass
+    // req.body.passConf
+
+    console.log(body("email", "Please write valid email "));
+    res.end();
   }
 );
 module.exports = app;
