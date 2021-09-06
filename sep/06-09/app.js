@@ -23,6 +23,7 @@ const { body, validationResult } = require("express-validator");
 // Get it started
 app.use(express.json());
 app.use(cookieParser());
+// https://www.npmjs.com/package/express-session
 app.use(
   expressSession({
     secret: "somethingSecret",
@@ -69,8 +70,9 @@ app.post(
     // req.body.email
     // req.body.pass
     // req.body.passConf
+    // https://express-validator.github.io/docs/index.html
+    // https://www.npmjs.com/package/express-handlebars
 
-    console.log(body("email", "Please write valid email "));
     res.end();
   }
 );
