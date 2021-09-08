@@ -15,20 +15,15 @@ app.engine(
     layoutsDir: __dirname + "/views/layouts/",
   })
 );
-// Setups
-const cookieParser = require("cookie-parser");
-const expressSession = require("express-session");
+// Validation setup
 const { body, validationResult } = require("express-validator");
 
-// Get it started
+// Let Express understand json
 app.use(express.json());
-app.use(cookieParser());
-// https://www.npmjs.com/package/express-session
+// Let Express understand  Content-Type: application/x-www-form-urlencoded aka form data
 app.use(
-  expressSession({
-    secret: "somethingSecret",
-    saveUninitialized: false,
-    resave: false,
+  express.urlencoded({
+    extended: true,
   })
 );
 
@@ -36,10 +31,7 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "Validation",
     done: false,
-    errors: req.session.errors,
-    cool: true,
   });
-  req.session.errors = null;
 });
 app.get("/about", (req, res) => {
   res.render("about", {
@@ -52,28 +44,25 @@ app.post(
   "/submit",
   // req.body
   body("email", "Please write valid email ").isEmail(),
-  //  if any of this functions said true then it will ove to next :)
+  //  if any of this functions says true then it will move to next :)
   // isMobilePhone
   // isEmail()
   // isPostalCode
   // isCurrency
   // isCreditCard
-  body("pass", "Invalid password").isLength({ min: 5 }),
+  body(
+    "pass",
+    "Invalid password, your pass should be 3 chars or more"
+  ).isLength({
+    min: 3,
+  }),
+
   body("passConf").custom((value, { req }) => {
     if (value != req.body.pass) {
       throw new Error("Password conf is not the same");
     }
     return true;
   }),
-  (req, res) => {
-    // req has form data
-    // req.body.email
-    // req.body.pass
-    // req.body.passConf
-    // https://express-validator.github.io/docs/index.html
-    // https://www.npmjs.com/package/express-handlebars
-
-    res.end();
-  }
+  (req, res) => {}
 );
 module.exports = app;
