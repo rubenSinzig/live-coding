@@ -2,6 +2,7 @@
 {{#if done}}
   <div>
     <h4>Every thing is cool 👍🏻</h4>
+    <a href="/">Sign up again</a>
   </div>
 {{else}}
   {{#if errors}}
@@ -14,7 +15,6 @@
       </ul>
     </div>
   {{/if}}
-
   <form method="POST" action="/submit">
     <label for="email">
       <input type="email" id="email" name="email" placeholder="Your email" />
@@ -33,6 +33,7 @@
         id="passConf"
         name="passConf"
         placeholder="Conf pass"
+        required
       />
     </label>
     <label for="submit">
