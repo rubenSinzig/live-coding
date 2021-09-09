@@ -31,7 +31,17 @@ booksController.getAll = async (req, res) => {
 // POST one
 booksController.addNewAuthor = async (req, res) => {
   //console.log(req.body);
+  // your psst req will look
+  /*
 
+{
+	"name":"Steel",
+	"books":[
+		{"title":"Summer","issueYear":2001},{"title":"Java","issueYear":1999},{"title":"Me & You","issueYear":2004}
+		]
+}
+
+*/
   const author = new AuthorModel({
     authorName: req.body.name,
   });
