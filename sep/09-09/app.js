@@ -17,6 +17,7 @@ mongoose
     console.log(`There was error ${err.message}`);
   });
 const bookController = require("./controller/bookController");
+const booksController = require("./controller/bookController");
 
 // GET all
 // POST new author
@@ -25,9 +26,13 @@ app.route("/").get(bookController.getAll).post(bookController.addNewAuthor);
 // DELETE one by id
 app
   .route("/:id")
-  .get(bookController.getOneByID)
-  .delete(bookController.deleteOneByID);
+  .get(bookController.authorCheck, bookController.getOneByID)
+  .delete(bookController.authorCheck, bookController.deleteOneByID)
+  .put(bookController.authorCheck, bookController.updateOneByID);
+//   .patch(bookController.authorCheck);
 
-// PUT later
-// PATCH later
+app
+  .route("/addbooks/:id")
+  .post(booksController.authorCheck, booksController.addMoreBooksToAuthor);
+
 module.exports = app;
