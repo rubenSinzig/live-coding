@@ -24,7 +24,7 @@ app
   .get(booksControllers.getAllAuthors)
   .post(booksControllers.addAuthor);
 app
-  .route("/:id")
+  .route("/author/:id")
   .get(booksControllers.checkAuthor, booksControllers.getOneByID)
   .delete(booksControllers.checkAuthor, booksControllers.deleteById);
 
