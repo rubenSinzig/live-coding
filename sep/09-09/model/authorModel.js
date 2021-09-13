@@ -6,8 +6,8 @@ const bookSchema = new mongoose.Schema(
     _id: false,
     title: String,
     issueYear: Number,
-  },
-  { versionKey: "_something" }
+  }
+  // { versionKey: "_something" }
 );
 
 const authorSchema = new mongoose.Schema({
