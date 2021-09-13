@@ -18,10 +18,18 @@ mongoose
   });
 const booksControllers = require("./controller/bookController");
 // GET all authors
-app.route("/").get();
-// GET all books from an author
 // Add new author
-// Add new book for an author
+app
+  .route("/")
+  .get(booksControllers.getAllAuthors)
+  .post(booksControllers.addAuthor);
+// GET all books
+// POST new book for an author
+app.route("/book").get(booksControllers.getAllBooks);
+app.route("/book/:id").post(booksControllers.addNewBook);
+// GET all books from an author
+// using author id
+
 // DEL later
 // PUT
 // PATCH
