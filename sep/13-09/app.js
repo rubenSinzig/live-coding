@@ -16,6 +16,5 @@ mongoose
   .catch((err) => {
     console.log(`There was error ${err.message}`);
   });
-const bookController = require("./controller/bookController");
 
 module.exports = app;

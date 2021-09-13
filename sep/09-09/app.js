@@ -17,7 +17,6 @@ mongoose
     console.log(`There was error ${err.message}`);
   });
 const bookController = require("./controller/bookController");
-const booksController = require("./controller/bookController");
 
 // GET all
 // POST new author
