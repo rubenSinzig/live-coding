@@ -25,7 +25,8 @@ app
   .post(booksControllers.addAuthor);
 app
   .route("/:id")
-  .get(booksControllers.checkAuthor, booksControllers.getOneByID);
+  .get(booksControllers.checkAuthor, booksControllers.getOneByID)
+  .delete(booksControllers.checkAuthor, booksControllers.deleteById);
 
 // GET all books
 // POST new book for an author

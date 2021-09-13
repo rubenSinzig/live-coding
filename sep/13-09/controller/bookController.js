@@ -94,4 +94,12 @@ booksControllers.getOneByID = async (req, res) => {
   }
 };
 // DELETE one author by id
+booksControllers.deleteById = async (req, res) => {
+  try {
+    const author = await Author.findByIdAndDelete(req.params.id);
+    res.status(200).json({ message: "This author has been removed", author });
+  } catch (err) {
+    res.status(err.status).json({ message: err.message });
+  }
+};
 module.exports = booksControllers;
