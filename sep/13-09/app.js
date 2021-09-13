@@ -23,6 +23,10 @@ app
   .route("/")
   .get(booksControllers.getAllAuthors)
   .post(booksControllers.addAuthor);
+app
+  .route("/:id")
+  .get(booksControllers.checkAuthor, booksControllers.getOneByID);
+
 // GET all books
 // POST new book for an author
 app.route("/book").get(booksControllers.getAllBooks);

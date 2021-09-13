@@ -69,5 +69,14 @@ booksControllers.addNewBook = async (req, res) => {
       res.status(400).json({ message: err.message });
     });
 };
-
+// GET one author by id
+booksControllers.getOneByID = async (req, res) => {
+  try {
+    const author = await Author.findById(req.params.id);
+    res.status(200).json(author);
+  } catch (err) {
+    res.status(err.status).json({ message: err.message });
+  }
+};
+// DELETE one author by id
 module.exports = booksControllers;
