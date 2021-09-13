@@ -1,6 +1,7 @@
 const { Author, Book } = require("../model/authorModel");
 const mongoose = require("mongoose");
 const booksControllers = {};
+// https://mongoosejs.com/docs/populate.html
 // Check author
 booksControllers.checkAuthor = async (req, res, next) => {
   //  const author = await Author.findOne({_id:req.params.id})
@@ -34,6 +35,11 @@ booksControllers.getAllBooks = async (req, res) => {
   }
 };
 // POST new author
+/*
+{
+	"name":"Hadi"
+}
+*/
 booksControllers.addAuthor = async (req, res) => {
   const author = new Author({
     _id: new mongoose.Types.ObjectId(),
@@ -48,6 +54,11 @@ booksControllers.addAuthor = async (req, res) => {
 };
 // POST new book
 // localhost:5000/book/:id
+/*
+{
+	"title":"Day"
+}
+*/
 booksControllers.addNewBook = async (req, res) => {
   Author.findById(req.params.id)
     .then((author) => {
@@ -72,8 +83,12 @@ booksControllers.addNewBook = async (req, res) => {
 // GET one author by id
 booksControllers.getOneByID = async (req, res) => {
   try {
-    const author = await Author.findById(req.params.id);
-    res.status(200).json(author);
+    const author = await Author.findById(req.params.id).populate("books");
+    // res.status(200).json(author);
+    res.status(200).json({
+      message: `${author.authorName} has ${author.books.length} books`,
+      books: author.books.map((book) => book.title).join(", "),
+    });
   } catch (err) {
     res.status(err.status).json({ message: err.message });
   }

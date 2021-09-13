@@ -34,8 +34,9 @@ app.route("/book/:id").post(booksControllers.addNewBook);
 // GET all books from an author
 // using author id
 
-// DEL later
-// PUT
+// DEL
+
+// PUT later
 // PATCH
 
 module.exports = app;
