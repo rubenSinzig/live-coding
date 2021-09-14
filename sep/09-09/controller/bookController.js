@@ -1,6 +1,6 @@
 const AuthorModel = require("../model/authorModel");
 const booksController = {};
-
+// GET all
 booksController.getAll = async (req, res) => {
   try {
     const authors = await AuthorModel.find();
@@ -28,9 +28,20 @@ booksController.getAll = async (req, res) => {
 //       }
 //     ];
 // }
+// POST one
 booksController.addNewAuthor = async (req, res) => {
   //console.log(req.body);
+  // your psst req will look
+  /*
 
+{
+	"name":"Steel",
+	"books":[
+		{"title":"Summer","issueYear":2001},{"title":"Java","issueYear":1999},{"title":"Me & You","issueYear":2004}
+		]
+}
+
+*/
   const author = new AuthorModel({
     authorName: req.body.name,
   });
@@ -49,5 +60,28 @@ booksController.addNewAuthor = async (req, res) => {
     });
   }
 };
-
+// GET one by id
+booksController.getOneByID = async (req, res) => {
+  try {
+    const author = await AuthorModel.findById(req.params.id);
+    //   const author = await AuthorModel.findOne({_id:req.params.id})
+    res.status(200).json(author);
+  } catch (err) {
+    res.status(err.status).json({
+      message: err.message,
+    });
+  }
+};
+// DELETE one by id
+booksController.deleteOneByID = async (req, res) => {
+  try {
+    const author = await AuthorModel.findByIdAndDelete(req.params.id);
+    //  const author = await AuthorModel.findOneAndDelete({_id:req.params.id})
+    res.status(200).json({ message: "This author been deleted", author });
+  } catch (err) {
+    res.status(err.status).json({
+      message: err.message,
+    });
+  }
+};
 module.exports = booksController;
