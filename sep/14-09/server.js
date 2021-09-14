@@ -1,7 +1,7 @@
 /* 
 To start new express project
  npm init -y
- echo "PORT=5000" > .env
+ echo "PORT=5000\nDB_URL=mongodb://localhost:27017/users" > .env
  echo "node_modules/" > .gitignore
  npm i express 
  npm i dotenv
