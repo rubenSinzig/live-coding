@@ -15,10 +15,11 @@ mongoose
     console.log(`There was a problem ${error.message}`);
   });
 
-const userControllers = require("./controllers/userControllers");
+const userControllers = require("./controller/userController");
 
 // GET all users
-app.get("/", userControllers.getAllUsers);
+app.get("/", userControllers.getAllUsers).post("/", userControllers.addNewUser);
 // POST new user
+
 // POST login
 module.exports = app;
