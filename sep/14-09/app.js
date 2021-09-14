@@ -18,8 +18,13 @@ mongoose
 const userControllers = require("./controller/userController");
 
 // GET all users
-app.get("/", userControllers.getAllUsers).post("/", userControllers.addNewUser);
+// app.get("/", userControllers.getAllUsers).post("/", userControllers.addNewUser);
+app
+  .route("/")
+  .get(userControllers.getAllUsers)
+  .post(userControllers.addNewUser);
 // POST new user
 
 // POST login
+app.route("/login").post(userControllers.login);
 module.exports = app;
