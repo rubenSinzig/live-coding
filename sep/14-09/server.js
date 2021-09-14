@@ -16,7 +16,7 @@ To start new express project
  - json script
  "start": "nodemon server.js"
  - create new DB in mongo shell
- use library
+ use users
  */
 
 require("dotenv").config();
