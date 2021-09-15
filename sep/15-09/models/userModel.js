@@ -13,7 +13,6 @@ const userSchema = Schema({
   password: {
     type: String,
     required: "You have to provide a password",
-    trim: true,
   },
   role: String,
   avatar: String,

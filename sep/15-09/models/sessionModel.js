@@ -4,7 +4,6 @@ const SessionSchema = Schema({
   uuid: {
     type: String,
     unique: true,
-    trim: true,
   },
   user_id: {
     type: mongoose.Schema.ObjectId,
