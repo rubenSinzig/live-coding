@@ -25,21 +25,41 @@ userControllers.addNewUser = async (req, res) => {
   }
 
   try {
-    //   const saltRounds = 20
+    //   const saltRounds = 10
     //   const salt = await bcrypt.genSalt(saltRounds);
     //   const hashedPassword = await bcrypt.hash(req.body.password,salt);
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     console.log(hashedPassword);
-    res.end();
+    // // $2b$10$y89WfrL78Xkf9ebZAtVzhOYHJYe7fzbmHixfZ/nn93VmckeQzkPXW
+    // // $2b$10$YMtVdZNtSR54xiqHlgNdQOZq2swiKITeXmIecUViKugQK5Dqp3AKO
+    // // $2b$10$3W8c7CzwFD9pAo328YtI3e23RT7tl1FZ7HCFXTZohk/ml16bk4UEO
+    // // $2b$10$xNG2WvunH/rf3LQ1kFctHeCragl0M/et.NTleNpYmIjNv2ndmPmbS
+    const newUser = await new User({
+      _id: mongoose.Types.ObjectId(),
+      username: req.body.username,
+      password: hashedPassword,
+    });
+    newUser.save();
+    res.status(201).json({ message: "New user been added ✅", newUser });
   } catch (err) {
-    res.status().json({ message: err.message });
+    res.status(400).json({ message: err.message });
   }
 };
 // POST
 userControllers.login = async (req, res) => {
+  const user = await User.findOne({ username: req.body.username });
+  if (user == null) {
+    return res.status(404).send("User Not found.");
+  }
+
   try {
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      res.send("Cool welcome");
+    } else {
+      res.send("Not Allowed");
+    }
   } catch (err) {
-    res.status().json({ message: err.message });
+    res.status(err.status).json({ message: err.message });
   }
 };
 
