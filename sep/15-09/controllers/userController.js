@@ -31,8 +31,9 @@ userControllers.addUser = async (req, res) => {
     // there will be a  for file
     console.log(req.file);
     const newUser = await new User({
+      _id: mongoose.Types.ObjectId(),
       username: req.body.username,
-      password: req.body.password,
+      password: hashedPassword,
       // role: "ADMIN",
       role: "USER",
       avatar: req.file.path,

@@ -37,7 +37,7 @@ router.get("/", (req, res) => {
   req.session.errors = null;
 });
 // register
-
+router.post("/register", upload.single("avatar"), userControllers.addUser);
 // login
 
 // logout
