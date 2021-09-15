@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-// cookie, session and validator
-const expressValidation = require("express-validator");
+// cookie, session
 const cookieParser = require("cookie-parser");
 const expressSession = require("express-session");
 
@@ -50,8 +49,8 @@ mongoose
   });
 // Alow uploads
 app.use("/uploads", express.static("uploads"));
-// const auth = require("./routes/auth");
-// app.use("/", auth);
+const auth = require("./routes/auth");
+app.use("/", auth);
 // const users = require("./routes/users");
 // app.use("/users", users);
 // const user = require("./routes/user");

@@ -9,14 +9,14 @@ To start new express project
  npm i mongoose
  npm i bcrypt
  npm i cookie-parser
- npm i express-handlebars
  npm i express-session
+ npm i express-handlebars
  npm i express-validator
  npm i uuid
  npm i multer
  npm i nodemon --save-dev
  touch server.js app.js
- mkdir models controllers views routes
+ mkdir models controllers views routes uploads
  mkdir views/layouts
  touch models/userModel.js
  touch models/sessionModel.js

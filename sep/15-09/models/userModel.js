@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = Schema({
   _id: Schema.Types.ObjectId,
-  userName: {
+  username: {
     type: String,
     required: "You have to provide a username",
     unique: true,
@@ -13,7 +13,6 @@ const userSchema = Schema({
   password: {
     type: String,
     required: "You have to provide a password",
-    trim: true,
   },
   role: String,
   avatar: String,
