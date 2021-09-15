@@ -45,7 +45,45 @@ userControllers.addUser = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
-userControllers.login = async (req, res) => {};
+// cookies.user_id
+
+userControllers.login = async (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  const user = await User.findOne({ username });
+  if (user == null) {
+    res.status(404).send("Cannot find user <br> <a href='/'>try again</a>");
+  }
+  try {
+    if (await bcrypt.compare(password, user.password)) {
+      let sessionId = uuid();
+      res.cookie("session_id", sessionId, {
+        expires: new Date(Date.now() + 900000), //cookie will expires in 15 min
+      });
+      res.cookie("role", user.role, {
+        expires: new Date(Date.now() + 900000), //cookie will expires in 15 min
+      });
+      res.cookie("user_id", user._id, {
+        expires: new Date(Date.now() + 900000), //cookie will expires in 15 min
+      });
+      let session = await new Session({
+        uuid: sessionId,
+        user_id: user,
+      });
+      session.save();
+      res.status(200).render("login", {
+        title: `Welcome ${username}`,
+        done: true,
+        errors: req.session.errors,
+      });
+      req.session.errors = null;
+    } else {
+      res.send("Not Allowed <br> <a href='/login'>try again</a>");
+    }
+  } catch (err) {
+    res.status(err.status).json({ message: err.message });
+  }
+};
 userControllers.getOne = async (req, res) => {
   const username = req.params.name;
   try {

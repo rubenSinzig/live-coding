@@ -39,7 +39,21 @@ router.get("/", (req, res) => {
 // register
 router.post("/register", upload.single("avatar"), userControllers.addUser);
 // login
+router.get("/login", (req, res) => {
+  // This if statement can be done in middleware to check if the user logged in or not
 
+  if (req.cookies.session_id) {
+    res.send("You ar e already logged in <br> <a href='/logout'>logout</a>");
+  }
+  res.render("login", {
+    title: "login",
+    done: false,
+    errors: req.session.errors,
+  });
+  req.session.errors = null;
+});
+router.post("/login", userControllers.login);
 // logout
+router.get("/logout", (req, res) => {});
 
 module.exports = router;
