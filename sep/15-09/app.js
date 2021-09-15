@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-// cookie, session and validator
-const expressValidation = require("express-validator");
+// cookie, session
 const cookieParser = require("cookie-parser");
 const expressSession = require("express-session");
 

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = Schema({
   _id: Schema.Types.ObjectId,
-  userName: {
+  username: {
     type: String,
     required: "You have to provide a username",
     unique: true,
