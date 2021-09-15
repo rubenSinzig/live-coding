@@ -13,7 +13,37 @@ userControllers.getAllUsers = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-userControllers.addUser = async (req, res) => {};
+userControllers.addUser = async (req, res) => {
+  const userCheck = await User.findOne({ username: req.body.username });
+  if (userCheck) {
+    return res
+      .status(400)
+      .send("This name is already been used <br> <a href='/'>Try again</a>");
+  }
+  // to validate later :)
+  // if any errors
+  // req.session.done = false;
+  // it was cool and no errors
+  req.session.done = true;
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    console.log(hashedPassword);
+    // there will be a  for file
+    console.log(req.file);
+    const newUser = await new User({
+      username: req.body.username,
+      password: req.body.password,
+      // role: "ADMIN",
+      role: "USER",
+      avatar: req.file.path,
+    });
+    console.log(newUser);
+    newUser.save();
+    res.status(200).send("New user been added <a href='/login'>login</a>");
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
 userControllers.login = async (req, res) => {};
 userControllers.getOne = async (req, res) => {
   const username = req.params.name;
