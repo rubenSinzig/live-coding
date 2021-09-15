@@ -45,7 +45,6 @@ userControllers.addUser = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
-// cookies.user_id
 
 userControllers.login = async (req, res) => {
   let username = req.body.username;

@@ -54,6 +54,13 @@ router.get("/login", (req, res) => {
 });
 router.post("/login", userControllers.login);
 // logout
-router.get("/logout", (req, res) => {});
+router.get("/logout", (req, res) => {
+  if (req.cookies && req.cookies.session_id) {
+    res.clearCookie("session_id");
+    res.clearCookie("role");
+    res.clearCookie("user_id");
+  }
+  res.redirect("/");
+});
 
 module.exports = router;
