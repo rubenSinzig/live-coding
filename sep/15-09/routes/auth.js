@@ -50,13 +50,17 @@ router.post("/register", upload.single("avatar"), userControllers.addUser);
 // login
 router.get("/login", (req, res) => {
   // This if statement can be done in middleware to check if the user logged in or not
-
+  let title, done;
   if (req.cookies.session_id) {
-    res.send("You ar e already logged in <br> <a href='/logout'>logout</a>");
+    title = "You ar e already logged in";
+    done = true;
+  } else {
+    title = "Login";
+    done = false;
   }
   res.render("login", {
-    title: "login",
-    done: false,
+    title,
+    done,
     errors: req.session.errors,
   });
   req.session.errors = null;
