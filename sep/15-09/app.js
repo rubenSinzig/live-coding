@@ -22,7 +22,11 @@ app.engine(
 
 // to process the data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 // validations
 // Validation setup
 const { body, validationResult } = require("express-validator");

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userControllers = require("../controllers/userController");
 const multer = require("multer");
+//const { body, validationResult } = require("express-validator");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -29,9 +30,17 @@ const upload = multer({
 });
 
 router.get("/", (req, res) => {
+  let done, title;
+  if (req.cookies.session_id) {
+    title = "You are already logged in";
+    done = true;
+  } else {
+    title = "Welcome";
+    done = false;
+  }
   res.render("index", {
-    title: "Welcome",
-    done: false,
+    title,
+    done,
     errors: req.session.errors,
   });
   req.session.errors = null;

@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/userModel");
 const Session = require("../models/sessionModel");
 const uuid = require("uuid").v4;
+
 const userControllers = {};
 
 userControllers.getAllUsers = async (req, res) => {
