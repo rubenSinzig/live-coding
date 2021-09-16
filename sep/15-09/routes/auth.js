@@ -52,7 +52,7 @@ router.get("/login", (req, res) => {
   // This if statement can be done in middleware to check if the user logged in or not
   let title, done;
   if (req.cookies.session_id) {
-    title = "You ar e already logged in";
+    title = "You are already logged in";
     done = true;
   } else {
     title = "Login";
