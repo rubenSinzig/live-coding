@@ -57,6 +57,6 @@ const auth = require("./routes/auth");
 app.use("/", auth);
 const users = require("./routes/users");
 app.use("/users", users);
-// const user = require("./routes/user");
-// app.use("/user", user);
+const user = require("./routes/user");
+app.use("/user", user);
 module.exports = app;
