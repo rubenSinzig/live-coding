@@ -53,6 +53,7 @@ mongoose
   });
 // Alow uploads
 app.use("/uploads", express.static("uploads"));
+//
 const auth = require("./routes/auth");
 app.use("/", auth);
 const users = require("./routes/users");

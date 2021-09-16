@@ -48,7 +48,9 @@ userControllers.login = async (req, res) => {
   let password = req.body.password;
   const user = await User.findOne({ username });
   if (user == null) {
-    res.status(404).send("Cannot find user <br> <a href='/'>try again</a>");
+    return res
+      .status(404)
+      .send("Cannot find user <br> <a href='/'>try again</a>");
   }
   try {
     if (await bcrypt.compare(password, user.password)) {
@@ -102,7 +104,8 @@ userControllers.deleteOneById = async (req, res) => {
   const id = req.params.id;
   try {
     const user = await User.findByIdAndDelete(id);
-    res.status(200).json(user);
+    // logout
+    res.status(200).json({ message: "This user is deleted ", user });
   } catch (err) {
     res.status(err.status).json({ message: err.message });
   }
