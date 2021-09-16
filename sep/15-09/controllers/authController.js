@@ -30,6 +30,7 @@ allowedAccess.loggedStatus = (req, res, next) => {
     req.title = "You are already logged in";
     req.done = true;
   } else {
+    // this is only for our small app :)
     req.title = req.path == "/" ? "Welcome" : "Login";
     req.done = false;
   }

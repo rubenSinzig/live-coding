@@ -80,6 +80,14 @@ userControllers.login = async (req, res) => {
     res.status(err.status).json({ message: err.message });
   }
 };
+userControllers.logout = async (req, res) => {
+  if (req.cookies && req.cookies.session_id) {
+    res.clearCookie("session_id");
+    res.clearCookie("role");
+    res.clearCookie("user_id");
+  }
+  res.redirect("/");
+};
 userControllers.getOne = async (req, res) => {
   const username = req.params.name;
   try {
