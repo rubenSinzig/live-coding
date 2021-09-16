@@ -32,7 +32,7 @@ userControllers.addUser = async (req, res) => {
       _id: mongoose.Types.ObjectId(),
       username: req.body.username,
       password: hashedPassword,
-      // role: "ADMIN",
+      //role: "ADMIN",
       role: "USER",
       avatar: req.file.path,
     });
