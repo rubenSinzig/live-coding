@@ -3,10 +3,11 @@ const router = express.Router();
 const userControllers = require("../controllers/userController");
 const multer = require("multer");
 const allowedAccess = require("../controllers/authController");
-const { body, validationResult } = require("express-validator");
+//const { body, validationResult } = require("express-validator");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
+    // function to check
     cb(null, "./uploads/");
   },
   filename: function (req, file, cb) {

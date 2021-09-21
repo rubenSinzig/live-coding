@@ -31,7 +31,7 @@ userControllers.addUser = async (req, res) => {
       .status(400)
       .send("This name is already been used <br> <a href='/'>Try again</a>");
   }
-
+  //
   req.session.done = true;
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -81,7 +81,7 @@ userControllers.login = async (req, res) => {
       res.status(200).render("login", {
         title: `Welcome`,
         done: true,
-        username,
+        username: user.username,
         avatar: user.avatar,
         errors: req.session.errors,
       });
