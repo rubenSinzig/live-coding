@@ -40,8 +40,8 @@ mongoose
 // Alow uploads
 app.use("/uploads", express.static("uploads"));
 
-app.get("/users", async (req, res) => {
-  const users = ["Zain", "Nancy", "Olga", "Jack"];
+app.route("/users").get(async (req, res) => {
+  const users = ["Nancy", "Zain", "Jack", "Olga"];
   res.status(200).json(users);
 });
 

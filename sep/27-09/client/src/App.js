@@ -1,24 +1,18 @@
-import { useState, useEffect } from "react";
-//import AddForm from './'
+import { useEffect, useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
-
   const getData = () => {
     fetch("/users")
+      // http://localhost:5000/users
       .then((result) => result.json())
       .then((data) => setUsers(data));
   };
   useEffect(() => {
     getData();
   }, []);
-  const userArr = users.map((user, i) => <li key={i}>{user}</li>);
-  console.log(users);
-  return (
-    <div className="App">
-      <ul>{userArr}</ul>
-    </div>
-  );
+  const usersLi = users.map((user, i) => <li key={i}>{user}</li>);
+  return <div className="App">{usersLi}</div>;
 }
 
 export default App;
