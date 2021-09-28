@@ -11,6 +11,7 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
+  console.log(users);
   const usersLi = users.map((user, i) => <li key={i}>{user}</li>);
   return <div className="App">{usersLi}</div>;
 }
