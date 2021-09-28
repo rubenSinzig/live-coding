@@ -1,19 +1,68 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-function App() {
+// function App() {
+//   const [users, setUsers] = useState([]);
+//   const getData = () => {
+//     fetch("/users")
+//       // http://localhost:5000/users
+//       .then((result) => result.json())
+//       .then((data) => setUsers(data));
+//   };
+//   useEffect(() => {
+//     getData();
+//   }, []);
+//   console.log(users);
+//   const usersLi = users.map((user, i) => <li key={i}>{user}</li>);
+//   return <div className="App">{usersLi}</div>;
+// }
+
+// export default App;
+
+import { useEffect, useState } from "react";
+//import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./sass/main.scss";
+import AddUser from "./components/AddUser";
+
+const App = () => {
   const [users, setUsers] = useState([]);
+  useEffect(() => {
+    if (localStorage.getItem("data")) {
+      setUsers(JSON.parse(localStorage.getItem("data")));
+    } else {
+      setUsers([]);
+    }
+  }, []);
+
+  const deleteData = () => {
+    localStorage.clear();
+    //localStorage.removeItem("data")
+  };
   const getData = () => {
     fetch("/users")
       // http://localhost:5000/users
       .then((result) => result.json())
-      .then((data) => setUsers(data));
+      .then((data) => {
+        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem("dataDate", Date.now());
+        setUsers(data);
+      });
   };
-  useEffect(() => {
-    getData();
-  }, []);
-  console.log(users);
-  const usersLi = users.map((user, i) => <li key={i}>{user}</li>);
-  return <div className="App">{usersLi}</div>;
-}
+  const usersItems = users.map((user) => (
+    <li key={user._id}>
+      {user.username}
+      <img src={`http://localhost:5000/${user.avatar}`} alt={user.name} />
+    </li>
+  ));
+
+  return (
+    <div>
+      <button onClick={getData}> {users.length ? "Update" : "Get data"}</button>
+      <button onClick={deleteData}>Delete</button>
+
+      <ul>{usersItems}</ul>
+      <AddUser />
+    </div>
+  );
+};
 
 export default App;
