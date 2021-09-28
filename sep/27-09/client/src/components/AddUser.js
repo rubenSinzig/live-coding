@@ -34,6 +34,16 @@ const AddUser = () => {
     data.append("avatar", avatar);
 
     // axios post /register
+    try {
+      const result = await axios.post("/register", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      console.log(result);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
   return (
     <div>
@@ -50,7 +60,7 @@ const AddUser = () => {
           //   value={newUser.username}
         />
         <input
-          type="text"
+          type="password"
           name="password"
           id="2"
           placeholder="Your Password"
@@ -60,7 +70,7 @@ const AddUser = () => {
           //   value={newUser.password}
         />
         <input
-          type="text"
+          type="password"
           name="confPassword"
           id="3"
           placeholder="Repeat your pass"
