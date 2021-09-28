@@ -25,6 +25,7 @@ import AddUser from "./components/AddUser";
 
 const App = () => {
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     if (localStorage.getItem("data")) {
       setUsers(JSON.parse(localStorage.getItem("data")));
@@ -35,6 +36,7 @@ const App = () => {
 
   const deleteData = () => {
     localStorage.clear();
+    setUsers([]);
     //localStorage.removeItem("data")
   };
   const getData = () => {
@@ -55,11 +57,11 @@ const App = () => {
   ));
 
   return (
-    <div>
-      <button onClick={getData}> {users.length ? "Update" : "Get data"}</button>
+    <div className="App">
+      <h4>Users</h4>
+      <button onClick={getData}>{users.length ? "Update" : "Get Data"}</button>
       <button onClick={deleteData}>Delete</button>
-
-      <ul>{usersItems}</ul>
+      {usersItems}
       <AddUser />
     </div>
   );
