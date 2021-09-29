@@ -13,6 +13,14 @@ app.use(
     credentials: true,
   })
 );
+// other
+// app.use(
+//   cors({
+//     origin: "*",
+//     methods: ["GET"],
+//     credentials: true,
+//   })
+// );
 app.get("/users", async (req, res) => {
   try {
     const users = ["Nancy", "Zain", "Jack", "Olga"];
