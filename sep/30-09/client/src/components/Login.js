@@ -5,15 +5,23 @@ import axios from "axios";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loginMessage, setLoginMessage] = useState("");
   axios.defaults.withCredentials = true;
   const loginUser = () => {
     axios
-      .post("http:localhost:5000/login", {
+      .post("http://localhost:5000/login", {
         //  username:username,
         username,
         password,
       })
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+        if (res.data.user) {
+          setLoginMessage(`Welcome ${res.data.user.username}`);
+        } else {
+          setLoginMessage(res.data.message);
+        }
+      });
   };
   return (
     <div className="App">
@@ -37,6 +45,7 @@ const Login = () => {
       </div>
       <h4>OR</h4>
       <Link to="/register">Register</Link>
+      <h4>{loginMessage}</h4>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Register = () => {
     data.append("avatar", avatar);
 
     axios
-      .post("http://loaclhost:5000/register", data, {
+      .post("", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

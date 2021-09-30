@@ -75,7 +75,7 @@ const upload = multer({
     }
   },
 });
-
+//console.log(process.env.TOKEN_TEXT);
 app.get("/users", controllers.getAll);
 app.post("/register", upload.single("avatar"), controllers.register);
 app.post("/login", controllers.login);

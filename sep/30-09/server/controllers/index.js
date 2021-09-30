@@ -2,7 +2,7 @@ const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 //const jwt = require("jsonwebtoken");
-//const { createTokens, checkToken } = require("../JWT-check");
+const { createToken, checkToken } = require("../JWT-check");
 const controllers = {};
 controllers.getAll = async (req, res) => {
   try {
@@ -39,7 +39,6 @@ controllers.register = async (req, res) => {
     res.json({ message: err.message });
   }
 };
-
 controllers.login = async (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
@@ -50,7 +49,17 @@ controllers.login = async (req, res) => {
   try {
     if (await bcrypt.compare(password, user.password)) {
       req.session.user = user;
-      res.json(user);
+      const token = createToken(user);
+      res.json({
+        auth: true,
+        token,
+        user: {
+          _id: user._id,
+          username: user.username,
+          role: user.role,
+          avatar: user.avatar,
+        },
+      });
     } else {
       res.json({
         message: "Not Allowed, please check your username or password",
