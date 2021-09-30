@@ -7,21 +7,23 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [ConfPassword, setConfPassword] = useState("");
   const [avatar, setAvatar] = useState("");
-
+  axios.defaults.withCredentials = true;
   const register = () => {
     const data = new FormData();
     data.append("username", username);
     data.append("password", password);
     data.append("confPassword", ConfPassword);
     data.append("avatar", avatar);
-    // later
+
     axios
       .post("http://loaclhost:5000/register", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       })
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+      });
   };
   const uploadHandle = (e) => {
     setAvatar(e.target.files[0]);

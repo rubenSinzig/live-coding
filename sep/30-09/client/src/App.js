@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Register from "./components/Register";
-// import Register from "./components/Register";
-// import Login from "./components/Login";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
     
     */}
         <Route path="/register" exact component={Register} />
+        <Route path="/login" exact component={Login} />
       </Router>
 
       <h1>Footer</h1>
