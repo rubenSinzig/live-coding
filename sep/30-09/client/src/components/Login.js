@@ -6,6 +6,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  //  Axios will send (cookies, basic http auth, etc.. ) in its requests
   axios.defaults.withCredentials = true;
   const loginUser = () => {
     axios
@@ -17,6 +18,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         if (res.data.user) {
+          localStorage.setItem("token", res.data.token);
           setLoginMessage(`Welcome ${res.data.user.username}`);
         } else {
           setLoginMessage(res.data.message);

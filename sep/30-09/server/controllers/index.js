@@ -43,8 +43,8 @@ controllers.login = async (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
   const user = await User.findOne({ username });
-  if (user == null) {
-    return res.status(404).json({ message: "Cannot find user" });
+  if (!user) {
+    return res.status(404).json({ auth: false, message: "Cannot find user" });
   }
   try {
     if (await bcrypt.compare(password, user.password)) {
@@ -62,11 +62,12 @@ controllers.login = async (req, res) => {
       });
     } else {
       res.json({
+        auth: false,
         message: "Not Allowed, please check your username or password",
       });
     }
   } catch (err) {
-    res.status(err.status).json({ message: err.message });
+    res.status(err.status).json({ auth: false, message: err.message });
   }
 };
 

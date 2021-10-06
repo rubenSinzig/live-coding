@@ -79,5 +79,6 @@ const upload = multer({
 app.get("/users", controllers.getAll);
 app.post("/register", upload.single("avatar"), controllers.register);
 app.post("/login", controllers.login);
-//app.get("/checkAuth", checkToken);
+app.get("/checkAuth", checkToken);
+
 module.exports = app;
