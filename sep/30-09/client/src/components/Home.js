@@ -4,8 +4,10 @@ import axios from "axios";
 const Home = () => {
   const [loginMessage, setLoginMessage] = useState("");
   //axios.defaults.withCredentials = true;
-  let token = `Bearer ${localStorage.getItem("token")}` || null;
-  //console.log(token);
+  const [token, setTocken] = useState(
+    `Bearer ${localStorage.getItem("token")}` || null
+  );
+  // This is not recommended;
   // if (token) {
   //   axios.interceptors.request.use(
   //     (config) => {
@@ -25,6 +27,7 @@ const Home = () => {
         console.log(res);
         if (res.data.auth) {
           setLoginMessage(res.data.message);
+          //
         } else {
           console.log(res.data.message);
           setLoginMessage(`You need to login ${res.data.message}`);

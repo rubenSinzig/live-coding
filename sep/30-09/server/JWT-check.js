@@ -2,6 +2,11 @@ const { sign, verify } = require("jsonwebtoken");
 // const JWT = require("jsonwebtoken");
 // JWT.sign()
 
+//  Authentication Vs  Authorization
+
+// Authentication : checking if it's the right user aka (correct username & correct password)
+// Authorization : allowing the correct user to access
+
 const createToken = (user) => {
   const accessToken = sign(
     { username: user.username, id: user._id },
@@ -16,7 +21,8 @@ const createToken = (user) => {
 };
 const checkToken = async (req, res, next) => {
   console.log(req.headers.authorization);
-
+  // Bearer used for Auth2.0 which's a cryptic string
+  // Take Bearer out
   const accessToken = req.headers.authorization.split(" ")[1];
   console.log(accessToken);
   if (accessToken == "null") {
@@ -33,10 +39,10 @@ const checkToken = async (req, res, next) => {
     } else {
       return res
         .status(404)
-        .json({ auth: true, message: "You need to login!" });
+        .json({ auth: false, message: "You need to login!" });
     }
   } catch (err) {
-    res.status(err.status).json({ auth: true, message: err.message });
+    res.status(err.status).json({ auth: false, message: err.message });
   }
 };
 
