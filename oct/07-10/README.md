@@ -96,7 +96,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
         />
 
         <Route path={() => "/main" || "/admin" || "/any-other-word" || regex expression}>
-
+            <Soon />
         </Route>
       </Switch>
       <Footer />
@@ -104,3 +104,5 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
   );
 };
 ```
+
+Redux
