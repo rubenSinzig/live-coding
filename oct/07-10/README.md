@@ -10,6 +10,7 @@ npx create-react-app <your-app-name>
 
 ```bash
 npm install sass
+npm install react-icons
 npm install axios
 npm install react-router-dom
 ```
