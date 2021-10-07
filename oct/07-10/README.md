@@ -35,9 +35,7 @@ The following example is made to send data object through post request, data obj
 
 ```
 
-### Rea POST example
-
-The following example is made to send data object through post request, data object includes media file
+### React Router example
 
 ```bash
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
