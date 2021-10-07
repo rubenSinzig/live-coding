@@ -14,6 +14,24 @@ npm install axios
 npm install react-router-dom
 ```
 
+### Axios GET example
+
+When you need to get some data from any API, your request should look something like this
+
+```bash
+    axios
+      .get("http://API address.domain/your API key, other values if needed")
+      .then((res) => {
+        console.log(res);
+        setData(res.data)
+      }
+      .catch((err)=>{
+          console.log(err);
+      }));
+  };
+
+```
+
 ### Axios POST example
 
 The following example is made to send data object through post request, data object includes media file
