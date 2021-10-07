@@ -68,6 +68,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
         }
 
         <Route path="/" exact component={Home} />
+        // other way
+         <Route path="/" exact render={Home} />
         <Route path="/about" exact component={About} />
         <Route
           path="/product"
