@@ -95,3 +95,20 @@ MongoDB using mongoose
 
 - uploading files with multer
 - cookies
+
+[27/09/2021](sep/27-09)
+
+- full-stack app
+
+[29/09/2021](sep/29-09)
+
+- Security (CORS)
+
+[30/09/2021](sep/30-09)
+
+- Security (JWT)
+
+[07/10/2021](oct/07-10)
+
+- React recap
+
