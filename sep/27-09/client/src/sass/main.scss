@@ -1,0 +1,18 @@
+input {
+  display: block;
+  border: none;
+  margin: 0.5rem;
+  border-radius: 2%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+
+img {
+  width: 3rem;
+}

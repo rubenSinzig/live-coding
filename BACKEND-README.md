@@ -67,3 +67,31 @@ MongoDB using mongoose
 [25/08/2021](aug/25-08)
 
 - adding controllers to the previous example project (employees server+database)
+
+[30/08/2021](aug/30-08)
+
+- Faker
+- ejs
+
+[31/08/2021](aug/31-08)
+
+- findById
+
+[06/09/2021](sep/06-09)
+
+- validation with handlebars
+- express-handlebars
+- express-validator
+
+[13/09/2021](sep/13-09)
+
+- DB relations (ref and populate)
+
+[14/09/2021](sep/14-09)
+
+- bcrypt (salting and hashing passwords)
+
+[15/09/2021](sep/15-09)
+
+- uploading files with multer
+- cookies

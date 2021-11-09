@@ -22,10 +22,16 @@ app.engine(
 
 // to process the data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Let Express understand  Content-Type: application/x-www-form-urlencoded aka form data
+
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 // validations
 // Validation setup
-const { body, validationResult } = require("express-validator");
+//const { body, validationResult } = require("express-validator");
 // cookies
 app.use(cookieParser());
 // Session
@@ -49,10 +55,12 @@ mongoose
   });
 // Alow uploads
 app.use("/uploads", express.static("uploads"));
+// router
 const auth = require("./routes/auth");
 app.use("/", auth);
-// const users = require("./routes/users");
-// app.use("/users", users);
-// const user = require("./routes/user");
-// app.use("/user", user);
+const users = require("./routes/users");
+app.use("/users", users);
+const user = require("./routes/user");
+app.use("/user", user);
+
 module.exports = app;
