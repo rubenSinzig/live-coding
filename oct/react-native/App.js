@@ -1,112 +1,119 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-  Button,
-  Alert,
-  TextInput,
-  Switch,
-  Keyboard,
-} from "react-native";
-import axios from "axios";
-import styles from "./app/styleSheet";
-//import font from "./assets/fonts/some.tft"
-export default function App() {
-  const [text, setText] = useState("");
-  const [users, setUsers] = useState([]);
-  const [keyboardStatus, setKeyboardStatus] = useState(undefined);
+// import { StatusBar } from "expo-status-bar";
+// import React, { useState, useEffect } from "react";
+// import {
+//   StyleSheet,
+//   Text,
+//   View,
+//   SafeAreaView,
+//   Image,
+//   TouchableOpacity,
+//   Button,
+//   Alert,
+//   TextInput,
+//   Switch,
+//   Keyboard,
+//   TouchableWithoutFeedbackBase,
+// } from "react-native";
+// import axios from "axios";
+// import styles from "./app/styles/styleSheet";
+// //import font from "./assets/fonts/some.tft"
+// export default function App() {
+//   const [text, setText] = useState("");
+//   const [users, setUsers] = useState([]);
+//   const [keyboardStatus, setKeyboardStatus] = useState(undefined);
 
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+//   const [isEnabled, setIsEnabled] = useState(false);
+//   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
-  const doSomethings = () => {
-    // somethings
-    console.log("Cool");
-  };
+//   const doSomethings = () => {
+//     // somethings
+//     console.log("Cool");
+//   };
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/users")
-  //     .then((res) => setUsers(res.data))
-  //     .catch((err) => console.log(err));
-  // });
-  useEffect(() => {
-    const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
-      setKeyboardStatus("Keyboard Shown");
-    });
-    const hideSubscription = Keyboard.addListener("keyboardDidHide", () => {
-      setKeyboardStatus("Keyboard Hidden");
-    });
+//   // useEffect(() => {
+//   //   axios
+//   //     .get("http://localhost:5000/users")
+//   //     .then((res) => setUsers(res.data))
+//   //     .catch((err) => console.log(err));
+//   // });
+//   // useEffect(() => {
+//   //   axios
+//   //     .post("http://localhost:5000/users",data,{})
+//   //     .then((res) => setUsers(res.data))
+//   //     .catch((err) => console.log(err));
+//   // });
+//   useEffect(() => {
+//     const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
+//       setKeyboardStatus("Keyboard Shown");
+//     });
+//     const hideSubscription = Keyboard.addListener("keyboardDidHide", () => {
+//       setKeyboardStatus("Keyboard Hidden");
+//     });
 
-    return () => {
-      showSubscription.remove();
-      hideSubscription.remove();
-    };
-  }, []);
+//     return () => {
+//       showSubscription.remove();
+//       hideSubscription.remove();
+//     };
+//   }, []);
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        source={require("./app/assets/F740BFC0-46E4-4092-8E99-92B52C3A250C_1_105_c.jpeg")}
-        // source={{ uri: "https://" }}
-        style={{
-          width: 200,
-          height: 200,
-          borderRadius: 100,
-        }}
-      />
-      <Text numberOfLines={8} onPress={doSomethings} style={styles.text}>
-        Open up App.js to start working on your app! Open up App.js to start
-        {"\n"}
-        working on your app! Open up App.js to start working on your app! Open
-        {"\n"}
-        up App.js to start working on your app! Open up App.js to start working
-        {"\n"}
-      </Text>
-      <TouchableOpacity
-        onPress={() => console.log("I am img")}
-      ></TouchableOpacity>
-
-      <Button
-        title="Press here"
-        // onPress={() => console.log("Nice, I am button")}
-        onPress={() =>
-          Alert.alert("Your info", "Are you sure?", [
-            {
-              text: "Ok",
-              onPress: () => console.log("Cool, you are the best"),
-            },
-            { text: "Not okay", onPress: () => console.log("Ok, no problem") },
-          ])
-        }
-      />
-      <Text>{keyboardStatus}</Text>
-      <TextInput
-        style={{ height: 20 }}
-        placeholder="Enter your name"
-        onChangeText={(text) => setText(text)}
-        defaultValue={text}
-        onSubmitEditing={Keyboard.dismiss}
-      />
-      {console.log(text)}
-      <Switch
-        // false not for ios
-        trackColor={{ false: "yellow", true: "gray" }}
-        thumbColor={isEnabled ? "black" : "red"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-        ios_backgroundColor="orange"
-      />
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-}
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <Image
+//         source={require("./app/assets/F740BFC0-46E4-4092-8E99-92B52C3A250C_1_105_c.jpeg")}
+//         // source={{ uri: "https://" }}
+//         style={{
+//           width: 200,
+//           height: 200,
+//           borderRadius: 100,
+//         }}
+//       />
+//       <Text numberOfLines={8} onPress={doSomethings} style={styles.text}>
+//         Open up App.js to start working on your app! Open up App.js to start
+//         {"\n"}
+//         working on your app! Open up App.js to start working on your app! Open
+//         {"\n"}
+//         up App.js to start working on your app! Open up App.js to start working
+//         {"\n"}
+//       </Text>
+//       <TouchableOpacity
+//         onPress={() => console.log("I am img")}
+//       ></TouchableOpacity>
+//       <Button
+//         title="Press here"
+//         // onPress={() => console.log("Nice, I am button")}
+//         onPress={() =>
+//           Alert.alert("Your info", "Are you sure?", [
+//             {
+//               text: "Ok",
+//               onPress: () => console.log("Cool, you are the best"),
+//             },
+//             { text: "Not okay", onPress: () => console.log("Ok, no problem") },
+//             { text: "Cool", onPress: () => console.log("Cool") },
+//           ])
+//         }
+//       />
+//       <Text>{keyboardStatus}</Text>
+//       <TextInput
+//         style={{ height: 20 }}
+//         placeholder="Enter your name"
+//         onChangeText={(text) => setText(text)}
+//         defaultValue={text}
+//         onSubmitEditing={Keyboard.dismiss}
+//       />
+//       {console.log(text)}
+//       <Switch
+//         // false not for ios
+//         trackColor={{ false: "yellow", true: "gray" }}
+//         thumbColor={isEnabled ? "black" : "red"}
+//         ios_backgroundColor="#3e3e3e"
+//         onValueChange={toggleSwitch}
+//         value={isEnabled}
+//         ios_backgroundColor="orange"
+//       />
+//       <StatusBar style="auto" />
+//     </SafeAreaView>
+//   );
+// }
 
 // import React from "react";
 // import {
@@ -191,7 +198,7 @@ export default function App() {
 //     margin: 24,
 //     textAlign: "center",
 //   },
-//
+
 //   separator: {
 //     marginVertical: 8,
 //     borderBottomColor: "#737373",
@@ -201,44 +208,44 @@ export default function App() {
 
 // export default App;
 
-// import React from "react";
-// import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-// // npm i react
-// // npm i react-router-native
-// import { NativeRouter, Route, Link } from "react-router-native";
-// import Home from "./app/screens/Home";
-// import About from "./app/screens/About";
-// import More from "./app/screens/More";
+import React from "react";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+// npm i react
+// npm i react-router-native
+import { NativeRouter, Route, Link } from "react-router-native";
+import Home from "./app/screens/Home";
+import About from "./app/screens/About";
+import More from "./app/screens/More";
 
-// const App = () => (
-//   <NativeRouter>
-//     <SafeAreaView style={styles.nav}>
-//       <Link to="/about" underlayColor="orange" style={styles.navItem}>
-//         <Text>About</Text>
-//       </Link>
-//       <Link to="/more" underlayColor="orange" style={styles.navItem}>
-//         <Text>More</Text>
-//       </Link>
-//     </SafeAreaView>
-//     <Route exact path="/" component={Home} />
-//     <Route path="/about" component={About} />
-//     <Route path="/more" component={More} />
-//   </NativeRouter>
-// );
+const App = () => (
+  <NativeRouter>
+    <SafeAreaView style={styles.nav}>
+      <Link to="/about" underlayColor="orange" style={styles.navItem}>
+        <Text>About</Text>
+      </Link>
+      <Link to="/more" underlayColor="orange" style={styles.navItem}>
+        <Text>More</Text>
+      </Link>
+    </SafeAreaView>
+    <Route exact path="/" component={Home} />
+    <Route path="/about" component={About} />
+    <Route path="/more" component={More} />
+  </NativeRouter>
+);
 
-// const styles = StyleSheet.create({
-//   nav: {
-//     flexDirection: "row",
-//     zIndex: 1,
-//     justifyContent: "space-around",
-//     backgroundColor: "#4444",
-//   },
-//   navItem: {
-//     flex: 1,
-//     alignItems: "center",
-//     padding: 10,
-//     backgroundColor: "#4444",
-//   },
-// });
+const styles = StyleSheet.create({
+  nav: {
+    flexDirection: "row",
+    zIndex: 1,
+    justifyContent: "space-around",
+    backgroundColor: "#4444",
+  },
+  navItem: {
+    flex: 1,
+    alignItems: "center",
+    padding: 10,
+    backgroundColor: "#4444",
+  },
+});
 
-// export default App;
+export default App;
